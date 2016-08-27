@@ -1,9 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn vga_sync.prj
--ofn vga_sync
--ofmt NGC
+set -tmpdir "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/xst"
+run -compileonly yes
 -p xc6slx16-3-csg324
 -top vga_sync
 -opt_mode Speed
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn vga_sync.prj

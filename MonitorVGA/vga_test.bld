@@ -6,7 +6,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 vga_test.ngc vga_test.ngd
 
 Reading NGO file
-"C:/Users/Sebastian/Documents/workspace/MonitorVGA/vga_test.ngc" ...
+"C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/vga_test.ngc"
+...
 Gathering constraint information from source properties...
 Done.
 
@@ -28,10 +29,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 188080 kilobytes
+Total memory usage is 188044 kilobytes
 
 Writing NGD file "vga_test.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "vga_test.bld"...

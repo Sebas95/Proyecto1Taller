@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: vga_test.prj
 
@@ -105,9 +105,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_sync.v" into library work
+Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" into library work
 Parsing module <vga_sync>.
-Analyzing Verilog file "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_test.v" into library work
+Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" into library work
 Parsing module <vga_test>.
 
 =========================================================================
@@ -117,18 +117,18 @@ Parsing module <vga_test>.
 Elaborating module <vga_test>.
 
 Elaborating module <vga_sync>.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_sync.v" Line 89: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_sync.v" Line 102: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 89: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 102: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <vga_test>.
-    Related source file is "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_test.v".
-INFO:Xst:3210 - "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_test.v" line 34: Output port <pixel_x> of the instance <vsync_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_test.v" line 34: Output port <pixel_y> of the instance <vsync_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_test.v" line 34: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v".
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 34: Output port <pixel_x> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 34: Output port <pixel_y> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 34: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
     Found 3-bit register for signal <rgb_reg>.
     Summary:
 	inferred   3 D-type flip-flop(s).
@@ -136,7 +136,7 @@ INFO:Xst:3210 - "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_test.v" l
 Unit <vga_test> synthesized.
 
 Synthesizing Unit <vga_sync>.
-    Related source file is "C:\Users\Sebastian\Documents\workspace\MonitorVGA\vga_sync.v".
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v".
     Found 10-bit register for signal <v_count_reg>.
     Found 10-bit register for signal <h_count_reg>.
     Found 1-bit register for signal <v_sync_reg>.
@@ -144,10 +144,10 @@ Synthesizing Unit <vga_sync>.
     Found 1-bit register for signal <mod2_reg>.
     Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_4_OUT> created at line 89.
     Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_7_OUT> created at line 102.
-    Found 10-bit comparator lessequal for signal <n0014> created at line 107
-    Found 10-bit comparator lessequal for signal <n0016> created at line 107
-    Found 10-bit comparator lessequal for signal <n0019> created at line 109
-    Found 10-bit comparator lessequal for signal <n0021> created at line 110
+    Found 10-bit comparator lessequal for signal <n0015> created at line 107
+    Found 10-bit comparator lessequal for signal <n0017> created at line 107
+    Found 10-bit comparator lessequal for signal <n0020> created at line 109
+    Found 10-bit comparator lessequal for signal <n0022> created at line 110
     Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_2_o_LessThan_15_o> created at line 112
     Found 10-bit comparator greater for signal <v_count_reg[9]_GND_2_o_LessThan_16_o> created at line 112
     Summary:
@@ -180,27 +180,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <v_count_reg_9> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_8> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_7> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_6> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_5> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_4> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_3> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_2> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_1> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <v_count_reg_0> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mod2_reg> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_0> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_1> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_2> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_3> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_4> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_5> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_6> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_7> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_8> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_9> (without init value) has a constant value of 0 in block <vsync_unit>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <vga_sync>.
 The following registers are absorbed into counter <v_count_reg>: 1 register on signal <v_count_reg>.
@@ -226,31 +205,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <mod2_reg> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <h_count_reg_9> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_8> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_7> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_6> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_5> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_4> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_3> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_2> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_1> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_count_reg_0> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_9> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_8> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_7> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_6> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_5> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_4> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_3> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_2> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_1> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_count_reg_0> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <h_sync_reg> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <v_sync_reg> (without init value) has a constant value of 0 in block <vga_sync>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <vga_test> ...
+
+Optimizing unit <vga_sync> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -262,8 +220,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3
- Flip-Flops                                            : 3
+# Registers                                            : 26
+ Flip-Flops                                            : 26
 
 =========================================================================
 
@@ -286,10 +244,19 @@ Top Level Output File Name         : vga_test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 78
 #      GND                         : 1
-# FlipFlops/Latches                : 3
-#      FDC                         : 3
+#      INV                         : 1
+#      LUT1                        : 2
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT5                        : 5
+#      LUT6                        : 22
+#      MUXCY                       : 18
+#      XORCY                       : 20
+# FlipFlops/Latches                : 26
+#      FDC                         : 6
+#      FDCE                        : 20
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 9
@@ -303,13 +270,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              23  out of  18224     0%  
+ Number of Slice LUTs:                   39  out of   9112     0%  
+    Number used as Logic:                39  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     39
+   Number with an unused Flip Flop:      16  out of     39    41%  
+   Number with an unused LUT:             0  out of     39     0%  
+   Number of fully used LUT-FF pairs:    23  out of     39    58%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          10
@@ -340,7 +310,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 3     |
+clk                                | BUFGP                  | 26    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -351,9 +321,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: 2.302ns
-   Maximum output required time after clock: 3.597ns
+   Minimum period: 4.391ns (Maximum Frequency: 227.744MHz)
+   Minimum input arrival time before clock: 2.858ns
+   Maximum output required time after clock: 6.652ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -361,10 +331,37 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 6 / 6
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.391ns (frequency: 227.744MHz)
+  Total number of paths / destination ports: 1321 / 43
 -------------------------------------------------------------------------
-Offset:              2.302ns (Levels of Logic = 1)
+Delay:               4.391ns (Levels of Logic = 6)
+  Source:            vsync_unit/v_count_reg_9 (FF)
+  Destination:       vsync_unit/v_count_reg_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vsync_unit/v_count_reg_9 to vsync_unit/v_count_reg_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.995  vsync_unit/v_count_reg_9 (vsync_unit/v_count_reg_9)
+     LUT6:I1->O           10   0.203   0.857  vsync_unit/v_end21 (vsync_unit/v_end_bdd2)
+     LUT5:I4->O            1   0.205   0.579  vsync_unit/v_end_inv11 (vsync_unit/v_end_inv)
+     MUXCY:CI->O           1   0.019   0.000  vsync_unit/Mcount_v_count_reg_cy<0> (vsync_unit/Mcount_v_count_reg_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vsync_unit/Mcount_v_count_reg_cy<1> (vsync_unit/Mcount_v_count_reg_cy<1>)
+     XORCY:CI->O           1   0.180   0.580  vsync_unit/Mcount_v_count_reg_xor<2> (vsync_unit/Mcount_v_count_reg2)
+     LUT3:I2->O            1   0.205   0.000  vsync_unit/v_count_reg_2_dpot (vsync_unit/v_count_reg_2_dpot)
+     FDCE:D                    0.102          vsync_unit/v_count_reg_2
+    ----------------------------------------
+    Total                      4.391ns (1.380ns logic, 3.011ns route)
+                                       (31.4% logic, 68.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              2.858ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       rgb_reg_0 (FF)
   Destination Clock: clk rising
@@ -373,47 +370,58 @@ Offset:              2.302ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.222   0.650  reset_IBUF (reset_IBUF)
+     IBUF:I->O            26   1.222   1.206  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.430          rgb_reg_0
     ----------------------------------------
-    Total                      2.302ns (1.652ns logic, 0.650ns route)
-                                       (71.8% logic, 28.2% route)
+    Total                      2.858ns (1.652ns logic, 1.206ns route)
+                                       (57.8% logic, 42.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 29 / 5
 -------------------------------------------------------------------------
-Offset:              3.597ns (Levels of Logic = 1)
-  Source:            rgb_reg_2 (FF)
+Offset:              6.652ns (Levels of Logic = 4)
+  Source:            vsync_unit/v_count_reg_5 (FF)
   Destination:       rgb<2> (PAD)
   Source Clock:      clk rising
 
-  Data Path: rgb_reg_2 to rgb<2>
+  Data Path: vsync_unit/v_count_reg_5 to rgb<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              1   0.447   0.579  rgb_reg_2 (rgb_reg_2)
+     FDCE:C->Q             3   0.447   0.879  vsync_unit/v_count_reg_5 (vsync_unit/v_count_reg_5)
+     LUT3:I0->O            1   0.205   0.808  vsync_unit/video_on_SW0 (N4)
+     LUT6:I3->O            3   0.205   0.755  vsync_unit/video_on (video_on)
+     LUT2:I0->O            1   0.203   0.579  Mmux_rgb31 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
-    Total                      3.597ns (3.018ns logic, 0.579ns route)
-                                       (83.9% logic, 16.1% route)
+    Total                      6.652ns (3.631ns logic, 3.021ns route)
+                                       (54.6% logic, 45.4% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.391|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.55 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.95 secs
  
 --> 
 
 Total memory usage is 278868 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   46 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

@@ -1,12 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Aug 26 18:28:46 2016
+// Written by: Map P.20131013 on Sat Aug 27 14:45:32 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
-COMP "rgb<0>" LOCATE = SITE "U7" LEVEL 1;
-COMP "rgb<1>" LOCATE = SITE "P8" LEVEL 1;
-COMP "rgb<2>" LOCATE = SITE "R7" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "N7" LEVEL 1;
+COMP "rgb<1>" LOCATE = SITE "V6" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "T7" LEVEL 1;
 COMP "hsync" LOCATE = SITE "N6" LEVEL 1;
 COMP "sw<0>" LOCATE = SITE "T5" LEVEL 1;
 COMP "sw<1>" LOCATE = SITE "V8" LEVEL 1;

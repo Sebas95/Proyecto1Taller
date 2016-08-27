@@ -66,8 +66,8 @@ module  vga_sync
 			h_sync_reg<=h_sync_next;
 			end 
 	
-	//  mod_2  c i r c u i t   t o   g e n e r a t e   25  MHz  e n a b l e   t i c k  
-	assign   mod2_next  =  mod2_reg; 
+	//  mod_2  circuit to generate   25  MHz  enable   tick  
+	assign   mod2_next  =  ~mod2_reg; 
 	assign   pixel_tick  =  mod2_reg; 
 	//  s t a t u s   s i g n a l s  
 	//  end  o f   h o r i z o n t a l   c o u n t e r   ( 7 9 9 )  
