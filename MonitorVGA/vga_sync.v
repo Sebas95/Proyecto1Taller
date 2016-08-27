@@ -20,20 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 module  vga_sync 
 	( 
-	input   wire   clk, reset, 
+	input   wire     clk , reset, 
 	output   wire   hsync ,  vsync , video_on,  p_tick, 
 	output   wire   [9:0]  pixel_x,  pixel_y 
 	) ;  
-	//  c o n s t a n t   d e c l a r a t i o n  
-	//  VGA  640-by-480  sync  p a r a m e t e r s  
-	localparam   HD  =  640; //  h o r i z o n t a l   d i s p l a y   a r e a  
-	localparam   HF  =  48  ;  //  h .   f r o n t   ( l e f t )   b o r d e r  
-	localparam   HB   =  16  ;  //  h .   back  ( r i g h t )   b o r d e r  
-	localparam   HR  =  96  ;  //  h .   r e t r a c e  
-	localparam   VD  =  480;  //  v e r t i c a l   d i s p l a y   a r e a  
-	localparam   VF  =  10;  //  v .   f r o n t   ( t o p )   b o r d e r  
-	localparam   VB  =  33;  //  v .   back  ( b o t t o m )   b o r d e r  
-	localparam   VR   =  2;  //  v .   r e t r a c e  
+	//  constant declaration  
+	//  VGA  640-by-480  sync  parameters  
+	//localparam   HD  =  640; // horizontal   display area  
+	localparam   HD  =  640; // horizontal   display area  
+	localparam   HF  =  48  ;  //  h.front (left)border  
+	localparam   HB   =  16  ;  //  h.back (right) border  
+	localparam   HR  =  96  ;  //  h.retrace  
+	//localparam   VD  =  480;  //  vertical	display area  
+	localparam   VD  =  480;  //  vertical	display area  
+	localparam   VF  =  10;  //  v.front(top)border 
+	localparam   VB  =  33;  //  v . back(bottom) border 
+	localparam   VR   =  2;  //  v.retracer
 	//  mod-2  c o u n t e r  
 	reg   mod2_reg; 
 	wire   mod2_next ; 
@@ -47,6 +49,11 @@ module  vga_sync
 	wire   h_end ,  v_end ,  pixel_tick; 
 	//  body 
 	//  r e g i s t e r s  
+	
+
+	
+	
+	
 	always @(posedge clk,posedge reset)
 
 		if(reset)
@@ -69,18 +76,18 @@ module  vga_sync
 	//  mod_2  circuit to generate   25  MHz  enable   tick  
 	assign   mod2_next  =  ~mod2_reg; 
 	assign   pixel_tick  =  mod2_reg; 
-	//  s t a t u s   s i g n a l s  
-	//  end  o f   h o r i z o n t a l   c o u n t e r   ( 7 9 9 )  
+	// status signals
+	//  end  of horizontal vounter  (799)  
 	assign   h_end  =  (h_count_reg==(HD+HF+HB+HR-1)) ; 
-	//  end  o f   v e r t i c a l   c o u n t e r   ( 5 2 4 )  
+	//  end  oof vertical conter(524)  
 	assign   v_end  =  (v_count_reg==(VD+VF+VB+VR-1))  ; 
 	
 	
 	
 	
-	//  n e x t - s t a t e   l o g i c   o f   mod-800  h o r i z o n t a l   s y n c   c o u n t e r  
+	//  next-state logic of mod-800 horizontal sync counter 
 	always @*
-	//  25  MHz  p u l s e  
+	//  25  MHz  pulse
 		if(pixel_tick)
 		begin
 			if (h_end) 
@@ -106,8 +113,7 @@ module  vga_sync
 	//  h - s v n c - n e x t   a s s e r t e d   b e t w e e n   656  and  751 
 	assign   h_sync_next  =  (h_count_reg>=(HD+HB) && h_count_reg<=(HD+HB+HR-1)); 
 	//  v h - s y n c - n e x t   a s s e r t e d   b e t w e e n   490  and  491 
-	assign   v_sync_next  =  (v_count_reg>=(VD+VB)  && 
-	v_count_reg<=(VD+VB+VR-1)); 
+	assign   v_sync_next  =  (v_count_reg>=(VD+VB)  && v_count_reg<=(VD+VB+VR-1)); 
 	//  v i d e o   o n / o f f  
 	assign   video_on  =  (h_count_reg<HD)  &&  (v_count_reg<VD); 
 	//  o u t p u t  

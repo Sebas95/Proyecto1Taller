@@ -19,11 +19,17 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module vga_test(
-		input wire clk,reset,
+		input wire CLK_50MHZ,reset,
 		input wire [2:0] sw,
 		output wire hsync, vsync,
 		output wire [2:0] rgb
     );
+	 
+	 	// This section divides CLK_50MHZ by 2 and outputs clk.
+	reg clk;
+	always @(posedge CLK_50MHZ)
+	clk <= ~clk;
+
 	 
 	 //signal declaration
 	 reg [2:0] rgb_reg;

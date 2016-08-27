@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: vga_test.prj
 
@@ -117,8 +117,8 @@ Parsing module <vga_test>.
 Elaborating module <vga_test>.
 
 Elaborating module <vga_sync>.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 89: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 102: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 96: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 109: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -126,12 +126,13 @@ WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\M
 
 Synthesizing Unit <vga_test>.
     Related source file is "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v".
-INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 34: Output port <pixel_x> of the instance <vsync_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 34: Output port <pixel_y> of the instance <vsync_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 34: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 40: Output port <pixel_x> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 40: Output port <pixel_y> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_test.v" line 40: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
     Found 3-bit register for signal <rgb_reg>.
+    Found 1-bit register for signal <clk>.
     Summary:
-	inferred   3 D-type flip-flop(s).
+	inferred   4 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <vga_test> synthesized.
 
@@ -142,14 +143,14 @@ Synthesizing Unit <vga_sync>.
     Found 1-bit register for signal <v_sync_reg>.
     Found 1-bit register for signal <h_sync_reg>.
     Found 1-bit register for signal <mod2_reg>.
-    Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_4_OUT> created at line 89.
-    Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_7_OUT> created at line 102.
-    Found 10-bit comparator lessequal for signal <n0015> created at line 107
-    Found 10-bit comparator lessequal for signal <n0017> created at line 107
-    Found 10-bit comparator lessequal for signal <n0020> created at line 109
-    Found 10-bit comparator lessequal for signal <n0022> created at line 110
-    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_2_o_LessThan_15_o> created at line 112
-    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_2_o_LessThan_16_o> created at line 112
+    Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_4_OUT> created at line 96.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_7_OUT> created at line 109.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 114
+    Found 10-bit comparator lessequal for signal <n0017> created at line 114
+    Found 10-bit comparator lessequal for signal <n0020> created at line 116
+    Found 10-bit comparator lessequal for signal <n0022> created at line 116
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_2_o_LessThan_15_o> created at line 118
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_2_o_LessThan_16_o> created at line 118
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
@@ -163,8 +164,8 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 2
-# Registers                                            : 6
- 1-bit register                                        : 3
+# Registers                                            : 7
+ 1-bit register                                        : 4
  10-bit register                                       : 2
  3-bit register                                        : 1
 # Comparators                                          : 6
@@ -192,8 +193,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 6
- Flip-Flops                                            : 6
+# Registers                                            : 7
+ Flip-Flops                                            : 7
 # Comparators                                          : 6
  10-bit comparator greater                             : 2
  10-bit comparator lessequal                           : 4
@@ -220,8 +221,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 26
- Flip-Flops                                            : 26
+# Registers                                            : 27
+ Flip-Flops                                            : 27
 
 =========================================================================
 
@@ -244,7 +245,7 @@ Top Level Output File Name         : vga_test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 78
+# BELS                             : 79
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 2
@@ -253,11 +254,14 @@ Primitive and Black Box Usage:
 #      LUT5                        : 5
 #      LUT6                        : 22
 #      MUXCY                       : 18
+#      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 26
+# FlipFlops/Latches                : 27
 #      FDC                         : 6
 #      FDCE                        : 20
-# Clock Buffers                    : 1
+#      FDR                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 9
 #      IBUF                        : 4
@@ -270,16 +274,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              23  out of  18224     0%  
+ Number of Slice Registers:              24  out of  18224     0%  
  Number of Slice LUTs:                   39  out of   9112     0%  
     Number used as Logic:                39  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     39
-   Number with an unused Flip Flop:      16  out of     39    41%  
-   Number with an unused LUT:             0  out of     39     0%  
-   Number of fully used LUT-FF pairs:    23  out of     39    58%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:     40
+   Number with an unused Flip Flop:      16  out of     40    40%  
+   Number with an unused LUT:             1  out of     40     2%  
+   Number of fully used LUT-FF pairs:    23  out of     40    57%  
+   Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                          10
@@ -287,7 +291,7 @@ IO Utilization:
     IOB Flip Flops/Latches:               3
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -310,7 +314,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 26    |
+CLK_50MHZ                          | BUFGP                  | 1     |
+clk                                | BUFG                   | 26    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -329,6 +334,27 @@ Speed Grade: -3
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_50MHZ'
+  Clock period: 1.456ns (frequency: 686.884MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.456ns (Levels of Logic = 0)
+  Source:            clk (FF)
+  Destination:       clk (FF)
+  Source Clock:      CLK_50MHZ rising
+  Destination Clock: CLK_50MHZ rising
+
+  Data Path: clk to clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  clk (clk)
+     FDR:R                     0.430          clk
+    ----------------------------------------
+    Total                      1.456ns (0.877ns logic, 0.579ns route)
+                                       (60.2% logic, 39.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -403,6 +429,14 @@ Offset:              6.652ns (Levels of Logic = 4)
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock CLK_50MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_50MHZ      |    1.456|         |         |         |
+---------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
@@ -414,8 +448,8 @@ clk            |    4.391|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.95 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.99 secs
  
 --> 
 
