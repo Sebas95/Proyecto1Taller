@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: vga_test.prj
 
@@ -117,8 +117,8 @@ Parsing module <vga_test>.
 Elaborating module <vga_test>.
 
 Elaborating module <vga_sync>.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 96: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 109: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 94: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 106: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -143,12 +143,12 @@ Synthesizing Unit <vga_sync>.
     Found 1-bit register for signal <v_sync_reg>.
     Found 1-bit register for signal <h_sync_reg>.
     Found 1-bit register for signal <mod2_reg>.
-    Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_4_OUT> created at line 96.
-    Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_7_OUT> created at line 109.
-    Found 10-bit comparator lessequal for signal <n0015> created at line 114
-    Found 10-bit comparator lessequal for signal <n0017> created at line 114
-    Found 10-bit comparator lessequal for signal <n0020> created at line 116
-    Found 10-bit comparator lessequal for signal <n0022> created at line 116
+    Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_4_OUT> created at line 94.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_7_OUT> created at line 106.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 112
+    Found 10-bit comparator lessequal for signal <n0017> created at line 112
+    Found 10-bit comparator lessequal for signal <n0020> created at line 115
+    Found 10-bit comparator lessequal for signal <n0022> created at line 115
     Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_2_o_LessThan_15_o> created at line 118
     Found 10-bit comparator greater for signal <v_count_reg[9]_GND_2_o_LessThan_16_o> created at line 118
     Summary:
@@ -448,8 +448,8 @@ clk            |    4.391|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.99 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.41 secs
  
 --> 
 
