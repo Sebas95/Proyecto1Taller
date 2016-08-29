@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   14:03:20 08/29/2016
+// Create Date:   15:18:10 08/29/2016
 // Design Name:   FourBitCounter
-// Module Name:   C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounterTest.v
+// Module Name:   C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test.v
 // Project Name:  MonitorVGA
 // Target Device:  
 // Tool versions:  
@@ -22,7 +22,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module FourBitCounterTest;
+module counter_test;
 
 	// Inputs
 	reg enable;
@@ -30,13 +30,13 @@ module FourBitCounterTest;
 	reg reset;
 
 	// Outputs
-	wire [7:0] out;
+	wire [5:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	FourBitCounter uut (
 		.out(out), 
 		.enable(enable), 
-		.clk(clk), 
+		.clk(clk),  
 		.reset(reset)
 	);
 
@@ -53,15 +53,15 @@ module FourBitCounterTest;
         
 		// Add stimulus here
 	
-		#10; clk=0; reset = 1;	
-		#10; clk=1;
-		#10; clk=1;reset = 0;
-		#10; clk=0;
+		#1; clk=0; reset = 1;	
+		#1; clk=1;
+		#1; clk=1;reset = 0;
+		#1; clk=0;
 		
-		for(x=0; x<20; x=x+1)
+		for(x=0; x<130; x=x+1)
 		begin
-			#10; clk=0;
-			#10; clk=1;
+			#1; clk=0;
+			#1; clk=1;
 		end
 		
 		

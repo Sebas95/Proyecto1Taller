@@ -23,7 +23,7 @@
 #endif
 static const char *ng0 = "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounter.v";
 static unsigned int ng1[] = {0U, 0U};
-static unsigned int ng2[] = {10U, 0U};
+static unsigned int ng2[] = {59U, 0U};
 static int ng3[] = {1, 0};
 
 
@@ -91,7 +91,7 @@ LAB6:    xsi_set_current_line(40, ng0);
     t2 = (t0 + 1768);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
-    t5 = ((char*)((ng2)));
+    t5 = ((char*)((ng1)));
     memset(t13, 0, 8);
     t11 = (t4 + 4);
     t12 = (t5 + 4);
@@ -146,7 +146,7 @@ LAB5:    xsi_set_current_line(36, ng0);
 LAB8:    xsi_set_current_line(37, ng0);
     t11 = ((char*)((ng1)));
     t12 = (t0 + 1768);
-    xsi_vlogvar_wait_assign_value(t12, t11, 0, 0, 8, 0LL);
+    xsi_vlogvar_wait_assign_value(t12, t11, 0, 0, 6, 0LL);
     goto LAB7;
 
 LAB11:    t21 = (t13 + 4);
@@ -157,9 +157,9 @@ LAB11:    t21 = (t13 + 4);
 LAB13:    xsi_set_current_line(41, ng0);
 
 LAB16:    xsi_set_current_line(42, ng0);
-    t28 = ((char*)((ng1)));
+    t28 = ((char*)((ng2)));
     t29 = (t0 + 1768);
-    xsi_vlogvar_wait_assign_value(t29, t28, 0, 0, 8, 0LL);
+    xsi_vlogvar_wait_assign_value(t29, t28, 0, 0, 6, 0LL);
     goto LAB15;
 
 LAB17:    xsi_set_current_line(46, ng0);
@@ -170,9 +170,9 @@ LAB20:    xsi_set_current_line(47, ng0);
     t11 = *((char **)t5);
     t12 = ((char*)((ng3)));
     memset(t13, 0, 8);
-    xsi_vlog_unsigned_add(t13, 32, t11, 8, t12, 32);
+    xsi_vlog_unsigned_minus(t13, 32, t11, 6, t12, 32);
     t21 = (t0 + 1768);
-    xsi_vlogvar_wait_assign_value(t21, t13, 0, 0, 8, 0LL);
+    xsi_vlogvar_wait_assign_value(t21, t13, 0, 0, 6, 0LL);
     goto LAB19;
 
 }
@@ -181,6 +181,6 @@ LAB20:    xsi_set_current_line(47, ng0);
 extern void work_m_00000000003854979852_2426599144_init()
 {
 	static char *pe[] = {(void *)Always_34_0};
-	xsi_register_didat("work_m_00000000003854979852_2426599144", "isim/FourBitCounterTest_isim_beh.exe.sim/work/m_00000000003854979852_2426599144.didat");
+	xsi_register_didat("work_m_00000000003854979852_2426599144", "isim/counter_test_isim_beh.exe.sim/work/m_00000000003854979852_2426599144.didat");
 	xsi_register_executes(pe);
 }

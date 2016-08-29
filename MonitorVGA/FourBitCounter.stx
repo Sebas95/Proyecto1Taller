@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: FourBitCounter.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Moni
 Parsing module <FourBitCounter>.
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.91 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.71 secs
  
 --> 
 
