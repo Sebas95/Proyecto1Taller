@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounterTest_isim_beh.exe" -prj "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounterTest_beh.prj" "work.FourBitCounterTest" "work.glbl" 

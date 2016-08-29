@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounter.v -lang verilog -prj MonitorVGA -o FourBitCounter.spl -module FourBitCounter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 FourBitCounter.spl C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounter.sym 
+vhdtdtfi -lib work C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounter.v -lang verilog -prj MonitorVGA -o FourBitCounter.spl -module FourBitCounter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 FourBitCounter.spl C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounter.sym 
