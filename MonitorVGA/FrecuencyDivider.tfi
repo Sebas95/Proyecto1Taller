@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+FrecuencyDivider instance_name (
+    .clk_100MHz(clk_100MHz), 
+    .clk_1Hz(clk_1Hz)
+    );
+
+

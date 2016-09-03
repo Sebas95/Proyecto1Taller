@@ -22,29 +22,37 @@ module FourBitCounter(
 	out     ,  // Output of the counter
 	enable  ,  // enable for counter
  	clk     ,  // clock Input
- 	reset      // reset Input
+ 	reset   ,  // reset Input
+	forward , //forward input
  );
  //----------Output Ports--------------
-   output [5:0] out; 
+   output [3:0] out; 
  //------------Input Ports--------------
-   input enable, clk, reset;
+   input enable, clk, reset, forward;
  //------------Internal Variables--------
-   reg [5:0] out;
+   reg [3:0] out;
  //-------------Code Starts Here-------
  	always @(posedge clk)
  	if (reset) // si se resetea se pone en cero
 	begin
-   		out <= 6'b0 ; 
+   		out <= 4'b0 ; 
  	end 
 	
-	else if (out== 6'b0) //
+	else if (out== 4'b0 && ~forward ) //si llega a cero se pone en 15
 	begin
-		out<= 6'b111011;
+		out<= 4'b1111;
+	end
+	
+	else if (out== 4'b1111 && forward) //si llega a 15 se pone en cero
+	begin
+		out<= 4'b0000;
 	end
 	
 	else if (enable) 
 	begin
-  		out <= out - 1;
+		if (forward)
+			out <= out + 1;
+		else out <= out - 1;
  	end
 	
 

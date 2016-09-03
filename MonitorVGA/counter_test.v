@@ -28,16 +28,17 @@ module counter_test;
 	reg enable;
 	reg clk;
 	reg reset;
-
+	reg forward;
 	// Outputs
-	wire [5:0] out;
+	wire [3:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	FourBitCounter uut (
 		.out(out), 
 		.enable(enable), 
 		.clk(clk),  
-		.reset(reset)
+		.reset(reset),
+		.forward(forward)
 	);
 
 	integer x=0;
@@ -47,6 +48,7 @@ module counter_test;
 		enable = 1;
 		clk = 0;
 		reset = 1;
+		forward = 0;
 	
 		// Wait 100 ns for global reset to finish
 		#100;
