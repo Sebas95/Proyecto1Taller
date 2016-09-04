@@ -1,0 +1,4 @@
+verilog work "SevenSegDeco.v"
+verilog work "FrecuencyDivider.v"
+verilog work "FourBitCounter.v"
+verilog work "Counter.v"
