@@ -43,7 +43,7 @@ module StateMachine(
 	   always @(state, cnt)
 			case(state)
 					0:  // Color Rojo
-					  if (1) nextState = 1;
+					  if (start) nextState = 1;
 					  else nextState = 0;
 					1:  // Color Ambar	
 						begin
@@ -52,6 +52,13 @@ module StateMachine(
 						  if (finish) nextState = 2;
 						  else nextState = 1;
 						end
+					3: 
+						begin
+						  enable = 1;
+						  forward = 0;
+						  if (finish) nextState = 2;
+						  else nextState = 1;
+						end					
 					2:  // Color Verde
 					  if (progressive || regressive)
 							begin
