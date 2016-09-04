@@ -1,0 +1,9 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Sep 03 18:18:57 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk_100MHz" LOCATE = SITE "V10" LEVEL 1;
+COMP "clk_1Hz" LOCATE = SITE "T11" LEVEL 1;
+SCHEMATIC END;
+

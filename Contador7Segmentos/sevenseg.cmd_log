@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+par -w -intstyle ise -ol high -mt off sevenseg_map.ncd sevenseg.ncd sevenseg.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sevenseg.twx sevenseg.ncd -o sevenseg.twr sevenseg.pcf -ucf sevenseg.ucf 
+bitgen -intstyle ise -f sevenseg.ut sevenseg.ncd 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+par -w -intstyle ise -ol high -mt off sevenseg_map.ncd sevenseg.ncd sevenseg.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sevenseg.twx sevenseg.ncd -o sevenseg.twr sevenseg.pcf -ucf sevenseg.ucf 
+bitgen -intstyle ise -f sevenseg.ut sevenseg.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.xst" -ofn "C:/Users/Sebastian/Documents/workspace/Contador7Segmentos/sevenseg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenseg.ucf -p xc6slx16-csg324-3 sevenseg.ngc sevenseg.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenseg_map.ncd sevenseg.ngd sevenseg.pcf 
+par -w -intstyle ise -ol high -mt off sevenseg_map.ncd sevenseg.ncd sevenseg.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sevenseg.twx sevenseg.ncd -o sevenseg.twr sevenseg.pcf -ucf sevenseg.ucf 
+bitgen -intstyle ise -f sevenseg.ut sevenseg.ncd 

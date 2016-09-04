@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml FrecuencyDivider.twx FrecuencyDivider.ncd -o
+FrecuencyDivider.twr FrecuencyDivider.pcf -ucf FrecuencyDivider.ucf
+
+Design file:              FrecuencyDivider.ncd
+Physical constraint file: FrecuencyDivider.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk_100MHz to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+clk_1Hz     |         7.419(R)|      SLOW  |         3.922(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<0>  |         6.916(R)|      SLOW  |         3.559(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<1>  |         7.055(R)|      SLOW  |         3.654(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<2>  |         7.133(R)|      SLOW  |         3.738(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<3>  |         6.675(R)|      SLOW  |         3.420(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<4>  |         7.421(R)|      SLOW  |         3.891(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<5>  |         7.461(R)|      SLOW  |         3.960(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<6>  |         7.468(R)|      SLOW  |         3.971(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<7>  |         6.995(R)|      SLOW  |         3.669(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<8>  |         7.029(R)|      SLOW  |         3.698(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<9>  |         7.002(R)|      SLOW  |         3.679(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<10> |         7.308(R)|      SLOW  |         3.933(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<11> |         6.794(R)|      SLOW  |         3.501(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<12> |         7.173(R)|      SLOW  |         3.766(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<13> |         6.871(R)|      SLOW  |         3.551(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<14> |         7.182(R)|      SLOW  |         3.805(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<15> |         7.013(R)|      SLOW  |         3.606(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<16> |         6.961(R)|      SLOW  |         3.633(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<17> |         7.087(R)|      SLOW  |         3.654(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<18> |         6.901(R)|      SLOW  |         3.547(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<19> |         7.136(R)|      SLOW  |         3.691(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<20> |         6.849(R)|      SLOW  |         3.536(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<21> |         6.849(R)|      SLOW  |         3.536(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<22> |         7.277(R)|      SLOW  |         3.873(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<23> |         6.872(R)|      SLOW  |         3.544(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<24> |         7.264(R)|      SLOW  |         3.729(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<25> |         7.282(R)|      SLOW  |         3.791(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+counter<26> |         7.059(R)|      SLOW  |         3.652(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_100MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_100MHz     |    3.930|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sat Sep 03 18:19:14 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 240 MB
+
+
+

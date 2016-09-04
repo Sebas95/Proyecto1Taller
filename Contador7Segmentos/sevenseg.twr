@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml sevenseg.twx sevenseg.ncd -o sevenseg.twr sevenseg.pcf
+-ucf sevenseg.ucf
+
+Design file:              sevenseg.ncd
+Physical constraint file: sevenseg.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+reset       |    1.533(R)|      SLOW  |   -0.519(R)|      SLOW  |clock_BUFGP       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+a           |         9.779(R)|      SLOW  |         5.184(R)|      FAST  |clock_BUFGP       |   0.000|
+an<0>       |         8.517(R)|      SLOW  |         4.466(R)|      FAST  |clock_BUFGP       |   0.000|
+an<1>       |         8.402(R)|      SLOW  |         4.428(R)|      FAST  |clock_BUFGP       |   0.000|
+an<2>       |         8.254(R)|      SLOW  |         4.322(R)|      FAST  |clock_BUFGP       |   0.000|
+an<3>       |         8.481(R)|      SLOW  |         4.462(R)|      FAST  |clock_BUFGP       |   0.000|
+d           |         9.605(R)|      SLOW  |         5.033(R)|      FAST  |clock_BUFGP       |   0.000|
+e           |         9.383(R)|      SLOW  |         4.940(R)|      FAST  |clock_BUFGP       |   0.000|
+f           |         9.401(R)|      SLOW  |         4.932(R)|      FAST  |clock_BUFGP       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    1.748|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+in0            |a              |    8.300|
+in0            |d              |    8.126|
+in0            |e              |    7.904|
+in0            |f              |    7.922|
+in1            |a              |    7.727|
+in1            |d              |    7.553|
+in1            |e              |    7.331|
+in1            |f              |    7.349|
+in2            |a              |    7.505|
+in2            |d              |    7.331|
+in2            |e              |    7.109|
+in2            |f              |    7.127|
+in3            |a              |    8.270|
+in3            |d              |    8.096|
+in3            |e              |    7.874|
+in3            |f              |    7.892|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Aug 15 20:54:28 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 242 MB
+
+
+
