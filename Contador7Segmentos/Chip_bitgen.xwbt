@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.ncd
+OUTFILE=C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos
+LICENSE=WebPack
+USER_INFO=211219331_0_0_312

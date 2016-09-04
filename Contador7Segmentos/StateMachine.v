@@ -22,34 +22,22 @@ module StateMachine(
     input clk,
     input start,
     input progressive,
-    input regressive
+	 input finish,
+    input regressive,
+	 output forward,
+	 output enable
     );
 	 
 	// Instantiate the Unit Under Test (UUT)
 	
 	reg enable = 0;
 	reg forward = 1;
-	reg reset;
-	wire [3:0] out;
-	
-	
-		Counter uut (
-		.enable(enable), 
-		.clk_100MHz(clk_100MHz), 
-		.reset(reset), 
-		.forward(forward), 
-		.a(a), 
-		.b(b), 
-		.c(c), 
-		.d(d), 
-		.e(e), 
-		.f(f), 
-		.g(g), 
-		.dp(dp), 
-		.an(an)
-	);
-	 
-	   always @(state, cnt)
+	reg state=0; 
+	reg nextState=0;
+	wire finish;
+
+	   always @(state)
+		begin
 			case(state)
 					0:  // Color Rojo
 					  if (start) nextState = 1;
@@ -84,6 +72,10 @@ module StateMachine(
 						end
 					default: nextState = 0;
 			endcase
-
+		end
+		always @(posedge clk)
+		begin
+			state=nextState;
+		end
 
 endmodule

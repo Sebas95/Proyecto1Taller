@@ -21,7 +21,8 @@
 module Counter(
 	input enable, clk_100MHz, reset, forward,
 	output a, b, c, d, e, f, g, dp, //the individual LED output for the seven segment along with the digital point
-	output [3:0] an   // the 4 bit enable signal
+	output [3:0] an,
+   output finish   // the 4 bit enable signal
    );
 	
 	wire clk_1Hz;
@@ -37,7 +38,8 @@ module Counter(
 		.enable(enable)  ,  // enable for counter
 		.clk(clk_1Hz)     ,  // clock Input
 		.reset(reset)   ,  // reset Input
-		.forward(forward) //forward input
+		.forward(forward), //forward input
+		.finish(finish)
 	);
 	SevenSegDeco deco(
 		.clock(clk_100MHz), 
