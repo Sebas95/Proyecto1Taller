@@ -28,7 +28,7 @@ module StateMachine(
 	// Instantiate the Unit Under Test (UUT)
 	
 	reg enable = 0;
-	reg forward = 0;
+	reg forward = 1;
 	reg reset;
 	wire [3:0] out;
 	
@@ -46,16 +46,26 @@ module StateMachine(
 					  if (1) nextState = 1;
 					  else nextState = 0;
 					1:  // Color Ambar	
-					  //enable = 1;
-					  if (1) nextState = 2;
-					  else nextState = 1;
+						begin
+						  enable = 1;
+						  forward = 1;
+						  if (finish) nextState = 2;
+						  else nextState = 1;
+						end
 					2:  // Color Verde
 					  if (progressive || regressive)
 							begin
-								if(progressive) nextState = 0;
-								else nextState = 0;
+								if(progressive) nextState = 1;
+								else nextState = 3;
 							end
 					  else nextState = 2;
+					3: 
+						begin
+							enable = 1;
+							forward = 0;
+							if (finish) nextState = 4;
+							else nextState = 1;	
+						end
 					default: nextState = 0;
 			endcase
 
