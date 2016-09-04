@@ -52,21 +52,21 @@ module StateMachine(
 						  if (finish) nextState = 2;
 						  else nextState = 1;
 						end
-					3: 
+					2: 
 						begin
 						  enable = 1;
 						  forward = 0;
-						  if (finish) nextState = 2;
-						  else nextState = 1;
+						  if (finish) nextState = 3;
+						  else nextState = 2;
 						end					
-					2:  // Color Verde
+					3:  // Color Verde
 					  if (progressive || regressive)
 							begin
 								if(progressive) nextState = 1;
-								else nextState = 3;
+								else nextState = 2;
 							end
-					  else nextState = 2;
-					3: 
+					  else nextState = 3;
+					4: 
 						begin
 							enable = 1;
 							forward = 0;
