@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: Chip.prj
 
@@ -113,13 +113,15 @@ Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Cont
 Parsing module <FourBitCounter>.
 Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" into library work
 Parsing module <StateMachine>.
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 33: Redeclaration of ansi port enable is not allowed
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 34: Redeclaration of ansi port forward is not allowed
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 37: Redeclaration of ansi port finish is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 36: Redeclaration of ansi port killStateMachine is not allowed
 Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Counter.v" into library work
 Parsing module <Counter>.
 Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" into library work
 Parsing module <Chip>.
+WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 29: Redeclaration of ansi port regressive is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 30: Redeclaration of ansi port progressive is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 31: Redeclaration of ansi port start is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 35: Redeclaration of ansi port finish is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -128,12 +130,13 @@ Parsing module <Chip>.
 Elaborating module <Chip>.
 
 Elaborating module <StateMachine>.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 43: Signal <start> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 49: Signal <finish> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 49: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:295 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 52: case condition never applies
-WARNING:HDLCompiler:295 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 59: case condition never applies
-WARNING:HDLCompiler:295 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 66: case condition never applies
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 46: Signal <start> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 53: Signal <finishAux> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 55: Signal <killStateMachine> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 64: Signal <finishAux> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 66: Signal <killStateMachine> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 74: Signal <progressive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 76: Signal <progressive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <Counter>.
 
@@ -147,7 +150,7 @@ WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\C
 
 Elaborating module <SevenSegDeco>.
 WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\SevenSegDeco.v" Line 38: Result of 19-bit expression is truncated to fit in 18-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 31: Net <rst> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 34: Net <rst> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -162,14 +165,26 @@ Unit <Chip> synthesized.
 
 Synthesizing Unit <StateMachine>.
     Related source file is "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v".
-WARNING:Xst:647 - Input <progressive> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <regressive> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <finishAux>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
 WARNING:Xst:737 - Found 1-bit latch for signal <enable>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <forward>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <killStateMachine>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 D-type flip-flop(s).
-	inferred   1 Latch(s).
-	inferred   1 Multiplexer(s).
+	inferred   3 Latch(s).
+	inferred   1 Finite State Machine(s).
 Unit <StateMachine> synthesized.
 
 Synthesizing Unit <Counter>.
@@ -184,7 +199,7 @@ Synthesizing Unit <FrecuencyDivider>.
     Found 1-bit register for signal <clk_1Hz>.
     Found 27-bit register for signal <counter>.
     Found 27-bit adder for signal <counter[26]_GND_7_o_add_4_OUT> created at line 51.
-    Found 27-bit comparator greater for signal <PWR_4_o_counter[26]_LessThan_2_o> created at line 38
+    Found 27-bit comparator greater for signal <PWR_7_o_counter[26]_LessThan_2_o> created at line 38
     Found 27-bit comparator lessequal for signal <counter[26]_GND_7_o_LessThan_3_o> created at line 43
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -225,13 +240,12 @@ Macro Statistics
  1-bit register                                        : 3
  27-bit register                                       : 1
  4-bit register                                        : 1
-# Latches                                              : 1
- 1-bit latch                                           : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 3
 # Comparators                                          : 2
  27-bit comparator greater                             : 1
  27-bit comparator lessequal                           : 1
-# Multiplexers                                         : 1
- 1-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
 
 =========================================================================
 
@@ -276,37 +290,23 @@ Macro Statistics
 # Comparators                                          : 2
  27-bit comparator greater                             : 1
  27-bit comparator lessequal                           : 1
+# FSMs                                                 : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
-   incompatible with the Spartan6 architecture. The two primary causes of this is
-   either a register or latch described with both an asynchronous set and
-   asynchronous reset, or a register or latch described with an asynchronous
-   set or reset which however has an initialization value of the opposite 
-   polarity (i.e. asynchronous reset with an initialization value of 1).
-    While this circuit can be built, it creates a sub-optimal implementation
-   in terms of area, power and performance. For a more optimal implementation
-   Xilinx highly recommends one of the following:
-
-          1) Remove either the set or reset from all registers and latches
-             if not needed for required functionality
-          2) Modify the code in order to produce a synchronous set
-             and/or reset (both is preferred)
-          3) Ensure all registers have the same initialization value as the
-             described asynchronous set or reset polarity
-          4) Use the -async_to_sync option to transform the asynchronous
-             set/reset to synchronous operation
-             (timing simulation highly recommended when using this option)
-
-  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
-
-  List of register instances with asynchronous set or reset and opposite initialization value:
-    Fsm/enable in unit <Chip>
-
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
 
 Optimizing unit <Chip> ...
 
@@ -315,6 +315,7 @@ Optimizing unit <FourBitCounter> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Chip, actual ratio is 0.
+Latch Fsm/killStateMachine has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -322,8 +323,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 34
- Flip-Flops                                            : 34
+# Registers                                            : 36
+ Flip-Flops                                            : 36
 
 =========================================================================
 
@@ -346,28 +347,29 @@ Top Level Output File Name         : Chip.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 141
+# BELS                             : 149
 #      GND                         : 1
-#      INV                         : 2
+#      INV                         : 3
 #      LUT1                        : 26
-#      LUT2                        : 25
-#      LUT3                        : 2
-#      LUT4                        : 10
+#      LUT2                        : 27
+#      LUT3                        : 1
+#      LUT4                        : 11
 #      LUT5                        : 12
-#      LUT6                        : 2
+#      LUT6                        : 6
 #      MUXCY                       : 33
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 27
-# FlipFlops/Latches                : 35
-#      FD                          : 25
+# FlipFlops/Latches                : 40
+#      FD                          : 27
 #      FDR                         : 5
 #      FDRE                        : 4
-#      LD                          : 1
+#      LD                          : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 13
-#      IBUF                        : 1
-#      OBUF                        : 12
+# IO Buffers                       : 17
+#      IBUF                        : 3
+#      OBUF                        : 14
 
 Device utilization summary:
 ---------------------------
@@ -376,20 +378,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              35  out of  18224     0%  
- Number of Slice LUTs:                   79  out of   9112     0%  
-    Number used as Logic:                79  out of   9112     0%  
+ Number of Slice Registers:              39  out of  18224     0%  
+ Number of Slice LUTs:                   86  out of   9112     0%  
+    Number used as Logic:                86  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     80
-   Number with an unused Flip Flop:      45  out of     80    56%  
-   Number with an unused LUT:             1  out of     80     1%  
-   Number of fully used LUT-FF pairs:    34  out of     80    42%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:     88
+   Number with an unused Flip Flop:      49  out of     88    55%  
+   Number with an unused LUT:             2  out of     88     2%  
+   Number of fully used LUT-FF pairs:    37  out of     88    42%  
+   Number of unique control sets:         6
 
 IO Utilization: 
- Number of IOs:                          16
- Number of bonded IOBs:                  14  out of    232     6%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -412,13 +415,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+--------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)    | Load  |
------------------------------------+--------------------------+-------+
-clk_100MHz                         | BUFGP                    | 29    |
-count/frecuency_divider/clk_1Hz    | NONE(count/counter/out_3)| 5     |
-Fsm/state                          | NONE(Fsm/enable)         | 1     |
------------------------------------+--------------------------+-------+
+-----------------------------------------------------+---------------------------+-------+
+Clock Signal                                         | Clock buffer(FF name)     | Load  |
+-----------------------------------------------------+---------------------------+-------+
+Fsm/state[1]_GND_5_o_Mux_16_o(Fsm/state__n0035<4>1:O)| NONE(*)(Fsm/forward)      | 2     |
+clk_100MHz                                           | BUFGP                     | 31    |
+Fsm/state_FSM_FFd2                                   | NONE(Fsm/killStateMachine)| 2     |
+count/frecuency_divider/clk_1Hz                      | NONE(count/counter/out_3) | 5     |
+-----------------------------------------------------+---------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -430,7 +437,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.508ns (Maximum Frequency: 285.087MHz)
-   Minimum input arrival time before clock: 2.211ns
+   Minimum input arrival time before clock: 3.122ns
    Maximum output required time after clock: 4.980ns
    Maximum combinational path delay: No path found
 
@@ -441,7 +448,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_100MHz'
   Clock period: 3.508ns (frequency: 285.087MHz)
-  Total number of paths / destination ports: 1771 / 34
+  Total number of paths / destination ports: 1777 / 35
 -------------------------------------------------------------------------
 Delay:               3.508ns (Levels of Logic = 7)
   Source:            count/frecuency_divider/counter_8 (FF)
@@ -454,12 +461,12 @@ Delay:               3.508ns (Levels of Logic = 7)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               4   0.447   1.028  count/frecuency_divider/counter_8 (count/frecuency_divider/counter_8)
-     LUT5:I0->O            1   0.203   0.000  count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_lut<1> (count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_lut<1>)
-     MUXCY:S->O            1   0.172   0.000  count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<1> (count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<2> (count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<3> (count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<4> (count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<4>)
-     MUXCY:CI->O          24   0.019   1.277  count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<5> (count/frecuency_divider/Mcompar_PWR_4_o_counter[26]_LessThan_2_o_cy<5>)
+     LUT5:I0->O            1   0.203   0.000  count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_lut<1> (count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<1> (count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<2> (count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<3> (count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<4> (count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<4>)
+     MUXCY:CI->O          24   0.019   1.277  count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<5> (count/frecuency_divider/Mcompar_PWR_7_o_counter[26]_LessThan_2_o_cy<5>)
      LUT5:I3->O            1   0.203   0.000  count/frecuency_divider/clk_1Hz_rstpot (count/frecuency_divider/clk_1Hz_rstpot)
      FD:D                      0.102          count/frecuency_divider/clk_1Hz
     ----------------------------------------
@@ -468,10 +475,10 @@ Delay:               3.508ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'count/frecuency_divider/clk_1Hz'
-  Clock period: 2.876ns (frequency: 347.723MHz)
-  Total number of paths / destination ports: 31 / 9
+  Clock period: 2.901ns (frequency: 344.667MHz)
+  Total number of paths / destination ports: 35 / 9
 -------------------------------------------------------------------------
-Delay:               2.876ns (Levels of Logic = 1)
+Delay:               2.901ns (Levels of Logic = 1)
   Source:            count/counter/out_2 (FF)
   Destination:       count/counter/out_3 (FF)
   Source Clock:      count/frecuency_divider/clk_1Hz rising
@@ -481,64 +488,92 @@ Delay:               2.876ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            11   0.447   1.111  count/counter/out_2 (count/counter/out_2)
-     LUT5:I2->O            4   0.205   0.683  count/counter/out[3]_enable_AND_4_o11 (count/counter/out[3]_enable_AND_4_o)
+     FDRE:C->Q            12   0.447   1.137  count/counter/out_2 (count/counter/out_2)
+     LUT6:I3->O            4   0.205   0.683  count/counter/_n003911 (count/counter/_n0039)
      FDRE:R                    0.430          count/counter/out_3
     ----------------------------------------
-    Total                      2.876ns (1.082ns logic, 1.794ns route)
-                                       (37.6% logic, 62.4% route)
+    Total                      2.901ns (1.082ns logic, 1.819ns route)
+                                       (37.3% logic, 62.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100MHz'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 4 / 2
 -------------------------------------------------------------------------
-Offset:              2.211ns (Levels of Logic = 2)
-  Source:            start (PAD)
-  Destination:       Fsm/state (FF)
+Offset:              3.122ns (Levels of Logic = 3)
+  Source:            regressive (PAD)
+  Destination:       Fsm/state_FSM_FFd2 (FF)
   Destination Clock: clk_100MHz rising
 
-  Data Path: start to Fsm/state
+  Data Path: regressive to Fsm/state_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.684  start_IBUF (start_IBUF)
-     LUT3:I1->O            1   0.203   0.000  Fsm/Mmux_nextState11 (Fsm/nextState)
-     FD:D                      0.102          Fsm/state
+     IBUF:I->O             1   1.222   0.808  regressive_IBUF (regressive_IBUF)
+     LUT4:I1->O            1   0.205   0.580  Fsm/state_FSM_FFd2-In_SW0 (N01)
+     LUT6:I5->O            1   0.205   0.000  Fsm/state_FSM_FFd2-In (Fsm/state_FSM_FFd2-In)
+     FD:D                      0.102          Fsm/state_FSM_FFd2
     ----------------------------------------
-    Total                      2.211ns (1.527ns logic, 0.684ns route)
-                                       (69.1% logic, 30.9% route)
+    Total                      3.122ns (1.734ns logic, 1.388ns route)
+                                       (55.5% logic, 44.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'count/frecuency_divider/clk_1Hz'
-  Total number of paths / destination ports: 28 / 7
+  Total number of paths / destination ports: 29 / 8
 -------------------------------------------------------------------------
 Offset:              4.980ns (Levels of Logic = 2)
-  Source:            count/counter/out_0 (FF)
-  Destination:       c (PAD)
+  Source:            count/counter/out_1 (FF)
+  Destination:       a (PAD)
   Source Clock:      count/frecuency_divider/clk_1Hz rising
 
-  Data Path: count/counter/out_0 to c
+  Data Path: count/counter/out_1 to a
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.447   1.180  count/counter/out_0 (count/counter/out_0)
-     LUT4:I0->O            1   0.203   0.579  count/deco/Mram_sseg_temp41 (e_OBUF)
-     OBUF:I->O                 2.571          e_OBUF (e)
+     FDRE:C->Q            13   0.447   1.180  count/counter/out_1 (count/counter/out_1)
+     LUT4:I0->O            1   0.203   0.579  count/deco/Mram_sseg_temp61 (g_OBUF)
+     OBUF:I->O                 2.571          g_OBUF (g)
     ----------------------------------------
     Total                      4.980ns (3.221ns logic, 1.759ns route)
                                        (64.7% logic, 35.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Fsm/state_FSM_FFd2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            Fsm/killStateMachine_1 (LATCH)
+  Destination:       k (PAD)
+  Source Clock:      Fsm/state_FSM_FFd2 rising
+
+  Data Path: Fsm/killStateMachine_1 to k
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  Fsm/killStateMachine_1 (Fsm/killStateMachine_1)
+     OBUF:I->O                 2.571          k_OBUF (k)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock Fsm/state
+Clock to Setup on destination clock Fsm/state[1]_GND_5_o_Mux_16_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_100MHz     |         |         |    1.134|         |
+clk_100MHz     |         |         |    1.536|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Fsm/state_FSM_FFd2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_100MHz     |    1.565|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_100MHz
@@ -546,8 +581,9 @@ Clock to Setup on destination clock clk_100MHz
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
+Fsm/state_FSM_FFd2             |    1.764|         |         |         |
 clk_100MHz                     |    3.508|         |         |         |
-count/frecuency_divider/clk_1Hz|    1.371|         |         |         |
+count/frecuency_divider/clk_1Hz|    1.727|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock count/frecuency_divider/clk_1Hz
@@ -555,21 +591,21 @@ Clock to Setup on destination clock count/frecuency_divider/clk_1Hz
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-Fsm/state                      |         |    2.902|         |         |
-count/frecuency_divider/clk_1Hz|    2.876|         |         |         |
+Fsm/state[1]_GND_5_o_Mux_16_o  |         |    2.931|         |         |
+count/frecuency_divider/clk_1Hz|    2.901|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.37 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.85 secs
  
 --> 
 
-Total memory usage is 278868 kilobytes
+Total memory usage is 231844 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   22 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

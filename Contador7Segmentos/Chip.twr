@@ -3,8 +3,8 @@ Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml Chip.twx Chip.ncd -o Chip.twr Chip.pcf -ucf Chip.ucf -ucf
-Counter.ucf
+-n 3 -fastpaths -xml Chip.twx Chip.ncd -o Chip.twr Chip.pcf -ucf Counter.ucf
+-ucf Chip.ucf
 
 Design file:              Chip.ncd
 Physical constraint file: Chip.pcf
@@ -37,7 +37,9 @@ Setup/Hold to clock clk_100MHz
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-start       |    0.968(R)|      FAST  |   -0.384(R)|      SLOW  |clk_100MHz_BUFGP  |   0.000|
+progressive |    2.658(R)|      SLOW  |   -1.340(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+regressive  |    2.849(R)|      SLOW  |   -1.841(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+start       |    2.235(R)|      SLOW  |   -1.462(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk_100MHz
@@ -45,11 +47,11 @@ Clock to Setup on destination clock clk_100MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_100MHz     |    3.401|         |         |         |
+clk_100MHz     |    3.277|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Sep 04 00:14:54 2016 
+Analysis completed Mon Sep 05 12:21:40 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

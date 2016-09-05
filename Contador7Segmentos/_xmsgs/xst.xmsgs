@@ -5,31 +5,40 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 33: Redeclaration of ansi port <arg fmt="%s" index="1">enable</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 36: Redeclaration of ansi port <arg fmt="%s" index="1">killStateMachine</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">forward</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 29: Redeclaration of ansi port <arg fmt="%s" index="1">regressive</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 37: Redeclaration of ansi port <arg fmt="%s" index="1">finish</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 30: Redeclaration of ansi port <arg fmt="%s" index="1">progressive</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 43: Signal &lt;<arg fmt="%s" index="1">start</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 31: Redeclaration of ansi port <arg fmt="%s" index="1">start</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 49: Signal &lt;<arg fmt="%s" index="1">finish</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 35: Redeclaration of ansi port <arg fmt="%s" index="1">finish</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 49: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 46: Signal &lt;<arg fmt="%s" index="1">start</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 52: case condition never applies
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 53: Signal &lt;<arg fmt="%s" index="1">finishAux</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 59: case condition never applies
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 55: Signal &lt;<arg fmt="%s" index="1">killStateMachine</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 66: case condition never applies
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 64: Signal &lt;<arg fmt="%s" index="1">finishAux</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 66: Signal &lt;<arg fmt="%s" index="1">killStateMachine</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 74: Signal &lt;<arg fmt="%s" index="1">progressive</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 76: Signal &lt;<arg fmt="%s" index="1">progressive</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\FrecuencyDivider.v" Line 46: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
@@ -47,19 +56,19 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\SevenSegDeco.v" Line 38: Result of <arg fmt="%d" index="1">19</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 31: Net &lt;<arg fmt="%s" index="1">rst</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 34: Net &lt;<arg fmt="%s" index="1">rst</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">rst</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">progressive</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">regressive</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">enable</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">forward</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">killStateMachine</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Counter.v</arg>&quot; line <arg fmt="%s" index="2">31</arg>: Output port &lt;<arg fmt="%s" index="3">counter</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frecuency_divider</arg>&gt; is unconnected or connected to loadless signal.
@@ -72,27 +81,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_sseg_temp</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-</msg>
-
-<msg type="warning" file="Xst" num="3002" delta="old" >This design contains one or more registers/latches that are directly
-incompatible with the <arg fmt="%s" index="1">Spartan6</arg> architecture. The two primary causes of this is
-either a register or latch described with both an asynchronous set and
-asynchronous reset, or a register or latch described with an asynchronous
-set or reset which however has an initialization value of the opposite 
-polarity (i.e. asynchronous reset with an initialization value of 1).
- While this circuit can be built, it creates a sub-optimal implementation
-in terms of area, power and performance. For a more optimal implementation
-Xilinx highly recommends one of the following:
-
-       1) Remove either the set or reset from all registers and latches
-          if not needed for required functionality
-       2) Modify the code in order to produce a synchronous set
-          and/or reset (both is preferred)
-       3) Ensure all registers have the same initialization value as the
-          described asynchronous set or reset polarity
-       4) Use the -async_to_sync option to transform the asynchronous
-          set/reset to synchronous operation
-          (timing simulation highly recommended when using this option)
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

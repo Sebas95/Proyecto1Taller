@@ -4,8 +4,8 @@
 NET "clk_100MHz" LOC = V10;
 
 NET "start" LOC = C9;
-NET "progressive" LOC = T9;
-NET "regressive" LOC = V9;
+NET "progressive" LOC = D9;
+NET "regressive" LOC = C4;
 
 NET "finish" LOC = U16;
 NET "K" LOC = V16;

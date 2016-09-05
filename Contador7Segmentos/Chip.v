@@ -14,7 +14,7 @@
 // Dependencies: 
 //
 // Revision: 
-// Revision 0.01 - File Created
+// Revision 0.01 - File Created 
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +23,7 @@ module Chip(
    input start,
    input progressive,
    input regressive,
-	output a, b, c, d, e, f, g, dp, finish, k,//the individual LED output for the seven segment along with the digital point
+	output a, b, c, d, e, f, g, dp, finish, k,
 	output [3:0] an   // the 4 bit enable signal
 );
 	wire regressive;
