@@ -23,9 +23,12 @@ module Chip(
    input start,
    input progressive,
    input regressive,
-	output a, b, c, d, e, f, g, dp, //the individual LED output for the seven segment along with the digital point
+	output a, b, c, d, e, f, g, dp, finish, k,//the individual LED output for the seven segment along with the digital point
 	output [3:0] an   // the 4 bit enable signal
 );
+	wire regressive;
+	wire progressive;
+	wire start;
 	wire en;
 	wire forward;
 	wire rst;
@@ -37,7 +40,8 @@ module Chip(
 		.finish(finish),
 		.regressive(regressive),
 		.forward(forward),
-		.enable(en)
+		.enable(en),
+		.killStateMachine(k)
 	);
 
 	Counter count(
