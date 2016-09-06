@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-SEBASTIAN95::  Mon Sep 05 12:21:26 2016
+SEBASTIAN95::  Mon Sep 05 18:29:14 2016
 
 par -w -intstyle ise -ol high -mt off Chip_map.ncd Chip.ncd Chip.pcf 
 
@@ -46,10 +46,10 @@ Slice Logic Utilization:
 Slice Logic Distribution:
   Number of occupied Slices:                    26 out of   2,278    1%
   Number of MUXCYs used:                        36 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           78
-    Number with an unused Flip Flop:            40 out of      78   51%
-    Number with an unused LUT:                   4 out of      78    5%
-    Number of fully used LUT-FF pairs:          34 out of      78   43%
+  Number of LUT Flip Flop pairs used:           77
+    Number with an unused Flip Flop:            39 out of      77   50%
+    Number with an unused LUT:                   3 out of      77    3%
+    Number of fully used LUT-FF pairs:          35 out of      77   45%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -60,9 +60,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        18 out of     232    7%
-    Number of LOCed IOBs:                       18 out of      18  100%
-    IOB Latches:                                 1
+  Number of bonded IOBs:                        17 out of     232    7%
+    Number of LOCed IOBs:                       17 out of      17  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -75,9 +74,7 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
-    Number used as OLOGIC2s:                     1
-    Number used as OSERDES2s:                    0
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -101,13 +98,13 @@ Finished initial Timing Analysis.  REAL time: 3 secs
 Starting Router
 
 
-Phase  1  : 269 unrouted;      REAL time: 3 secs 
+Phase  1  : 265 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 213 unrouted;      REAL time: 4 secs 
+Phase  2  : 215 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 28 unrouted;      REAL time: 4 secs 
+Phase  3  : 21 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 28 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 21 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Updating file: Chip.ncd with current fully routed design.
 
@@ -143,11 +140,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.277ns|     N/A|           0
-  _100MHz_BUFGP                             | HOLD        |     0.503ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.323ns|     N/A|           0
+  _100MHz_BUFGP                             | HOLD        |     0.446ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cou | SETUP       |         N/A|     2.368ns|     N/A|           0
-  nt/frecuency_divider/clk_1Hz              | HOLD        |     0.459ns|            |       0|           0
+  Autotimespec constraint for clock net cou | SETUP       |         N/A|     2.124ns|     N/A|           0
+  nt/frecuency_divider/clk_1Hz              | HOLD        |     0.457ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

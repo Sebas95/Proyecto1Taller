@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Sep 05 12:21:13 2016
+Mapped Date    : Mon Sep 05 18:28:59 2016
 
 Design Summary
 --------------
@@ -37,10 +37,10 @@ Slice Logic Utilization:
 Slice Logic Distribution:
   Number of occupied Slices:                    26 out of   2,278    1%
   Number of MUXCYs used:                        36 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           78
-    Number with an unused Flip Flop:            40 out of      78   51%
-    Number with an unused LUT:                   4 out of      78    5%
-    Number of fully used LUT-FF pairs:          34 out of      78   43%
+  Number of LUT Flip Flop pairs used:           77
+    Number with an unused Flip Flop:            39 out of      77   50%
+    Number with an unused LUT:                   3 out of      77    3%
+    Number of fully used LUT-FF pairs:          35 out of      77   45%
     Number of unique control sets:               6
     Number of slice register sites lost
       to control set restrictions:              33 out of  18,224    1%
@@ -52,9 +52,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        18 out of     232    7%
-    Number of LOCed IOBs:                       18 out of      18  100%
-    IOB Latches:                                 1
+  Number of bonded IOBs:                        17 out of     232    7%
+    Number of LOCed IOBs:                       17 out of      17  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -67,9 +66,7 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
-    Number used as OLOGIC2s:                     1
-    Number used as OSERDES2s:                    0
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -83,10 +80,10 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.43
+Average Fanout of Non-Clock Nets:                2.45
 
-Peak Memory Usage:  371 MB
-Total REAL time to MAP completion:  8 secs 
+Peak Memory Usage:  400 MB
+Total REAL time to MAP completion:  10 secs 
 Total CPU time to MAP completion:   6 secs 
 
 Table of Contents
@@ -165,7 +162,6 @@ Section 6 - IOB Properties
 | f                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | finish                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | g                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| k                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | progressive                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | regressive                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | start                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |

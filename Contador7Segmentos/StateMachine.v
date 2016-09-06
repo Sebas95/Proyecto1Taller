@@ -25,7 +25,7 @@ module StateMachine(
 	 input wire finish,
     input wire regressive,
 	 output reg forward,
-	 output reg enable,output killStateMachine
+	 output reg enable
     );
 	 
 	// Instantiate the Unit Under Test (UUT)
@@ -35,7 +35,7 @@ module StateMachine(
 	reg finishAux = 0;
 	reg killStateMachine = 0;
 
-	always @(state, finish)
+	always @(state,finish,start,finishAux,killStateMachine,progressive,regressive)
 		begin
 			case(state)
 					0:                  // Estado inicial

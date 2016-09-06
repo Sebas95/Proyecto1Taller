@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Sep 05 12:21:21 2016
+// Written by: Map P.20131013 on Mon Sep 05 18:29:09 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -9,7 +9,6 @@ COMP "g" LOCATE = SITE "L14" LEVEL 1;
 COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
 COMP "clk_100MHz" LOCATE = SITE "V10" LEVEL 1;
 COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
-COMP "k" LOCATE = SITE "V16" LEVEL 1;
 COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
 COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
 COMP "dp" LOCATE = SITE "M13" LEVEL 1;

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: Chip.prj
 
@@ -113,15 +113,10 @@ Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Cont
 Parsing module <FourBitCounter>.
 Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" into library work
 Parsing module <StateMachine>.
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 36: Redeclaration of ansi port killStateMachine is not allowed
 Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Counter.v" into library work
 Parsing module <Counter>.
 Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" into library work
 Parsing module <Chip>.
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 29: Redeclaration of ansi port regressive is not allowed
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 30: Redeclaration of ansi port progressive is not allowed
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 31: Redeclaration of ansi port start is not allowed
-WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 35: Redeclaration of ansi port finish is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -130,13 +125,6 @@ WARNING:HDLCompiler:751 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\C
 Elaborating module <Chip>.
 
 Elaborating module <StateMachine>.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 46: Signal <start> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 53: Signal <finishAux> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 55: Signal <killStateMachine> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 64: Signal <finishAux> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 66: Signal <killStateMachine> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 74: Signal <progressive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\StateMachine.v" Line 76: Signal <progressive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <Counter>.
 
@@ -150,7 +138,6 @@ WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\C
 
 Elaborating module <SevenSegDeco>.
 WARNING:HDLCompiler:413 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\SevenSegDeco.v" Line 38: Result of 19-bit expression is truncated to fit in 18-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v" Line 34: Net <rst> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -158,7 +145,6 @@ WARNING:HDLCompiler:634 - "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\C
 
 Synthesizing Unit <Chip>.
     Related source file is "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Contador7Segmentos\Chip.v".
-WARNING:Xst:653 - Signal <rst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <Chip> synthesized.
@@ -315,7 +301,6 @@ Optimizing unit <FourBitCounter> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Chip, actual ratio is 0.
-Latch Fsm/killStateMachine has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -360,16 +345,16 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 27
-# FlipFlops/Latches                : 40
+# FlipFlops/Latches                : 39
 #      FD                          : 27
 #      FDR                         : 5
 #      FDRE                        : 4
-#      LD                          : 4
+#      LD                          : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 17
+# IO Buffers                       : 16
 #      IBUF                        : 3
-#      OBUF                        : 14
+#      OBUF                        : 13
 
 Device utilization summary:
 ---------------------------
@@ -390,9 +375,8 @@ Slice Logic Distribution:
    Number of unique control sets:         6
 
 IO Utilization: 
- Number of IOs:                          18
- Number of bonded IOBs:                  18  out of    232     7%  
-    IOB Flip Flops/Latches:               1
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    232     7%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -420,7 +404,7 @@ Clock Signal                                         | Clock buffer(FF name)    
 -----------------------------------------------------+---------------------------+-------+
 Fsm/state[1]_GND_5_o_Mux_16_o(Fsm/state__n0035<4>1:O)| NONE(*)(Fsm/forward)      | 2     |
 clk_100MHz                                           | BUFGP                     | 31    |
-Fsm/state_FSM_FFd2                                   | NONE(Fsm/killStateMachine)| 2     |
+Fsm/state_FSM_FFd2                                   | NONE(Fsm/killStateMachine)| 1     |
 count/frecuency_divider/clk_1Hz                      | NONE(count/counter/out_3) | 5     |
 -----------------------------------------------------+---------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -437,7 +421,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.508ns (Maximum Frequency: 285.087MHz)
-   Minimum input arrival time before clock: 3.122ns
+   Minimum input arrival time before clock: 3.159ns
    Maximum output required time after clock: 4.980ns
    Maximum combinational path delay: No path found
 
@@ -499,22 +483,22 @@ Delay:               2.901ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100MHz'
   Total number of paths / destination ports: 4 / 2
 -------------------------------------------------------------------------
-Offset:              3.122ns (Levels of Logic = 3)
-  Source:            regressive (PAD)
+Offset:              3.159ns (Levels of Logic = 3)
+  Source:            progressive (PAD)
   Destination:       Fsm/state_FSM_FFd2 (FF)
   Destination Clock: clk_100MHz rising
 
-  Data Path: regressive to Fsm/state_FSM_FFd2
+  Data Path: progressive to Fsm/state_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.808  regressive_IBUF (regressive_IBUF)
-     LUT4:I1->O            1   0.205   0.580  Fsm/state_FSM_FFd2-In_SW0 (N01)
-     LUT6:I5->O            1   0.205   0.000  Fsm/state_FSM_FFd2-In (Fsm/state_FSM_FFd2-In)
+     IBUF:I->O             2   1.222   0.845  progressive_IBUF (progressive_IBUF)
+     LUT4:I1->O            1   0.205   0.580  Fsm/state_FSM_FFd2-In1 (Fsm/state_FSM_FFd2-In1)
+     LUT6:I5->O            1   0.205   0.000  Fsm/state_FSM_FFd2-In2 (Fsm/state_FSM_FFd2-In)
      FD:D                      0.102          Fsm/state_FSM_FFd2
     ----------------------------------------
-    Total                      3.122ns (1.734ns logic, 1.388ns route)
-                                       (55.5% logic, 44.5% route)
+    Total                      3.159ns (1.734ns logic, 1.425ns route)
+                                       (54.9% logic, 45.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'count/frecuency_divider/clk_1Hz'
@@ -535,25 +519,6 @@ Offset:              4.980ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      4.980ns (3.221ns logic, 1.759ns route)
                                        (64.7% logic, 35.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Fsm/state_FSM_FFd2'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              3.648ns (Levels of Logic = 1)
-  Source:            Fsm/killStateMachine_1 (LATCH)
-  Destination:       k (PAD)
-  Source Clock:      Fsm/state_FSM_FFd2 rising
-
-  Data Path: Fsm/killStateMachine_1 to k
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.579  Fsm/killStateMachine_1 (Fsm/killStateMachine_1)
-     OBUF:I->O                 2.571          k_OBUF (k)
-    ----------------------------------------
-    Total                      3.648ns (3.069ns logic, 0.579ns route)
-                                       (84.1% logic, 15.9% route)
 
 =========================================================================
 
@@ -581,9 +546,9 @@ Clock to Setup on destination clock clk_100MHz
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-Fsm/state_FSM_FFd2             |    1.764|         |         |         |
+Fsm/state_FSM_FFd2             |    1.650|         |         |         |
 clk_100MHz                     |    3.508|         |         |         |
-count/frecuency_divider/clk_1Hz|    1.727|         |         |         |
+count/frecuency_divider/clk_1Hz|    1.744|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock count/frecuency_divider/clk_1Hz
@@ -598,14 +563,14 @@ count/frecuency_divider/clk_1Hz|    2.901|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.85 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.89 secs
  
 --> 
 
-Total memory usage is 231844 kilobytes
+Total memory usage is 278868 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   24 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

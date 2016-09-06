@@ -37,9 +37,9 @@ Setup/Hold to clock clk_100MHz
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-progressive |    2.658(R)|      SLOW  |   -1.340(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
-regressive  |    2.849(R)|      SLOW  |   -1.841(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
-start       |    2.235(R)|      SLOW  |   -1.462(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+progressive |    1.924(R)|      SLOW  |   -0.830(R)|      SLOW  |clk_100MHz_BUFGP  |   0.000|
+regressive  |    2.281(R)|      SLOW  |   -1.460(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
+start       |    1.483(R)|      SLOW  |   -0.902(R)|      FAST  |clk_100MHz_BUFGP  |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk_100MHz
@@ -47,11 +47,11 @@ Clock to Setup on destination clock clk_100MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_100MHz     |    3.277|         |         |         |
+clk_100MHz     |    3.323|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Sep 05 12:21:40 2016 
+Analysis completed Mon Sep 05 18:29:27 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

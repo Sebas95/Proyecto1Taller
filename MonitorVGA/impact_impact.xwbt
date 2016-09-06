@@ -1,8 +1,8 @@
 INTSTYLE=impact
 INFILE=C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\impact.xsl
 OUTFILE=C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\impact.xsl
-FAMILY=Single
-PART=Single
+FAMILY=None
+PART=None
 WORKINGDIR=C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA
 LICENSE=iMPACT
 USER_INFO=iMPACT

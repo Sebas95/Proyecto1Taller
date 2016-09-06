@@ -15,24 +15,23 @@
 //
 // Revision: 
 // Revision 0.01 - File Created 
-// Additional Comments: 
+// Additional Comments:  
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Chip(
 	input clk_100MHz,
-   input start,
-   input progressive,
-   input regressive,
-	output a, b, c, d, e, f, g, dp, finish, k,
+   input wire start,
+   input wire progressive,
+   input wire regressive,
+	output a, b, c, d, e, f, g, dp, wire finish, 
 	output [3:0] an   // the 4 bit enable signal
 );
-	wire regressive;
-	wire progressive;
-	wire start;
+
+
 	wire en;
 	wire forward;
-	wire rst;
-	wire finish;
+	wire rst=0;
+	
 	StateMachine Fsm(
 		.clk(clk_100MHz),
 		.start(start), 
@@ -40,8 +39,7 @@ module Chip(
 		.finish(finish),
 		.regressive(regressive),
 		.forward(forward),
-		.enable(en),
-		.killStateMachine(k)
+		.enable(en)
 	);
 
 	Counter count(

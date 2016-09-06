@@ -8,7 +8,7 @@ NET "progressive" LOC = D9;
 NET "regressive" LOC = C4;
 
 NET "finish" LOC = U16;
-NET "K" LOC = V16;
+
 
 NET "an[0]" LOC = N16 ;
 NET "an[1]" LOC = N15 ;
