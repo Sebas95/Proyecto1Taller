@@ -32,12 +32,29 @@ module Chip(
 	wire forward;
 	wire rst=0;
 	
+	wire strt;
+	wire regre;
+	wire prog;
+	
+	GlobalDebouncer db (
+		.clk(clk_100MHz), 
+		.reset(rst),
+		.progressive_btn(progressive),
+		.progressive(prog),
+		.regressive_btn(regressive),
+		.regressive(regre),
+		.start_btn(start),
+		.start(strt)
+	);
+	
+	
+	
 	StateMachine Fsm(
 		.clk(clk_100MHz),
-		.start(start), 
-		.progressive(progressive),
+		.start(strt), 
+		.progressive(prog),
 		.finish(finish),
-		.regressive(regressive),
+		.regressive(regre),
 		.forward(forward),
 		.enable(en)
 	);

@@ -1,6 +1,8 @@
 verilog work "SevenSegDeco.v"
 verilog work "FrecuencyDivider.v"
 verilog work "FourBitCounter.v"
+verilog work "Debouncer.v"
 verilog work "StateMachine.v"
+verilog work "GlobalDebouncer.v"
 verilog work "Counter.v"
 verilog work "Chip.v"

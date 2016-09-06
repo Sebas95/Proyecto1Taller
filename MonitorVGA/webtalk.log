@@ -3,7 +3,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=e8199d0fe47f4ef09347beaaf6e36e7f
+ProjectID=f584954c738b48f38f59c3f06b15c898
 ProjectIteration=1
 
 WebTalk Summary
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-09-05T13:51:24.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-09-05T18:59:45.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html

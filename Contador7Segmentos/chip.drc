@@ -1,12 +1,12 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Sep 05 18:29:34 2016
+Mon Sep 05 19:11:53 2016
 
 drc -z Chip.ncd Chip.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Fsm/state[1]_GND_5_o_Mux_16_o is sourced by a combinatorial pin. This is not
+   Fsm/state[1]_GND_7_o_Mux_16_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 DRC detected 0 errors and 1 warnings.  Please see the previously displayed

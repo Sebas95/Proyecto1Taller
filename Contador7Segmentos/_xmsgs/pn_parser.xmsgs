@@ -8,22 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/Chip.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/Counter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/FourBitCounter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/FrecuencyDivider.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/SevenSegDeco.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/StateMachine.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/Debouncer.v&quot; into library work</arg>
 </msg>
 
 </messages>

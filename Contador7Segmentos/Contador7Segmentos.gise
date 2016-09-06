@@ -90,6 +90,9 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Counter_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Counter_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Counter_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Debouncer.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Debouncer.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Debouncer.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DividerTest_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DividerTest_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="DividerTest_isim_beh.wdb"/>
@@ -295,7 +298,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473104571" xil_pn:in_ck="-3635558902165435885" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="64761844482187831" xil_pn:start_ts="1473104559">
+    <transform xil_pn:end_ts="1473124232" xil_pn:in_ck="-9122238042975980294" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="64761844482187831" xil_pn:start_ts="1473124222">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -319,7 +322,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473121733" xil_pn:in_ck="9098126444025064835" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1401001993520253559" xil_pn:start_ts="1473121720">
+    <transform xil_pn:end_ts="1473124284" xil_pn:in_ck="9098126444025064835" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1401001993520253559" xil_pn:start_ts="1473124277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Chip.bld"/>
@@ -328,11 +331,9 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473121751" xil_pn:in_ck="-1792330868389909465" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473121733">
+    <transform xil_pn:end_ts="1473124293" xil_pn:in_ck="-1792330868389909465" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473124284">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Chip.pcf"/>
       <outfile xil_pn:name="Chip_map.map"/>
       <outfile xil_pn:name="Chip_map.mrp"/>
@@ -343,7 +344,7 @@
       <outfile xil_pn:name="Chip_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473121768" xil_pn:in_ck="-8215475274598813269" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473121751">
+    <transform xil_pn:end_ts="1473124308" xil_pn:in_ck="-8215475274598813269" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473124293">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Chip.ncd"/>
@@ -357,7 +358,7 @@
       <outfile xil_pn:name="Chip_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473121786" xil_pn:in_ck="-1020032890651229541" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473121768">
+    <transform xil_pn:end_ts="1473124324" xil_pn:in_ck="-1020032890651229541" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473124308">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -370,11 +371,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1473121876" xil_pn:in_ck="8334269398195641091" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473121874">
+    <transform xil_pn:end_ts="1473124332" xil_pn:in_ck="8334269398195641091" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473124331">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473121768" xil_pn:in_ck="-3098003378958327913" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473121761">
+    <transform xil_pn:end_ts="1473124308" xil_pn:in_ck="-3098003378958327913" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473124302">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Chip.twr"/>
