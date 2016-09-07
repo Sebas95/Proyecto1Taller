@@ -31,9 +31,7 @@ module SixBitCounter(
  );
  
 	reg [5:0]out2=0;
-	//boolean
-	reg asignar=0; 
-	reg alreadyAsigned=0;
+
 	
 	
 
@@ -41,7 +39,7 @@ module SixBitCounter(
  	always @(posedge clk)
 	begin
 		if(enable && forward)
-			alreadyAsigned <= 0;
+			out<=out2;
 			
 		if (enable && ~forward)
 		begin
@@ -49,20 +47,11 @@ module SixBitCounter(
 			if (reset) 	
 				out <= 6'b0 ; 
 			
-			if(asignar && ~alreadyAsigned) 
-			begin
-				out<=out2;
-				alreadyAsigned <= 1;
-			end
-			
-			
-			
 			else if (out== 6'b0) //si llega a cero se pone en 59
 			begin
 				finish<=1;
 				out<= 6'b111011;
 			end
-			
 			
 			else 
 			begin
@@ -78,6 +67,9 @@ module SixBitCounter(
 	//-----------------------------------------------------
 	always @(posedge increment)
 	begin
+		if(enable && ~forward)
+			out2<=6'b0;
+	
 		if(enable && forward)
 		begin
 			// si se resetea se pone en cero
@@ -94,8 +86,7 @@ module SixBitCounter(
 	end
 	
 	//--------------------------------------------------------------
-	always @(negedge forward)
-		asignar<=1;
+
 		
 	
 
