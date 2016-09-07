@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\pongTest\pong_top.ncd
+OUTFILE=C:\pongTest\pong_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\pongTest
+LICENSE=WebPack
+USER_INFO=211219328_0_0_078
