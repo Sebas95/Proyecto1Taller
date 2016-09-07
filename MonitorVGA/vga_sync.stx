@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> Parameter xsthdpdir set to C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Reading design: vga_sync.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\Moni
 Parsing module <vga_sync>.
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.21 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.49 secs
  
 --> 
 

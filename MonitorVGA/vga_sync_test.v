@@ -61,4 +61,3 @@ module vga_sync_test;
 	end
       
 endmodule
-

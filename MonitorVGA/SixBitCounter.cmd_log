@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/SixBitCounter.xst" -ofn "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/SixBitCounter.syr" 
