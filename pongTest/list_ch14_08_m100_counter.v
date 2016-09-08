@@ -1,4 +1,5 @@
 // Listing 14.8
+
 module m100_counter
    (
     input wire clk, reset,

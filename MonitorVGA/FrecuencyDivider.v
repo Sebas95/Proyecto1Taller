@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    18:30:50 08/31/2016 
+// Create Date:    20:10:24 09/05/2016 
 // Design Name: 
 // Module Name:    FrecuencyDivider 
 // Project Name: 
@@ -19,37 +19,43 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module FrecuencyDivider(
-   input clk_100MHz,
-	output clk_1Hz,
-	reg counter[15]
+   clk_100MHz,
+	clk_1Hz,
+	counter[26:0]
+	
 	);
-
+	
+	input clk_100MHz;
+	output clk_1Hz;
+	output [26:0]counter;
+	reg [26:0]counter=0;
+	
+	
+	reg  clk_1Hz; 
+	  
 	always @(posedge clk_100MHz)
-	begin
+	begin 
 
-		
-		if(counter==16'd10000)
+		if(counter>27'd99999998)
 		begin
-			counter<=16'd0;
+		counter<=27'b0;
+		clk_1Hz<=1;
+		end 
+		else if (counter<27'd50000000)
+		begin
+			 clk_1Hz<=0;
+			 counter<=counter + 1;
+		end
+		else  
+		begin
+			clk_1Hz <=1; 
+			counter<=counter + 1;
 		end
 		
-		
-		
-		if (counter<16'd5000)
-		begin
-			clk_1Hz<=1'b0;
-		end
-		
-		
-		if(counter < 16'd5000 )
-		begin
-			clk_1Hz<=1'b1;
-		end
-		
-		
-		counter<=counter + 1;
-	end
+	end		
 
-	assign clk_1Hz = counter[15];
+	
+	
+	
 
 endmodule

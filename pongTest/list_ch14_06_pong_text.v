@@ -165,7 +165,7 @@ module pong_text
                     (5<=pix_x[9:5]) && (pix_x[9:5]<=13);
    assign row_addr_o = pix_y[5:2];
    assign bit_addr_o = pix_x[4:2];
-   always @*
+ /*  always @*
       case(pix_x[8:5])
          4'h5: char_addr_o = 7'h47; // G
          4'h6: char_addr_o = 7'h61; // a
@@ -176,7 +176,7 @@ module pong_text
          4'hb: char_addr_o = 7'h76; // v
          4'hc: char_addr_o = 7'h65; // e
          default: char_addr_o = 7'h72; // r
-      endcase
+      endcase*/
    //-------------------------------------------
    // mux for font ROM addresses and rgb
    //-------------------------------------------

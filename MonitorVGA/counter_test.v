@@ -4,15 +4,15 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   15:18:10 08/29/2016
-// Design Name:   FourBitCounter
+// Create Date:   14:05:04 09/06/2016
+// Design Name:   SixBitCounter
 // Module Name:   C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test.v
 // Project Name:  MonitorVGA
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: FourBitCounter
+// Verilog Test Fixture created by ISE for module: SixBitCounter
 //
 // Dependencies:
 // 
@@ -25,49 +25,71 @@
 module counter_test;
 
 	// Inputs
-	reg enable;
-	reg clk;
-	reg reset;
-	reg forward;
+	reg enable=0;
+	reg clk=0;
+	reg reset=0;
+	reg forward=0;
+	reg increment=0;
+
 	// Outputs
-	wire [3:0] out;
+	wire [5:0] out;
+	wire finish;
 
 	// Instantiate the Unit Under Test (UUT)
-	FourBitCounter uut (
-		.out(out), 
+	SixBitCounter uut (
 		.enable(enable), 
-		.clk(clk),  
-		.reset(reset),
-		.forward(forward)
+		.clk(clk), 
+		.reset(reset), 
+		.forward(forward), 
+		.increment(increment), 
+		.out(out), 
+		.finish(finish)
 	);
-
-	integer x=0;
+	
+	always #5 clk = ~clk;
 	
 	initial begin
 		// Initialize Inputs
 		enable = 1;
-		clk = 0;
-		reset = 1;
-		forward = 0;
-	
+		
+
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-	
-		#1; clk=0; reset = 1;	
-		#1; clk=1;
-		#1; clk=1;reset = 0;
-		#1; clk=0;
+		forward = 1;
+		#10;
+		increment=1;
+		#10;
+		increment=0;
+		#10;
+		increment=1;
+		#10;
+		increment=0;
+		#10;
+		forward=0;
+		#100;
+		//increment=1;
+		#200;
 		
-		for(x=0; x<130; x=x+1)
-		begin
-			#1; clk=0;
-			#1; clk=1;
-		end
 		
+		forward = 1;
+		#10;
+		increment=1;
+		#10;
+		increment=0;
+		#10;
+		increment=1;
+		#10;
+		increment=0;
+		#10;
+		increment=1;
+		#10;
+		increment=0;
+		#10;
+		forward=0;
+		#100;
 		
-
 	end
       
 endmodule

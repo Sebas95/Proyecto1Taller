@@ -25,13 +25,13 @@ module Debouncer
     output reg db
    );
 
-   // symbolic state declaration
+   // declaracion de los estados
    localparam  [2:0]
-               zero    = 3'b000,
+               cero    = 3'b000,
                wait1_1 = 3'b001,
                wait1_2 = 3'b010,
                wait1_3 = 3'b011,
-               one     = 3'b100,
+               uno     = 3'b100,
                wait0_1 = 3'b101,
                wait0_2 = 3'b110,
                wait0_3 = 3'b111;
@@ -45,11 +45,10 @@ module Debouncer
    wire m_tick;
    reg [2:0] state_reg, state_next;
 
-   // body
+ 
 
-   //=============================================
-   // counter to generate 10 ms tick
-   //=============================================
+  
+   // contador para generar el tick de 10 ms 
    always @(posedge clk)
       q_reg <= q_next;
    // next-state logic
@@ -57,44 +56,44 @@ module Debouncer
    // output tick
    assign m_tick = (q_reg==0) ? 1'b1 : 1'b0;
 
-   //=============================================
-   // debouncing FSM
-   //=============================================
+ 
+   // Máquina de estados
+  
    // state register
     always @(posedge clk, posedge reset)
        if (reset)
-          state_reg <= zero;
+          state_reg <= cero;
        else
           state_reg <= state_next;
 
-   // next-state logic and output logic
+   // logica de transición entre estados
    always @*
    begin
       state_next = state_reg;  // default state: the same
       db = 1'b0;               // default output: 0
       case (state_reg)
-         zero:
+         cero:
             if (sw)
                state_next = wait1_1;
          wait1_1:
             if (~sw)
-               state_next = zero;
+               state_next = cero;
             else
                if (m_tick)
                   state_next = wait1_2;
          wait1_2:
             if (~sw)
-               state_next = zero;
+               state_next = cero;
             else
                if (m_tick)
                   state_next = wait1_3;
          wait1_3:
             if (~sw)
-               state_next = zero;
+               state_next = cero;
             else
                if (m_tick)
-                  state_next = one;
-         one:
+                  state_next = uno;
+         uno:
             begin
               db = 1'b1;
               if (~sw)
@@ -104,7 +103,7 @@ module Debouncer
             begin
                db = 1'b1;
                if (sw)
-                  state_next = one;
+                  state_next = uno;
                else
                  if (m_tick)
                     state_next = wait0_2;
@@ -113,7 +112,7 @@ module Debouncer
             begin
                db = 1'b1;
                if (sw)
-                  state_next = one;
+                  state_next = uno;
                else
                  if (m_tick)
                     state_next = wait0_3;
@@ -122,12 +121,14 @@ module Debouncer
             begin
                db = 1'b1;
                if (sw)
-                  state_next = one;
+                  state_next = uno;
                else
                  if (m_tick)
-                    state_next = zero;
+                    state_next = cero;
             end
-         default: state_next = zero;
+				
+				
+         default: state_next = cero;
       endcase
    end
 
