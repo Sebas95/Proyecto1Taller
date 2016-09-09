@@ -26,14 +26,15 @@ module MinutesCounter(
 	input forward , //forward input
 	input incrementSeconds,
 	input incrementMinutes,
-	output  [3:0]secondsDecimals     ,  // Output of the counter
-	output  [3:0]secondsUnits     ,  // Output of the counter
-	output  [3:0]minutesDecimals     ,  // Output of the counter
-	output  [3:0]minutesUnits     ,  // Output of the counter
+	output   [3:0]secondsDecimals   ,  // Output of the counter
+	output   [3:0]secondsUnits   ,  // Output of the counter
+	output   [3:0]minutesDecimals   ,  // Output of the counter
+	output   [3:0]minutesUnits    ,  // Output of the counter
 	
 	output  finish
 
     );
+		 
 	
 	
 	wire minutesClock;
@@ -82,7 +83,6 @@ module MinutesCounter(
 		.decimals(minutesDecimals),
 		.units(minutesUnits)
 	);
-
-
+		
 
 endmodule
