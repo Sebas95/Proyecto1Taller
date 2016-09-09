@@ -8,7 +8,31 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/Contador7Segmentos/FrecuencyDivider.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/FourBitCounter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch13_01_vga_sync.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch14_01_font_rom.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch14_06_pong_text.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch14_07_pong_graph.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch14_08_m100_counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch14_09_timer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/list_ch14_10_pong_top.v&quot; into library work</arg>
 </msg>
 
 </messages>

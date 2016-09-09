@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/buttonTest/testButton.xst" -ofn "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/buttonTest/testButton.syr" 
+xst -intstyle ise -ifn "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/buttonTest/testButton.xst" -ofn "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/buttonTest/testButton.syr" 
