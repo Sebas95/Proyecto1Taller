@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Wed Sep 07 08:56:46 2016">
+<application name="pn" timeStamp="Fri Sep 09 01:34:26 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="66BE0FD9223A40188CBF0736FE0457E9" type="project"/>
-<property name="ProjectIteration" value="5" type="project"/>
-<property name="ProjectFile" value="C:/pongTest/pongTest.xise" type="project"/>
+<property name="ProjectIteration" value="67" type="project"/>
+<property name="ProjectFile" value="C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/pongTest.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-09-07T08:07:26" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -24,10 +24,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-09-07T08:07:26" type="design"/>
 <property name="PROP_intWbtProjectID" value="66BE0FD9223A40188CBF0736FE0457E9" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="5" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="67" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
+<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
 <property name="PROP_DevDevice" value="xc6slx16" type="design"/>
@@ -37,7 +38,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VERILOG" value="7" type="source"/>
+<property name="FILE_VERILOG" value="9" type="source"/>
 </section>
 </application>
 </document>

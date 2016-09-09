@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\pongTest\pong_top.ncd
-OUTFILE=C:\pongTest\pong_top.bit
+INFILE=C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\pongTest\pong_top.ncd
+OUTFILE=C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\pongTest\pong_top.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\pongTest
+WORKINGDIR=C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\pongTest
 LICENSE=WebPack
 USER_INFO=211219328_0_0_078

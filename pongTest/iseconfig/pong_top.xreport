@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-09-07T08:08:15</DateModified>
+  <DateModified>2016-09-09T00:45:00</DateModified>
   <ModuleName>pong_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/pongTest/iseconfig/pong_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/pongTest</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-09-09T00:32:49</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest/iseconfig/pong_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/pongTest\</ImplementationReportsDirectory>
   <DateInitialized>2016-09-07T08:08:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

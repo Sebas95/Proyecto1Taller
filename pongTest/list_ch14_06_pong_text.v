@@ -5,7 +5,7 @@ module pong_text
     input wire [1:0] ball,
     input wire [3:0] dig0, dig1,
     input wire [9:0] pix_x, pix_y,
-	 input wire [6:0] timer,
+	 input wire [3:0] out,
     output wire [3:0] text_on,
     output reg [2:0] text_rgb
    );
@@ -32,31 +32,31 @@ module pong_text
    //  - scale to 16-by-32 font
    //  - line 1, 16 chars: "Score:DD Ball:D"
    //-------------------------------------------
-   assign score_on = (pix_y[9:7]==2) &&
-                    (3<=pix_x[9:6]) && (pix_x[9:6]<=6);
+   assign score_on = (pix_y[9:5]==7) && (pix_x[9:4]<31  && pix_x[9:4]>23);
    assign row_addr_s = pix_y[4:1];
    assign bit_addr_s = pix_x[3:1];
    always @*
-      case (pix_x[7:4])
-         4'h0: char_addr_s = 7'h53; // S
-         4'h1: char_addr_s = 7'h63; // c
-         4'h2: char_addr_s = 7'h6f; // o
-         4'h3: char_addr_s = 7'h72; // r
-         4'h4: char_addr_s = 7'h65; // e
-         4'h5: char_addr_s = 7'h3a; // :
-          4'h6: char_addr_s = {3'b011, timer[3:0]}; // digit 10
-          4'h7: char_addr_s = {3'b011, timer[3:0]}; // digit 1
+      case (pix_x[6:4])
+         4'h0: char_addr_s = {3'b011,out};  // S
+         4'h1: char_addr_s = {3'b011,out}; // c
+         4'h2: char_addr_s = 7'h3a; // :
+         4'h3: char_addr_s = {3'b011,out}; 
+         4'h4: char_addr_s = {3'b011,out}; 
+         /*4'h5: char_addr_s = 7'h00; //
+         4'h6: char_addr_s = 7'h00; //
+         4'h7: char_addr_s = 7'h00; //
           4'h8: char_addr_s = 7'h00; //
           4'h9: char_addr_s = 7'h00; //
-          4'ha: char_addr_s = 7'h42; // B
-          4'hb: char_addr_s = 7'h61; // a
-          4'hc: char_addr_s = 7'h6c; // l
-          4'hd: char_addr_s = 7'h6c; // l
-          4'he: char_addr_s = 7'h3a; // :
-          4'hf: char_addr_s = {5'b01100, ball};
+          4'ha: char_addr_s = 7'h00; //
+          4'hb: char_addr_s = 7'h00; //
+          4'hc: char_addr_s = 7'h00; //
+          4'hd: char_addr_s = 7'h00; //
+          4'he: char_addr_s = 7'h00; //
+          4'hf: char_addr_s = 7'h00; //*/
+			 default : char_addr_s = 7'h00;
       endcase
    //-------------------------------------------
-   // logo region:
+  // logo region:
    //   - display logo "PONG" at top center
    //   - used as background
    //   - scale to 64-by-128 font
@@ -191,22 +191,22 @@ module pong_text
             if (font_bit)
                text_rgb = 3'b001;
          end
-      else if (rule_on)
+      /*else if (rule_on)
          begin
             char_addr = char_addr_r;
             row_addr = row_addr_r;
             bit_addr = bit_addr_r;
             if (font_bit)
                text_rgb = 3'b001;
-         end
-      else if (logo_on)
+         end*/
+      /*else if (logo_on)
          begin
             char_addr = char_addr_l;
             row_addr = row_addr_l;
             bit_addr = bit_addr_l;
             if (font_bit)
                text_rgb = 3'b011;
-         end
+         end*/
       else // game over
          begin
             char_addr = char_addr_o;

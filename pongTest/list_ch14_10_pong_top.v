@@ -20,7 +20,7 @@ module pong_top
    wire [3:0]text_on=0;
    wire [3:0] dig0, dig1;
    reg [1:0] ball_reg=0;
-
+	wire [3:0]num; //number that is goint to be showed in the 7seg
    //=======================================================
    // instantiation
    //=======================================================
@@ -34,7 +34,24 @@ module pong_top
       (.clk(clk),
        .pix_x(pixel_x), .pix_y(pixel_y),
        .dig0(dig0), .dig1(dig1), .ball(ball_reg),
-       .timer(t_reg),.text_on(text_on), .text_rgb(rgb));
+       .out(num),.text_on(text_on), .text_rgb(rgb));
 		 
+  	
+	wire clk_1Hz;
+	reg enable = 1;
+	reg forward = 1;
+	FrecuencyDivider frecuency_divider(
+		.clk_100MHz(CLK_50MHZ),
+		.clk_1Hz(clk_1Hz),
+		.counter()
+	);
+	FourBitCounter counter(
+		.out(num)     ,  // Output of the counter
+		.enable(enable)  ,  // enable for counter
+		.clk(clk_1Hz)     ,  // clock Input
+		.reset(reset)   ,  // reset Input
+		.forward(forward), //forward input
+		.finish(finish)
+	);
   
 endmodule
