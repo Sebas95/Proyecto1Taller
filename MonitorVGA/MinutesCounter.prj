@@ -1,0 +1,4 @@
+verilog work "TwoDigitDeco.v"
+verilog work "SixBitCounter.v"
+verilog work "FrecuencyDivider.v"
+verilog work "MinutesCounter.v"

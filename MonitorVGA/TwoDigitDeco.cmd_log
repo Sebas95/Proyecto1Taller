@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/TwoDigitDeco.v -lang verilog -prj MonitorVGA -o TwoDigitDeco.spl -module TwoDigitDeco -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 TwoDigitDeco.spl C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/TwoDigitDeco.sym 

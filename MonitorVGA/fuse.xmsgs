@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="370" delta="unknown" >"C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/FourBitCounter.v" Line 27: Empty port in module declaration
-</msg>
-
 </messages>
 

@@ -53,6 +53,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="MinutesCounter.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="MinutesCounter.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MinutesCounter.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MinutesCounter_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="MinutesCounter_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="MinutesCounter_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MinutesCounter_map.map" xil_pn:subbranch="Map"/>
@@ -79,6 +80,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SixBitCounter.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SixBitCounter.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SixBitCounter.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SixBitCounter_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SixBitCounter_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="SixBitCounter_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SixBitCounter_test_beh.prj"/>
@@ -86,6 +88,14 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SixBitCounter_test_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SixBitCounter_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SixBitCounter_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TwoDigitDeco.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="TwoDigitDeco.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="TwoDigitDeco.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="TwoDigitDeco.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="TwoDigitDeco.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TwoDigitDeco_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TwoDigitDeco_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TwoDigitDeco_test_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -173,56 +183,75 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1473192664" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1473192664">
+    <transform xil_pn:end_ts="1473220281" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1473220281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473193518" xil_pn:in_ck="-9056861757719425455" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1473193518">
+    <transform xil_pn:end_ts="1473448663" xil_pn:in_ck="-2453143452259111611" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1473448663">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FrecuencyDivider.v"/>
       <outfile xil_pn:name="MinutesCounter.v"/>
       <outfile xil_pn:name="SixBitCounter.v"/>
+      <outfile xil_pn:name="TwoDigitDeco.v"/>
+      <outfile xil_pn:name="TwoDigitDeco_test.v"/>
       <outfile xil_pn:name="counter_test.v"/>
-      <outfile xil_pn:name="vga_sync.v"/>
-      <outfile xil_pn:name="vga_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1473192665" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8518582589454513046" xil_pn:start_ts="1473192665">
+    <transform xil_pn:end_ts="1473448472" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1897507745749681980" xil_pn:start_ts="1473448472">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473192665" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3194490887156397908" xil_pn:start_ts="1473192665">
+    <transform xil_pn:end_ts="1473448472" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="955953298575152890" xil_pn:start_ts="1473448472">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473192665" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4576002043985584759" xil_pn:start_ts="1473192665">
+    <transform xil_pn:end_ts="1473220281" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4576002043985584759" xil_pn:start_ts="1473220281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473193518" xil_pn:in_ck="-9056861757719425455" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1473193518">
+    <transform xil_pn:end_ts="1473448663" xil_pn:in_ck="-2453143452259111611" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1473448663">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FrecuencyDivider.v"/>
       <outfile xil_pn:name="MinutesCounter.v"/>
       <outfile xil_pn:name="SixBitCounter.v"/>
+      <outfile xil_pn:name="TwoDigitDeco.v"/>
+      <outfile xil_pn:name="TwoDigitDeco_test.v"/>
       <outfile xil_pn:name="counter_test.v"/>
-      <outfile xil_pn:name="vga_sync.v"/>
-      <outfile xil_pn:name="vga_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1473193532" xil_pn:in_ck="-9056861757719425455" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4563973034265704459" xil_pn:start_ts="1473193518">
+    <transform xil_pn:end_ts="1473448674" xil_pn:in_ck="-2453143452259111611" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2239313025829569993" xil_pn:start_ts="1473448663">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="counter_test_beh.prj"/>
-      <outfile xil_pn:name="counter_test_isim_beh.exe"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TwoDigitDeco_test_beh.prj"/>
+      <outfile xil_pn:name="TwoDigitDeco_test_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1473193534" xil_pn:in_ck="3271505138932187326" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2271277456845575406" xil_pn:start_ts="1473193532">
+    <transform xil_pn:end_ts="1473448675" xil_pn:in_ck="-1278052458343118426" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6752429805808992198" xil_pn:start_ts="1473448674">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="counter_test_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TwoDigitDeco_test_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -254,12 +283,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473193174" xil_pn:in_ck="-973842088021943890" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3333694794421420856" xil_pn:start_ts="1473193162">
+    <transform xil_pn:end_ts="1473450404" xil_pn:in_ck="-5511260473772328519" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3333694794421420856" xil_pn:start_ts="1473450391">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="MinutesCounter.lso"/>
       <outfile xil_pn:name="MinutesCounter.ngc"/>
       <outfile xil_pn:name="MinutesCounter.ngr"/>
@@ -267,6 +294,7 @@
       <outfile xil_pn:name="MinutesCounter.stx"/>
       <outfile xil_pn:name="MinutesCounter.syr"/>
       <outfile xil_pn:name="MinutesCounter.xst"/>
+      <outfile xil_pn:name="MinutesCounter_beh.prj"/>
       <outfile xil_pn:name="MinutesCounter_xst.xrpt"/>
       <outfile xil_pn:name="SixBitCounter.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -281,8 +309,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>

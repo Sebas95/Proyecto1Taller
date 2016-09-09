@@ -5,37 +5,76 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 47: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 47: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 52: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 52: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" Line 70: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" Line 65: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" Line 91: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" Line 93: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">counter</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">fd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v" Line 51: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">out</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">asignar</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">seconds</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v" Line 62: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">out</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">asignar</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">minutes</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v" Line 73: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">number</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">asignar</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SixBitCounter</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v" Line 81: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">number</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">minutes/asignar</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MinutesCounter</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;seconds/asignar&gt; </arg>
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v</arg>&quot; line <arg fmt="%s" index="2">44</arg>: Output port &lt;<arg fmt="%s" index="3">counter</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">fd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0073</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">units_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TwoDigitDeco</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">decoMinutes/units_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoMinutes/units_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoMinutes/units_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoMinutes/decimals_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoMinutes/decimals_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoMinutes/decimals_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoSeconds/units_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoSeconds/units_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoSeconds/units_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoSeconds/decimals_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoSeconds/decimals_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">decoSeconds/decimals_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MinutesCounter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

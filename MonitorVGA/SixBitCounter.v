@@ -31,6 +31,7 @@ module SixBitCounter(
  );
  
 	reg [5:0]out2=0;
+	reg [5:0]out3=0;
 
 	
 	
@@ -38,57 +39,72 @@ module SixBitCounter(
  //-------------Code Starts Here-------
  	always @(posedge clk)
 	begin
-		if(enable && forward)
-			out<=out2;
+		
+	
+		/*if (enable && forward )
+	
+			out2<=out3;*/
+		
 			
-		if (enable && ~forward)
+		if (enable && ~forward )
 		begin
 		
 		// si se resetea se pone en cero
 			if (reset) 	
-				out <= 6'b0 ; 
+				out2 <= 6'b0 ; 
 			
-			else if (out== 6'b0) //si llega a cero se pone en 59
+			else if (out2== 6'b0) //si llega a cero se pone en 59
 			begin
 				finish<=1;
-				out<= 6'b111011;
+				out2<= 6'b111011;
 			end
 			
 			else 
 			begin
 				finish<=0;
-				out <= out - 1;
+				out2 <= out2 - 1;
 			end
 			
-		
 			
+
 		end //end del if
+		
+	
+
+		
 	end //end del always
 	
 	//-----------------------------------------------------
+	
 	always @(posedge increment)
 	begin
 		
-		if(enable && forward)
+		if(enable && forward )
 		begin
 			// si se resetea se pone en cero
-			if (reset) 
-					out2 <= 6'b0 ; 		
+			if (reset ) 
+					out3 <= 6'b0 ; 		
 			
 			//si llega a 59 se pone en cero			
-			else if (out2== 6'b111011) 
-				out2<= 6'b000000;
+			else if (out3== 6'b111011) 
+				out3<= 6'b000000;
 				
 			else
-				out2 <= out2 + 1;
+				out3 <= out3 + 1;
 		end
 	end
 	
 	//--------------------------------------------------------------
+	always @*
+	begin
+		if (forward)
+			out<= out3;
+		else
+			out<= out2;
+	end
 
-		
+
 	
-
 endmodule
 
 

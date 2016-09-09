@@ -26,8 +26,11 @@ module MinutesCounter(
 	input forward , //forward input
 	input incrementSeconds,
 	input incrementMinutes,
-	output  [5:0]outSeconds     ,  // Output of the counter
-	output  [5:0]outMinutes     ,  // Output of the counter
+	output  [3:0]secondsDecimals     ,  // Output of the counter
+	output  [3:0]secondsUnits     ,  // Output of the counter
+	output  [3:0]minutesDecimals     ,  // Output of the counter
+	output  [3:0]minutesUnits     ,  // Output of the counter
+	
 	output  finish
 
     );
@@ -35,6 +38,8 @@ module MinutesCounter(
 	
 	wire minutesClock;
 	wire clk_1Hz;
+	wire minutes6bit;
+	wire seconds6bit;
 	
 	FrecuencyDivider fd (
 		.clk_100MHz(clk),
@@ -43,7 +48,7 @@ module MinutesCounter(
 	);
 	
 	SixBitCounter seconds (
-	.out(outSeconds)    , 
+	.out(seconds6bit)    , 
 	.enable(enable)  ,  
  	.clk(clk_1Hz)     ,  
  	.reset(reset)   ,  
@@ -54,15 +59,30 @@ module MinutesCounter(
 	);
 	
 	SixBitCounter minutes (
-	.out(outMinutes)    , 
+	.out(minutes6bit)    , 
 	.enable(enable)  ,  
  	.clk(minutesClock), // el clock del contador de minutes es el finish de los segundos 
  	.reset(reset)   ,  
 	.forward(forward) ,
 	.increment(incrementMinutes),
 	.finish(finish)
-	
 	);
+	
+	TwoDigitDeco decoSeconds(
+		.clk(clk),
+		.number(seconds6bit),
+		.decimals(secondsDecimals),
+		.units(secondsUnits)
+	);
+	
+	
+	TwoDigitDeco decoMinutes(
+		.clk(clk),
+		.number(minutes6bit),
+		.decimals(minutesDecimals),
+		.units(minutesUnits)
+	);
+
 
 
 endmodule

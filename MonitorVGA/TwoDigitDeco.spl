@@ -1,0 +1,10 @@
+[Inputs]
+clk
+=number[5:0]=
+[Outputs]
+=decimals[3:0]=
+=units[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel TwoDigitDeco
+

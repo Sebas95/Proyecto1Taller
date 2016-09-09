@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Sep 05 21:07:03 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk_1Hz" LOCATE = SITE "V16" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "enable" LOCATE = SITE "T5" LEVEL 1;
+COMP "forward" LOCATE = SITE "V8" LEVEL 1;
+COMP "reset" LOCATE = SITE "C9" LEVEL 1;
+COMP "minutesClock" LOCATE = SITE "U16" LEVEL 1;
+SCHEMATIC END;
+
