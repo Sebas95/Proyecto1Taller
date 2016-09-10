@@ -26,9 +26,3 @@ NET "rgb[2]" LOC = T7;
 NET "hsync" LOC = N6;     
 NET "vsync" LOC = P7;
 
-//NET "btn[0]" LOC = C4;
-//NET "btn[1]" LOC = D9;
-
-//NET "sw[0]" LOC = T5;
-//NET "sw[1]" LOC = V8;
-//NET "sw[2]" LOC = U8;

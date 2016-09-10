@@ -1,0 +1,8 @@
+verilog work "TwoDigitDeco.v"
+verilog work "SixBitCounter.v"
+verilog work "FrecuencyDivider.v"
+verilog work "vga_sync.v"
+verilog work "timer_text.v"
+verilog work "MinutesCounter.v"
+verilog work "font_rom.v"
+verilog work "Temporizador.v"

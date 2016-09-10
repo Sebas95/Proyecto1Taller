@@ -28,7 +28,7 @@
     </file>
     <file xil_pn:name="MinutesCounter.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
     </file>
     <file xil_pn:name="MinutesCounter.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
@@ -49,24 +49,24 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="165"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="165"/>
     </file>
-    <file xil_pn:name="list_ch13_01_vga_sync.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="vga_sync.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="167"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="167"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
-    <file xil_pn:name="list_ch14_01_font_rom.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="font_rom.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="168"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="168"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
     </file>
-    <file xil_pn:name="list_ch14_06_pong_text.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="timer_text.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="169"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="169"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
     <file xil_pn:name="Temporizador.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="170"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="170"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
     </file>
-    <file xil_pn:name="TemporizadorConstraintsUpdated.ucf" xil_pn:type="FILE_UCF">
-      <association xil_pn:name="Implementation" xil_pn:seqID="171"/>
+    <file xil_pn:name="Temporizador.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="209"/>
     </file>
   </files>
 
@@ -401,7 +401,7 @@
   <bindings>
     <binding xil_pn:location="/SixBitCounter" xil_pn:name="vga_test.ucf"/>
     <binding xil_pn:location="/MinutesCounter" xil_pn:name="MinutesCounter.ucf"/>
-    <binding xil_pn:location="/MinutesCounter" xil_pn:name="TemporizadorConstraintsUpdated.ucf"/>
+    <binding xil_pn:location="/Temporizador" xil_pn:name="Temporizador.ucf"/>
   </bindings>
 
   <libraries/>

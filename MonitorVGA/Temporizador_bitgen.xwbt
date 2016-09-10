@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.ncd
+OUTFILE=C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA
+LICENSE=WebPack
+USER_INFO=211219328_0_0_078

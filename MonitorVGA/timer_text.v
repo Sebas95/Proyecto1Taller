@@ -63,14 +63,7 @@ module vgaWritter
             if (font_bit)
                text_rgb = 3'b001;
          end
-     /* else // game over
-         begin
-            char_addr = char_addr_o;
-            row_addr = row_addr_o;
-            bit_addr = bit_addr_o;
-            if (font_bit)
-               text_rgb = 3'b001;
-         end*/
+
    end
 
    assign text_on = {score_on};
