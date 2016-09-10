@@ -1,14 +1,14 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Sep 10 14:55:13 2016
+Sat Sep 10 15:16:37 2016
 
 drc -z Temporizador.ncd Temporizador.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   text_unit/score_on_state_on_OR_33_o is sourced by a combinatorial pin. This
-   is not good design practice. Use the CE pin to control the loading of data
-   into the flip-flop.
+   vgap/text_unit/score_on_state_on_OR_33_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net mc/seconds/finish is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.

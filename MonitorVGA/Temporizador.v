@@ -43,50 +43,24 @@ module Temporizador(
 	always @(posedge CLK_50MHZ)
 		clk <= ~clk;
 
-   // signal declaration
-   wire [9:0] pixel_x, pixel_y;
-   wire video_on;
-	//
-   wire [3:0]text_on=0;
-   wire [3:0] dig0, dig1;
-	wire [3:0]num;
-   wire [10:0] rom_addr;
-	wire [7:0] font_word;
 
 	//number that is goint to be showed in the 7seg
    //=======================================================
    // instantiation
    //=======================================================
 	
-   font_rom font_unit
-      (.clk(clk), .addr(rom_addr), .data(font_word));	
-		
-   // instantiate video synchronization unit
-   vga_sync vsync_unit
-      (.clk(clk), 
-		.reset(reset), 
-		.hsync(hsync), 
-		.vsync(vsync),
-      .video_on(video_on), 
-		.p_tick(pixel_tick),
-      .pixel_x(pixel_x),
-		.pixel_y(pixel_y)		
-	);
 	
-   // instantiate text module
-   vgaWritter text_unit
-      (.clk(clk),
-       .pix_x(pixel_x), 
-		 .pix_y(pixel_y),
-       .dig0(mDecimal), 
-		 .dig1(mUnit),
-		 .dig2(sDecimal),
-		 .dig3(sUnit), 
-		 .text_on(text_on),
-		 .text_rgb(rgb),
-		 .rom_addr(rom_addr),
-		 .font_word(font_word)
-	);
+	VgaPainter vgap (
+		.mDecimal(mDecimal), 
+		.mUnit(mUnit), 
+		.sUnit(sUnit), 
+		.sDecimal(sDecimal), 
+		.clk(clk), 
+		.hsync(hsync), 
+		.vsync(vsync), 
+		.rgb(rgb)
+	);	
+
 		
 	 MinutesCounter mc (	
 			.enable(enableCounter)  ,  // enable for counter

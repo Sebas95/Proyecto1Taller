@@ -243,6 +243,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FrecuencyDivider.v"/>
@@ -343,7 +344,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473540712" xil_pn:in_ck="4835890920303184647" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5524547352802433875" xil_pn:start_ts="1473540695">
+    <transform xil_pn:end_ts="1473542140" xil_pn:in_ck="-1956528912524984772" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5524547352802433875" xil_pn:start_ts="1473542120">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -368,7 +369,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473540871" xil_pn:in_ck="-729257592913796685" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8753277989874969051" xil_pn:start_ts="1473540862">
+    <transform xil_pn:end_ts="1473542154" xil_pn:in_ck="-729257592913796685" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8753277989874969051" xil_pn:start_ts="1473542144">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.bld"/>
@@ -377,7 +378,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473540889" xil_pn:in_ck="-4456015728997295842" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473540871">
+    <transform xil_pn:end_ts="1473542172" xil_pn:in_ck="-4456015728997295842" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473542154">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -391,7 +392,7 @@
       <outfile xil_pn:name="Temporizador_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473540908" xil_pn:in_ck="-6601609849404324030" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473540889">
+    <transform xil_pn:end_ts="1473542191" xil_pn:in_ck="-6601609849404324030" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473542172">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.ncd"/>
@@ -405,7 +406,7 @@
       <outfile xil_pn:name="Temporizador_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473540925" xil_pn:in_ck="5488069108988440488" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473540908">
+    <transform xil_pn:end_ts="1473542209" xil_pn:in_ck="5488069108988440488" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473542191">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -418,11 +419,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1473540928" xil_pn:in_ck="8830488558822265033" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473540925">
+    <transform xil_pn:end_ts="1473542220" xil_pn:in_ck="8830488558822265033" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473542209">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473540908" xil_pn:in_ck="-530766248663175154" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473540900">
+    <transform xil_pn:end_ts="1473542191" xil_pn:in_ck="-530766248663175154" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473542184">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.twr"/>

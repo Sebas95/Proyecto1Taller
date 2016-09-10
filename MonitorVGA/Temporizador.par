@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-IOOIF27::  Sat Sep 10 14:54:52 2016
+DESKTOP-IOOIF27::  Sat Sep 10 15:16:15 2016
 
 par -w -intstyle ise -ol high -mt off Temporizador_map.ncd Temporizador.ncd
 Temporizador.pcf 
@@ -22,30 +22,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   109 out of  18,224    1%
-    Number used as Flip Flops:                  95
+  Number of Slice Registers:                   110 out of  18,224    1%
+    Number used as Flip Flops:                  96
     Number used as Latches:                     14
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        157 out of   9,112    1%
-    Number used as logic:                      156 out of   9,112    1%
-      Number using O6 output only:              83
-      Number using O5 output only:              28
-      Number using O5 and O6:                   45
+  Number of Slice LUTs:                        195 out of   9,112    2%
+    Number used as logic:                      192 out of   9,112    2%
+      Number using O6 output only:             127
+      Number using O5 output only:              41
+      Number using O5 and O6:                   24
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      1
+    Number used exclusively as route-thrus:      3
       Number with same-slice register load:      0
-      Number with same-slice carry load:         1
+      Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    59 out of   2,278    2%
+  Number of occupied Slices:                    69 out of   2,278    3%
   Number of MUXCYs used:                        60 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          165
-    Number with an unused Flip Flop:            78 out of     165   47%
-    Number with an unused LUT:                   8 out of     165    4%
-    Number of fully used LUT-FF pairs:          79 out of     165   47%
+  Number of LUT Flip Flop pairs used:          202
+    Number with an unused Flip Flop:            97 out of     202   48%
+    Number with an unused LUT:                   7 out of     202    3%
+    Number of fully used LUT-FF pairs:          98 out of     202   48%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -56,8 +56,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        12 out of     232    5%
-    Number of LOCed IOBs:                       11 out of      12   91%
+  Number of bonded IOBs:                        11 out of     232    4%
+    Number of LOCed IOBs:                       11 out of      11  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         1 out of      32    3%
@@ -94,13 +94,13 @@ Finished initial Timing Analysis.  REAL time: 4 secs
 Starting Router
 
 
-Phase  1  : 843 unrouted;      REAL time: 4 secs 
+Phase  1  : 862 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 712 unrouted;      REAL time: 4 secs 
+Phase  2  : 749 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 260 unrouted;      REAL time: 5 secs 
+Phase  3  : 254 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 260 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  4  : 254 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
 Updating file: Temporizador.ncd with current fully routed design.
 
@@ -134,22 +134,23 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|     CLK_50MHZ_BUFGP | BUFGMUX_X3Y13| No   |   14 |  0.026     |  0.881      |
+|     CLK_50MHZ_BUFGP | BUFGMUX_X3Y13| No   |   16 |  0.018     |  0.875      |
 +---------------------+--------------+------+------+------------+-------------+
-|            clk_BUFG |  BUFGMUX_X2Y4| No   |   11 |  0.024     |  0.892      |
+|            clk_BUFG |  BUFGMUX_X2Y9| No   |   12 |  0.043     |  0.900      |
 +---------------------+--------------+------+------+------------+-------------+
 |incrementSeconds_IBU |              |      |      |            |             |
-|              F_BUFG |  BUFGMUX_X3Y7| No   |    1 |  0.000     |  0.861      |
+|              F_BUFG |  BUFGMUX_X2Y4| No   |    1 |  0.000     |  0.860      |
 +---------------------+--------------+------+------+------------+-------------+
 |incrementMinutes_IBU |              |      |      |            |             |
-|              F_BUFG |  BUFGMUX_X2Y1| No   |    1 |  0.000     |  0.855      |
+|              F_BUFG |  BUFGMUX_X2Y1| No   |    1 |  0.000     |  0.852      |
 +---------------------+--------------+------+------+------------+-------------+
-|text_unit/score_on_s |              |      |      |            |             |
-|     tate_on_OR_33_o |         Local|      |    5 |  0.351     |  1.333      |
+|vgap/text_unit/score |              |      |      |            |             |
+|_on_state_on_OR_33_o |              |      |      |            |             |
+|                     |         Local|      |    5 |  1.152     |  1.791      |
 +---------------------+--------------+------+------+------------+-------------+
-|       mc/fd/clk_1Hz |         Local|      |    4 |  0.201     |  0.841      |
+|       mc/fd/clk_1Hz |         Local|      |    4 |  0.187     |  1.112      |
 +---------------------+--------------+------+------+------------+-------------+
-|   mc/seconds/finish |         Local|      |    6 |  0.045     |  0.556      |
+|   mc/seconds/finish |         Local|      |    5 |  0.207     |  0.531      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -169,8 +170,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |    16.539ns|     3.461ns|       0|           0
-  s HIGH 40%                                | HOLD        |     0.452ns|            |       0|           0
+  NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |    16.715ns|     3.285ns|       0|           0
+  s HIGH 40%                                | HOLD        |     0.469ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -184,7 +185,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 6 secs 
 Total CPU time to PAR completion: 6 secs 
 
-Peak Memory Usage:  348 MB
+Peak Memory Usage:  347 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
