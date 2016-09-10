@@ -21,8 +21,8 @@
 module TwoDigitDeco(
 		input clk,
 		input [5:0]number,
-		output reg [3:0]decimals=0,
-		output reg [3:0] units=0
+		output reg [3:0]decimals,
+		output reg [3:0] units
     );
 	 
 	 
@@ -331,8 +331,8 @@ module TwoDigitDeco(
 			end
          default:
 			begin			
-				units <= 	4'b0000;
-				decimals <=	4'b0000;
+				units <= 	4'b1111; 
+				decimals <=	4'b1111;
 			end
       endcase
 		

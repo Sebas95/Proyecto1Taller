@@ -27,7 +27,7 @@ module SixBitCounter(
 	input increment,
 	
 	output reg [5:0]out =0    ,  // Output of the counter
-	output reg finish
+	output reg finish =0
  );
  
 	reg [5:0]out2=0;
