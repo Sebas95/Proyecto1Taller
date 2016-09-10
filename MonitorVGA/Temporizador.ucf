@@ -5,11 +5,14 @@ NET "incrementSeconds" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "incrementMinutes" CLOCK_DEDICATED_ROUTE = FALSE; 
 
 
-
-NET "forward" LOC  = T10;
+//Botones
+//NET "forward" LOC  = T10;
+NET "start" LOC = A8;
+NET "stop" LOC = B8;
+NET "delete" LOC = C9;
 NET "incrementSeconds" LOC = C4;
 NET "incrementMinutes" LOC = D9;
-NET "reset" LOC = C9;
+//NET "reset" LOC = C9;
 
 NET "rgb[2]" LOC = U7;
 NET "rgb[2]" LOC = V7;

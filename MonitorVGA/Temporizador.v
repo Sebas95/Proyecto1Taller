@@ -20,7 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Temporizador(
 	input wire CLK_50MHZ,
-	input wire forward,
 	input wire incrementSeconds,
 	input wire incrementMinutes,
 	input wire reset,
@@ -30,14 +29,17 @@ module Temporizador(
    output wire hsync, vsync,
    output wire [2:0] rgb
    );
-	
+   
+	wire enableCounter;
+   wire resetTimer;	
+	wire forward;
 	wire [3:0] mDecimal ;
 	wire [3:0] mUnit;
 	wire [3:0] sUnit;
 	wire [3:0] sDecimal;
 	
 	reg clk;
-	reg enable = 1;
+	//reg enable = 1;
 	always @(posedge CLK_50MHZ)
 		clk <= ~clk;
 
@@ -87,9 +89,9 @@ module Temporizador(
 	);
 		
 	 MinutesCounter mc (	
-			.enable(enable)  ,  // enable for counter
+			.enable(enableCounter)  ,  // enable for counter
 			.clk(CLK_50MHZ)     ,  // clock Input
-			.reset(reset)   ,  // reset Input
+			.reset(resetTimer)   ,  // reset Input
 			.forward(forward), //forward input
 			.incrementSeconds(incrementSeconds),
 			.incrementMinutes(incrementMinutes),
@@ -100,11 +102,10 @@ module Temporizador(
 			.finish()
     );
 	 
-	 wire enableCounter;
-	 wire resetTimer;
-/*
+
+
 	TimerStateMachine tsm (
-		.clk(clk), 
+		.clk(CLK_50MHZ), 
 		.start(start), 
 		.stop(stop), 
 		.delete(delete), 
@@ -114,5 +115,4 @@ module Temporizador(
 		.forward(forward), 
 		.resetTimer(resetTimer)
 	);
-*/
 endmodule

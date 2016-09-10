@@ -83,8 +83,9 @@ module TimerStateMachine(
 						enableCounter  = 0;
 						resetTimer = 0;
 						forward    = 0;
-						if(start) nextState = countState;
-						else nextState = deleteState;					
+						if(start && ~delete) nextState = countState;
+						else if(delete) nextState = deleteState;
+						else nextState = stopState;					
 					end
 				deleteState:
 					begin
@@ -92,8 +93,7 @@ module TimerStateMachine(
 						enableCounter  = 0;
 						resetTimer = 1;
 						forward    = 0;
-						if(delete) begin nextState = initialState; end
-						else nextState = stopState;
+						nextState = initialState;
 					end
 				 default:
 					begin 
