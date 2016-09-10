@@ -24,6 +24,9 @@ module Temporizador(
 	input wire incrementSeconds,
 	input wire incrementMinutes,
 	input wire reset,
+	input wire start,
+	input wire stop,
+	input wire delete,
    output wire hsync, vsync,
    output wire [2:0] rgb
    );
@@ -96,6 +99,20 @@ module Temporizador(
 			.minutesUnits(mUnit)     ,  // Output of the counter	
 			.finish()
     );
-
-
+	 
+	 wire enableCounter;
+	 wire resetTimer;
+/*
+	TimerStateMachine tsm (
+		.clk(clk), 
+		.start(start), 
+		.stop(stop), 
+		.delete(delete), 
+		.segDemand(incrementSeconds), 
+		.minDemand(incrementMinutes), 
+		.enableCounter(enableCounter), 
+		.forward(forward), 
+		.resetTimer(resetTimer)
+	);
+*/
 endmodule

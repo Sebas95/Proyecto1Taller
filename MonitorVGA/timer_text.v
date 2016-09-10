@@ -11,14 +11,12 @@ module vgaWritter
    );
 
    // signal declaration
-   reg  [6:0] char_addr, char_addr_s, char_addr_l,
-             char_addr_r, char_addr_o;
+   reg  [6:0] char_addr, char_addr_s, char_addr_st;
    reg  [3:0] row_addr;
-   wire [3:0] row_addr_s, row_addr_l, row_addr_r, row_addr_o;
+   wire [3:0] row_addr_s, row_addr_st;
    reg  [2:0] bit_addr;
-   wire [2:0] bit_addr_s, bit_addr_l,bit_addr_r, bit_addr_o;
-   wire font_bit, score_on, logo_on, rule_on, over_on;
-   wire [7:0] rule_rom_addr;
+   wire [2:0] bit_addr_s, bit_addr_st;
+   wire font_bit, score_on, state_on;
 
    //-------------------------------------------
    // score region
@@ -49,6 +47,35 @@ module vgaWritter
 			4'hf: char_addr_s = 7'h00; //
 			default : char_addr_s = 7'h00;			
       endcase
+		
+   //-------------------------------------------
+   // State region
+   //  - display two-digit score, ball on top left
+   //  - scale to 16-by-32 font
+   //  - line 1, 16 chars: "Score:DD Ball:D"
+   //-------------------------------------------
+   assign state_on = (pix_y[9:5]==1) && (pix_x[9:4]<16);
+   assign row_addr_st = pix_y[4:1];
+   assign bit_addr_st = pix_x[3:1];
+   always @*
+      case (pix_x[7:4])
+         4'h0: char_addr_st = 7'h45; // E
+         4'h1: char_addr_st = 7'h53; // s
+         4'h2: char_addr_st = 7'h54; // t
+         4'h3: char_addr_st = 7'h41; // a
+         4'h4: char_addr_st = 7'h44; // d
+         4'h5: char_addr_st = 7'h4f; // o
+			4'h6: char_addr_st = 7'h3a; //:
+			4'h7: char_addr_st = 7'h00; //
+			4'h8: char_addr_st = 7'h00; //
+			4'h9: char_addr_st = 7'h00; //
+			4'ha: char_addr_st = 7'h00; // 
+			4'hb: char_addr_st = 7'h00; // 
+			4'hc: char_addr_st = 7'h00; // 
+			4'hd: char_addr_st = 7'h00; // 
+			4'he: char_addr_st = 7'h00; // 
+			4'hf: char_addr_st = 7'h00;
+      endcase		
    //-------------------------------------------
    // mux for font ROM addresses and rgb
    //-------------------------------------------
@@ -63,10 +90,18 @@ module vgaWritter
             if (font_bit)
                text_rgb = 3'b001;
          end
+      else if (state_on)
+         begin
+            char_addr = char_addr_st;
+            row_addr = row_addr_st;
+            bit_addr = bit_addr_st;
+            if (font_bit)
+               text_rgb = 3'b001;
+         end		
 
    end
 
-   assign text_on = {score_on};
+   assign text_on = {score_on,state_on};
    //-------------------------------------------
    // font rom interface
    //-------------------------------------------
