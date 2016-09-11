@@ -1,0 +1,3 @@
+verilog isim_temp "timer_text.v"
+verilog isim_temp "rgbText.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

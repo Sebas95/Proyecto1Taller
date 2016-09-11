@@ -1,0 +1,6 @@
+verilog isim_temp "vga_sync.v"
+verilog isim_temp "timer_text.v"
+verilog isim_temp "font_rom.v"
+verilog isim_temp "VgaPainter.v"
+verilog isim_temp "PainterTest.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

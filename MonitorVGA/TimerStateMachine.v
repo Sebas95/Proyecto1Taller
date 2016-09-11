@@ -24,10 +24,11 @@ module TimerStateMachine(
     input wire stop,
     input wire delete,
 	 input wire segDemand,
-	 input wire minDemand,
+	 input wire minDemand,	
 	 output reg enableCounter  = 0,
 	 output reg forward    = 0,
-    output reg resetTimer = 0
+    output reg resetTimer = 0,
+	 output reg [2:0] actualState = 3'b000
     );
 	 
 	 reg [2:0] state     = 3'b000; 
@@ -105,7 +106,8 @@ module TimerStateMachine(
 		end	
 		
 	always@(posedge clk)
-		begin
+		begin			
 			state = nextState;
+			actualState = nextState;
 		end
 endmodule

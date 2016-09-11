@@ -10,17 +10,17 @@
          <ClosedNode>/MinutesCounter C:|Users|Sebastian|Documents|GitHub|Proyecto1Taller|MonitorVGA|MinutesCounter.v/minutes - SixBitCounter</ClosedNode>
          <ClosedNode>/MinutesCounter C:|Users|Sebastian|Documents|GitHub|Proyecto1Taller|MonitorVGA|MinutesCounter.v/seconds - SixBitCounter</ClosedNode>
          <ClosedNode>/SixBitCounter C:|Users|Sebastian|Documents|GitHub|Proyecto1Taller|MonitorVGA|SixBitCounter.v</ClosedNode>
-         <ClosedNode>/Temporizador C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|Temporizador.v</ClosedNode>
-         <ClosedNode>/Temporizador C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|Temporizador.v/mc - MinutesCounter</ClosedNode>
          <ClosedNode>/Temporizador C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|Temporizador.v/mc - MinutesCounter/minutes - SixBitCounter</ClosedNode>
          <ClosedNode>/Temporizador C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|Temporizador.v/mc - MinutesCounter/seconds - SixBitCounter</ClosedNode>
       </ClosedNodes>
-      <SelectedItems/>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <SelectedItems>
+         <SelectedItem>vgap - VgaPainter (C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/VgaPainter.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000126000000020000000000000000000000000200000064ffffffff000000810000000300000002000001260000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000167000000020000000000000000000000000200000064ffffffff000000810000000300000002000001670000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Temporizador (C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/Temporizador.v)</CurrentItem>
+      <CurrentItem>vgap - VgaPainter (C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/VgaPainter.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -28,13 +28,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016a0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -43,7 +43,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000137000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004200000001000000000000002400000001000000000000006600000001000000000000006b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000016a000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004200000001000000000000002400000001000000000000006600000001000000000000009e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>counter_test.v</CurrentItem>
    </ItemView>
@@ -55,7 +55,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000137000000010001000100000000000000000000000064ffffffff000000810000000000000001000001370000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000d7000000010001000100000000000000000000000064ffffffff000000810000000000000001000000d70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -65,17 +65,16 @@
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
-         <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Configure Target Device</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000010c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000010c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Configure Target Device</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000128000000b801000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -86,17 +85,18 @@
          <ClosedNode>/Temporizador C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|Temporizador.v</ClosedNode>
          <ClosedNode>/Temporizador C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|Temporizador.v/mc - MinutesCounter</ClosedNode>
          <ClosedNode>/TwoDigitDeco_test C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|TwoDigitDeco_test.v</ClosedNode>
+         <ClosedNode>/VgaPainterTest C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|VgaPainterTest.v</ClosedNode>
          <ClosedNode>/counter_test C:|Users|Giovanni|Documents|GitHub|Proyecto1Taller|MonitorVGA|counter_test.v</ClosedNode>
          <ClosedNode>/vga_test C:|Users|Sebastian|Documents|GitHub|Proyecto1Taller|MonitorVGA|vga_test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>StateMachineTest (C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/StateMachineTest.v)</SelectedItem>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000011e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000011e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>StateMachineTest (C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/StateMachineTest.v)</CurrentItem>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -108,7 +108,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000010c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000010c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -118,26 +118,26 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000010c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000010c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Edit Constraints (Text)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Edit Constraints (Text)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>

@@ -29,10 +29,11 @@ module Temporizador(
    output wire hsync, vsync,
    output wire [2:0] rgb
    );
-   
+  
 	wire enableCounter;
    wire resetTimer;	
 	wire forward;
+	wire [2:0] actualState;
 	wire [3:0] mDecimal ;
 	wire [3:0] mUnit;
 	wire [3:0] sUnit;
@@ -56,6 +57,8 @@ module Temporizador(
 		.sUnit(sUnit), 
 		.sDecimal(sDecimal), 
 		.clk(clk), 
+		.clk2(CLK_50MHZ), 
+		.actualState(actualState),
 		.hsync(hsync), 
 		.vsync(vsync), 
 		.rgb(rgb)
@@ -87,6 +90,7 @@ module Temporizador(
 		.minDemand(incrementMinutes), 
 		.enableCounter(enableCounter), 
 		.forward(forward), 
-		.resetTimer(resetTimer)
+		.resetTimer(resetTimer),
+		.actualState(actualState)
 	);
 endmodule

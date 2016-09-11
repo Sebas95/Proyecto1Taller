@@ -1,0 +1,29 @@
+Command line:
+   rgbText_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56013
+
+Sat Sep 10 19:13:35 2016
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 840.966 Meg
+
+ Total Signals          : 33
+ Total Nets             : 95
+ Total Signal Drivers   : 23
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 30
+ Total Traceable Variables  : 35
+ Total Scalar Nets and Variables : 258
+Total Line Count : 160
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 683.68 Meg
+
+Sat Sep 10 19:19:11 2016
+

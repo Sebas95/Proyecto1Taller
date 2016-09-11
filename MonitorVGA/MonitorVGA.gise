@@ -72,6 +72,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Minutes_Test_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Minutes_Test_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Minutes_Test_isim_beh.wdb"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="PainterTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="PainterTest_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PainterTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SixBitCounter.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SixBitCounter.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SixBitCounter.ngc"/>
@@ -88,9 +91,7 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SixBitCounter_test_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SixBitCounter_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SixBitCounter_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="StateMachineTest_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="StateMachineTest_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="StateMachineTest_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="StateMachineTest_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Temporizador.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Temporizador.cmd_log"/>
@@ -144,6 +145,9 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="TwoDigitDeco.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="TwoDigitDeco.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TwoDigitDeco_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="VgaPainterTest_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="VgaPainterTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="VgaPainterTest_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -158,10 +162,13 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="minutescounter.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="minutescounter.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="minutescounter.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="rgbText_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="rgbText_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="temporizador.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="temporizador.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="temporizador.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -238,75 +245,48 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473533166" xil_pn:in_ck="-8340768004215386099" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1473533166">
+    <transform xil_pn:end_ts="1473557139" xil_pn:in_ck="-8491205979040377582" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1473557139">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="FrecuencyDivider.v"/>
-      <outfile xil_pn:name="MinutesCounter.v"/>
-      <outfile xil_pn:name="SixBitCounter.v"/>
-      <outfile xil_pn:name="StateMachineTest.v"/>
-      <outfile xil_pn:name="Temporizador.v"/>
-      <outfile xil_pn:name="TimerStateMachine.v"/>
-      <outfile xil_pn:name="TwoDigitDeco.v"/>
-      <outfile xil_pn:name="TwoDigitDeco_test.v"/>
-      <outfile xil_pn:name="counter_test.v"/>
-      <outfile xil_pn:name="font_rom.v"/>
-      <outfile xil_pn:name="timer_text.v"/>
-      <outfile xil_pn:name="vga_sync.v"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1473533166" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2790402794256169037" xil_pn:start_ts="1473533166">
+    <transform xil_pn:end_ts="1473557828" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8437076516339558440" xil_pn:start_ts="1473557828">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473533166" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2745162089006402059" xil_pn:start_ts="1473533166">
+    <transform xil_pn:end_ts="1473557828" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1639746179547066394" xil_pn:start_ts="1473557828">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473533166" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="602986720326055867" xil_pn:start_ts="1473533166">
+    <transform xil_pn:end_ts="1473542770" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4057322549520874756" xil_pn:start_ts="1473542770">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1473533167" xil_pn:in_ck="-8340768004215386099" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1473533166">
+    <transform xil_pn:end_ts="1473557139" xil_pn:in_ck="-8491205979040377582" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1473557139">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="FrecuencyDivider.v"/>
-      <outfile xil_pn:name="MinutesCounter.v"/>
-      <outfile xil_pn:name="SixBitCounter.v"/>
-      <outfile xil_pn:name="StateMachineTest.v"/>
-      <outfile xil_pn:name="Temporizador.v"/>
-      <outfile xil_pn:name="TimerStateMachine.v"/>
-      <outfile xil_pn:name="TwoDigitDeco.v"/>
-      <outfile xil_pn:name="TwoDigitDeco_test.v"/>
-      <outfile xil_pn:name="counter_test.v"/>
-      <outfile xil_pn:name="font_rom.v"/>
-      <outfile xil_pn:name="timer_text.v"/>
-      <outfile xil_pn:name="vga_sync.v"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1473533170" xil_pn:in_ck="-8340768004215386099" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5951551416113403609" xil_pn:start_ts="1473533167">
+    <transform xil_pn:end_ts="1473557842" xil_pn:in_ck="-8491205979040377582" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4558209649109327023" xil_pn:start_ts="1473557828">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1473533170" xil_pn:in_ck="3469811934533888543" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8046824070238489188" xil_pn:start_ts="1473533170">
+    <transform xil_pn:end_ts="1473557842" xil_pn:in_ck="2276760584461615530" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4536204286958545774" xil_pn:start_ts="1473557842">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -344,7 +324,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473542140" xil_pn:in_ck="-1956528912524984772" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5524547352802433875" xil_pn:start_ts="1473542120">
+    <transform xil_pn:end_ts="1473558604" xil_pn:in_ck="-1956528912524984772" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5524547352802433875" xil_pn:start_ts="1473558588">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -365,11 +345,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1473539339" xil_pn:in_ck="-1121064038279228570" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8704819108206622622" xil_pn:start_ts="1473539338">
+    <transform xil_pn:end_ts="1473558441" xil_pn:in_ck="-2950633217056699907" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8704819108206622622" xil_pn:start_ts="1473558441">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473542154" xil_pn:in_ck="-729257592913796685" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8753277989874969051" xil_pn:start_ts="1473542144">
+    <transform xil_pn:end_ts="1473558617" xil_pn:in_ck="-566243841070367542" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8753277989874969051" xil_pn:start_ts="1473558607">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.bld"/>
@@ -378,7 +358,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473542172" xil_pn:in_ck="-4456015728997295842" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473542154">
+    <transform xil_pn:end_ts="1473558637" xil_pn:in_ck="5470253375235226549" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473558617">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -392,7 +372,7 @@
       <outfile xil_pn:name="Temporizador_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473542191" xil_pn:in_ck="-6601609849404324030" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473542172">
+    <transform xil_pn:end_ts="1473558657" xil_pn:in_ck="-6699170229987105447" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473558637">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.ncd"/>
@@ -406,7 +386,7 @@
       <outfile xil_pn:name="Temporizador_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473542209" xil_pn:in_ck="5488069108988440488" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473542191">
+    <transform xil_pn:end_ts="1473558677" xil_pn:in_ck="5488069108988440488" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473558657">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -419,11 +399,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1473542220" xil_pn:in_ck="8830488558822265033" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473542209">
+    <transform xil_pn:end_ts="1473558680" xil_pn:in_ck="8830488558822265033" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473558677">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473542191" xil_pn:in_ck="-530766248663175154" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473542184">
+    <transform xil_pn:end_ts="1473558657" xil_pn:in_ck="6909523726171318949" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473558649">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.twr"/>
