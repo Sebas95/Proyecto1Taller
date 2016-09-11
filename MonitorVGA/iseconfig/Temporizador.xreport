@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-09-10T20:20:42</DateModified>
+  <DateModified>2016-09-11T12:30:50</DateModified>
   <ModuleName>Temporizador</ModuleName>
-  <SummaryTimeStamp>2016-09-10T14:12:39</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/iseconfig/Temporizador.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-09-11T12:01:39</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/iseconfig/Temporizador.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA\</ImplementationReportsDirectory>
   <DateInitialized>2016-09-10T14:11:32</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

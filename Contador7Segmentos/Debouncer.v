@@ -62,7 +62,7 @@ module Debouncer
    // state register
     always @(posedge clk, posedge reset)
        if (reset)
-          state_reg <= cero;
+          state_reg <= 3'b000;
        else
           state_reg <= state_next;
 

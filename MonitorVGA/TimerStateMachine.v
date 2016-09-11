@@ -48,7 +48,7 @@ module TimerStateMachine(
 					begin
 						//Asigno las salidas de la maquina (estados del contador)
 						enableCounter  = 0;
-						resetTimer = 0;
+						resetTimer = 1;
 						forward    = 0;
 						if(start) nextState = countState;
 						else if (segDemand || minDemand) nextState = settingState;
