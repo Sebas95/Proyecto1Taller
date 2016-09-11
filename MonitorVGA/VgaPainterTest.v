@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   15:13:55 09/10/2016
+// Create Date:   19:59:30 09/10/2016
 // Design Name:   VgaPainter
-// Module Name:   C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/VgaPainterTest.v
+// Module Name:   C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest.v
 // Project Name:  MonitorVGA
 // Target Device:  
 // Tool versions:  
@@ -22,14 +22,16 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module VgaPainterTest;
+module vgaPainterTest;
 
 	// Inputs
 	reg [3:0] mDecimal;
 	reg [3:0] mUnit;
 	reg [3:0] sUnit;
 	reg [3:0] sDecimal;
-	reg clk;
+	reg [2:0] actualState;
+	reg clk = 0;
+	reg clk2 = 0;
 
 	// Outputs
 	wire hsync;
@@ -42,11 +44,16 @@ module VgaPainterTest;
 		.mUnit(mUnit), 
 		.sUnit(sUnit), 
 		.sDecimal(sDecimal), 
+		.actualState(actualState), 
 		.clk(clk), 
+		.clk2(clk2), 
 		.hsync(hsync), 
 		.vsync(vsync), 
 		.rgb(rgb)
 	);
+	
+	always #5 clk = ~clk;
+	always #20 clk2 = ~clk2;
 
 	initial begin
 		// Initialize Inputs
@@ -54,7 +61,9 @@ module VgaPainterTest;
 		mUnit = 0;
 		sUnit = 0;
 		sDecimal = 0;
+		actualState = 0;
 		clk = 0;
+		clk2 = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;

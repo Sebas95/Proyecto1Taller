@@ -25,6 +25,7 @@ module Temporizador(
 	input wire reset,
 	input wire start,
 	input wire stop,
+	input wire [2:0] sw,
 	input wire delete,
    output wire hsync, vsync,
    output wire [2:0] rgb
@@ -61,9 +62,10 @@ module Temporizador(
 		.actualState(actualState),
 		.hsync(hsync), 
 		.vsync(vsync), 
-		.rgb(rgb)
+		.rgb(rgb),
+		.video_on(video_on)
 	);	
-
+	
 		
 	 MinutesCounter mc (	
 			.enable(enableCounter)  ,  // enable for counter
@@ -93,4 +95,10 @@ module Temporizador(
 		.resetTimer(resetTimer),
 		.actualState(actualState)
 	);
+	/*
+	reg [2:0] rgb_reg;
+	   always @*
+         rgb_reg <= sw;
+   // output */
+
 endmodule

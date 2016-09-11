@@ -26,7 +26,7 @@ static int ng1[] = {0, 0};
 
 
 
-static void NetDecl_36_0(char *t0)
+static void NetDecl_56_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 4928U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(36, ng0);
+LAB2:    xsi_set_current_line(56, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 5312);
     t4 = (t3 + 56U);
@@ -77,9 +77,9 @@ LAB1:    return;
 }
 
 
-extern void work_m_00000000001694768504_3719611828_init()
+extern void work_m_00000000002071413485_3719611828_init()
 {
-	static char *pe[] = {(void *)NetDecl_36_0};
-	xsi_register_didat("work_m_00000000001694768504_3719611828", "isim/VgaPainterTest_isim_beh.exe.sim/work/m_00000000001694768504_3719611828.didat");
+	static char *pe[] = {(void *)NetDecl_56_0};
+	xsi_register_didat("work_m_00000000002071413485_3719611828", "isim/TimerTest_isim_beh.exe.sim/work/m_00000000002071413485_3719611828.didat");
 	xsi_register_executes(pe);
 }

@@ -1941,6 +1941,6 @@ LAB1:    return;
 extern void work_m_00000000001079929347_2203017034_init()
 {
 	static char *pe[] = {(void *)Always_34_0,(void *)Cont_53_1,(void *)Cont_54_2,(void *)Cont_58_3,(void *)Cont_60_4,(void *)Always_63_5,(void *)Always_73_6,(void *)Cont_84_7,(void *)Cont_87_8,(void *)Cont_91_9,(void *)Cont_94_10,(void *)Cont_95_11,(void *)Cont_96_12,(void *)Cont_97_13,(void *)Cont_98_14};
-	xsi_register_didat("work_m_00000000001079929347_2203017034", "isim/VgaPainterTest_isim_beh.exe.sim/work/m_00000000001079929347_2203017034.didat");
+	xsi_register_didat("work_m_00000000001079929347_2203017034", "isim/vgaPainterTest_isim_beh.exe.sim/work/m_00000000001079929347_2203017034.didat");
 	xsi_register_executes(pe);
 }

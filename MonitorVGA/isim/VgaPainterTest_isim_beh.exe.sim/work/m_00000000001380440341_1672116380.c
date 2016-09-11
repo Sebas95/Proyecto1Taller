@@ -3098,6 +3098,6 @@ LAB5:    t15 = *((unsigned int *)t7);
 extern void work_m_00000000001380440341_1672116380_init()
 {
 	static char *pe[] = {(void *)Cont_30_0,(void *)Cont_31_1,(void *)Cont_32_2,(void *)Always_33_3,(void *)Cont_60_4,(void *)Cont_61_5,(void *)Always_62_6,(void *)Always_165_7,(void *)Always_187_8,(void *)Cont_192_9,(void *)Cont_196_10,(void *)Cont_197_11};
-	xsi_register_didat("work_m_00000000001380440341_1672116380", "isim/VgaPainterTest_isim_beh.exe.sim/work/m_00000000001380440341_1672116380.didat");
+	xsi_register_didat("work_m_00000000001380440341_1672116380", "isim/vgaPainterTest_isim_beh.exe.sim/work/m_00000000001380440341_1672116380.didat");
 	xsi_register_executes(pe);
 }

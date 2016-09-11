@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Sat Sep 10 19:49:50 2016">
+  <application stringID="Xst" timeStamp="Sat Sep 10 21:13:42 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -166,9 +166,9 @@
           <item dataType="int" stringID="XST_LUT1" value="44"/>
           <item dataType="int" stringID="XST_LUT2" value="29"/>
           <item dataType="int" stringID="XST_LUT3" value="9"/>
-          <item dataType="int" stringID="XST_LUT4" value="41"/>
+          <item dataType="int" stringID="XST_LUT4" value="42"/>
           <item dataType="int" stringID="XST_LUT5" value="58"/>
-          <item dataType="int" stringID="XST_LUT6" value="45"/>
+          <item dataType="int" stringID="XST_LUT6" value="44"/>
           <item dataType="int" stringID="XST_MUXCY" value="51"/>
           <item dataType="int" stringID="XST_MUXF7" value="4"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
@@ -202,7 +202,7 @@
       <item AVAILABLE="243" dataType="int" label="Number with an unused LUT" stringID="XST_NUMBER_WITH_AN_UNUSED_LUT" value="9"/>
       <item AVAILABLE="243" dataType="int" label="Number of fully used LUT-FF pairs" stringID="XST_NUMBER_OF_FULLY_USED_LUTFF_PAIRS" value="107"/>
       <item dataType="int" label="Number of unique control sets" stringID="XST_NUMBER_OF_UNIQUE_CONTROL_SETS" value="10"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="12"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="15"/>
       <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="11"/>
       <item AVAILABLE="32" dataType="int" label="Number of Block RAM/FIFO" stringID="XST_NUMBER_OF_BLOCK_RAMFIFO" value="1"/>
       <item dataType="int" label="Number using Block RAM only" stringID="XST_NUMBER_USING_BLOCK_RAM_ONLY" value="1"/>
@@ -214,7 +214,7 @@
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="29"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="11"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="10"/>
     </section>
   </application>
 

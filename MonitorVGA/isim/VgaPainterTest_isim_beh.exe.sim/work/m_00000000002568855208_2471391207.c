@@ -24675,6 +24675,6 @@ LAB4100:    xsi_set_current_line(2199, ng0);
 extern void work_m_00000000002568855208_2471391207_init()
 {
 	static char *pe[] = {(void *)Always_19_0,(void *)Always_22_1};
-	xsi_register_didat("work_m_00000000002568855208_2471391207", "isim/VgaPainterTest_isim_beh.exe.sim/work/m_00000000002568855208_2471391207.didat");
+	xsi_register_didat("work_m_00000000002568855208_2471391207", "isim/vgaPainterTest_isim_beh.exe.sim/work/m_00000000002568855208_2471391207.didat");
 	xsi_register_executes(pe);
 }

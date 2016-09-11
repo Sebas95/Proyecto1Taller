@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: Temporizador.prj
 
@@ -139,12 +139,11 @@ Elaborating module <font_rom>.
 Elaborating module <vga_sync>.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 68: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 78: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 70: Assignment to video_on ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 71: Assignment to pixel_tick ignored, since the identifier is never used
 
 Elaborating module <textPainter>.
 WARNING:HDLCompiler:1127 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 86: Assignment to text_on ignored, since the identifier is never used
 WARNING:HDLCompiler:634 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 67: Net <reset> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v" Line 66: Assignment to video_on ignored, since the identifier is never used
 
 Elaborating module <MinutesCounter>.
 
@@ -166,8 +165,10 @@ Elaborating module <TimerStateMachine>.
 
 Synthesizing Unit <Temporizador>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v".
+WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v" line 68: Output port <finish> of the instance <mc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v" line 55: Output port <video_on> of the instance <vgap> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v" line 70: Output port <finish> of the instance <mc> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <clk>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -175,8 +176,6 @@ Unit <Temporizador> synthesized.
 
 Synthesizing Unit <VgaPainter>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v".
-INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" line 65: Output port <video_on> of the instance <vsync_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" line 65: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" line 77: Output port <text_on> of the instance <text_unit> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
@@ -218,8 +217,8 @@ Synthesizing Unit <textPainter>.
 WARNING:Xst:647 - Input <pix_x<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <pix_y<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 3-bit register for signal <text_rgb>.
-    Found 32x7-bit Read Only RAM for signal <_n0259>
-    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 197.
+    Found 32x7-bit Read Only RAM for signal <_n0266>
+    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 199.
 WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -234,10 +233,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<0>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 6-bit comparator greater for signal <pix_x[9]_PWR_5_o_LessThan_2_o> created at line 30
-    Found 6-bit comparator greater for signal <GND_5_o_pix_x[9]_LessThan_3_o> created at line 30
-    Found 6-bit comparator greater for signal <pix_x[9]_GND_5_o_LessThan_10_o> created at line 64
-    Found 6-bit comparator greater for signal <pix_x[9]_GND_5_o_LessThan_15_o> created at line 90
+    Found 6-bit comparator greater for signal <pix_x[9]_PWR_5_o_LessThan_2_o> created at line 31
+    Found 6-bit comparator greater for signal <GND_5_o_pix_x[9]_LessThan_3_o> created at line 31
+    Found 6-bit comparator greater for signal <pix_x[9]_GND_5_o_LessThan_10_o> created at line 65
+    Found 6-bit comparator greater for signal <pix_x[9]_GND_5_o_LessThan_15_o> created at line 91
     Summary:
 	inferred   1 RAM(s).
 	inferred   3 D-type flip-flop(s).
@@ -393,7 +392,7 @@ INFO:Xst:3226 - The RAM <Mram_data> will be implemented as a BLOCK RAM, absorbin
 Unit <font_rom> synthesized (advanced).
 
 Synthesizing (advanced) Unit <textPainter>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0259> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0266> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -514,9 +513,9 @@ Primitive and Black Box Usage:
 #      LUT1                        : 44
 #      LUT2                        : 29
 #      LUT3                        : 9
-#      LUT4                        : 41
+#      LUT4                        : 42
 #      LUT5                        : 58
-#      LUT6                        : 45
+#      LUT6                        : 44
 #      MUXCY                       : 51
 #      MUXF7                       : 4
 #      VCC                         : 1
@@ -554,7 +553,7 @@ Slice Logic Distribution:
    Number of unique control sets:        10
 
 IO Utilization: 
- Number of IOs:                          12
+ Number of IOs:                          15
  Number of bonded IOBs:                  11  out of    232     4%  
 
 Specific Feature Utilization:
@@ -606,7 +605,7 @@ Speed Grade: -3
 
    Minimum period: 4.841ns (Maximum Frequency: 206.556MHz)
    Minimum input arrival time before clock: 3.350ns
-   Maximum output required time after clock: 3.634ns
+   Maximum output required time after clock: 3.668ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -616,7 +615,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50MHZ'
   Clock period: 3.997ns (frequency: 250.195MHz)
-  Total number of paths / destination ports: 1891 / 54
+  Total number of paths / destination ports: 1893 / 54
 -------------------------------------------------------------------------
 Delay:               3.997ns (Levels of Logic = 3)
   Source:            tsm/actualState_FSM_FFd2 (FF)
@@ -629,9 +628,9 @@ Delay:               3.997ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              49   0.447   1.534  tsm/actualState_FSM_FFd2 (tsm/actualState_FSM_FFd2)
-     LUT5:I4->O            2   0.205   0.617  vgap/text_unit/_n01812_SW0 (N5)
-     LUT6:I5->O            1   0.205   0.684  vgap/text_unit/_n01812 (vgap/text_unit/state_on)
-     LUT6:I4->O            1   0.203   0.000  vgap/text_unit/text_rgb_0_rstpot (vgap/text_unit/text_rgb_0_rstpot)
+     LUT5:I4->O            2   0.205   0.617  vgap/text_unit/_n01842_SW0 (N5)
+     LUT6:I5->O            1   0.205   0.684  vgap/text_unit/_n01842 (vgap/text_unit/state_on)
+     LUT5:I3->O            1   0.203   0.000  vgap/text_unit/text_rgb_0_rstpot1 (vgap/text_unit/text_rgb_0_rstpot)
      FD:D                      0.102          vgap/text_unit/text_rgb_0
     ----------------------------------------
     Total                      3.997ns (1.162ns logic, 2.835ns route)
@@ -723,7 +722,7 @@ Delay:               3.045ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              8   0.447   1.167  mc/seconds/out2_0 (mc/seconds/out2_0)
-     LUT6:I0->O            1   0.203   0.924  mc/seconds/out2_4_glue_set_SW0 (N15)
+     LUT6:I0->O            1   0.203   0.924  mc/seconds/out2_4_glue_set_SW0 (N19)
      LUT6:I1->O            1   0.203   0.000  mc/seconds/out2_4_glue_set (mc/seconds/out2_4_glue_set)
      FDR:D                     0.102          mc/seconds/out2_4
     ----------------------------------------
@@ -780,7 +779,7 @@ Offset:              3.350ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHZ'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
+Offset:              3.668ns (Levels of Logic = 1)
   Source:            vgap/text_unit/text_rgb_1 (FF)
   Destination:       rgb<2> (PAD)
   Source Clock:      CLK_50MHZ rising
@@ -789,11 +788,11 @@ Offset:              3.634ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.616  vgap/text_unit/text_rgb_1 (vgap/text_unit/text_rgb_1)
+     FD:C->Q               3   0.447   0.650  vgap/text_unit/text_rgb_1 (vgap/text_unit/text_rgb_1)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -825,7 +824,7 @@ Clock to Setup on destination clock CLK_50MHZ
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
 CLK_50MHZ                               |    3.997|         |         |         |
-clk                                     |    3.998|         |         |         |
+clk                                     |    4.108|         |         |         |
 incrementMinutes                        |    2.935|         |         |         |
 incrementSeconds                        |    2.935|         |         |         |
 mc/fd/clk_1Hz                           |    3.064|         |         |         |
@@ -883,14 +882,14 @@ Clock to Setup on destination clock vgap/text_unit/score_on_state_on_OR_55_o
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 CLK_50MHZ      |         |         |    5.289|         |
-clk            |         |         |    5.726|         |
+clk            |         |         |    5.714|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.94 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.25 secs
  
 --> 
 
@@ -898,5 +897,5 @@ Total memory usage is 293980 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   29 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

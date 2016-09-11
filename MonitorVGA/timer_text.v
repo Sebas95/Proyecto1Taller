@@ -8,7 +8,8 @@ module textPainter
     output wire [3:0] text_on,
     output reg  [2:0] text_rgb,
 	 output wire [10:0] rom_addr,
-	 input wire [7:0] font_word
+	 input wire [7:0] font_word,
+	 input wire pixel_tick
    );
 
    // signal declaration
@@ -19,7 +20,7 @@ module textPainter
    wire [2:0] bit_addr_s, bit_addr_st;
    wire font_bit, score_on;
 	reg state_on = 0;
-	reg [2:0] nextRGB;
+	reg [2:0] nextRGB = 3'b000;
 
    //-------------------------------------------
    // score region
@@ -186,7 +187,8 @@ module textPainter
 	
 	always@(posedge clk)
 		begin
-			text_rgb <= nextRGB;						
+			if (pixel_tick)
+				text_rgb = nextRGB;						
 		end
 
    assign text_on = {score_on,state_on};
