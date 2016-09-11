@@ -31,6 +31,9 @@ module Temporizador(
    output wire [2:0] rgb
    );
   
+	//ground
+	reg gnd = 0;
+	//declaration of wires
 	wire enableCounter;
    wire resetTimer;	
 	wire forward;
@@ -39,17 +42,45 @@ module Temporizador(
 	wire [3:0] mUnit;
 	wire [3:0] sUnit;
 	wire [3:0] sDecimal;
+	// debounced inputs
+	wire start_db;
+	wire stop_db;
+	wire delete_db;
+	wire incrementSeconds_db;
+	wire incrementMinutes_db;
 	
+	
+	//devisor de frecuencia pra el controlador VGA
 	reg clk;
 	//reg enable = 1;
 	always @(posedge CLK_50MHZ)
 		clk <= ~clk;
+
+	//-------------------Debouncer-----------------------------
+	TotalDebouncer dbounce (	
+		.button0(start),
+		.button1(stop),
+		.button2(delete),
+		.button3(incrementSeconds),
+		.button4(incrementMinutes),
+		.clk(CLK_50MHZ),
+		.reset(gnd),
+		.db0(start_db),
+		.db1(stop_db),
+		.db2(delete_db),
+		.db3(incrementSeconds_db),
+		.db4(incrementMinutes_db)
+	);
+	
+
 
 
 	//number that is goint to be showed in the 7seg
    //=======================================================
    // instantiation
    //=======================================================
+	
+	
 	
 	
 	VgaPainter vgap (
@@ -72,8 +103,8 @@ module Temporizador(
 			.clk(CLK_50MHZ)     ,  // clock Input
 			.reset(resetTimer)   ,  // reset Input
 			.forward(forward), //forward input
-			.incrementSeconds(incrementSeconds),
-			.incrementMinutes(incrementMinutes),
+			.incrementSeconds(incrementSeconds_db),
+			.incrementMinutes(incrementMinutes_db),
 			.secondsDecimals(sDecimal)     ,  // Output of the counter
 			.secondsUnits(sUnit)     ,  // Output of the counter
 			.minutesDecimals(mDecimal)     ,  // Output of the counter
@@ -85,11 +116,11 @@ module Temporizador(
 
 	TimerStateMachine tsm (
 		.clk(CLK_50MHZ), 
-		.start(start), 
-		.stop(stop), 
-		.delete(delete), 
-		.segDemand(incrementSeconds), 
-		.minDemand(incrementMinutes), 
+		.start(start_db), 
+		.stop(stop_db), 
+		.delete(delete_db), 
+		.segDemand(incrementSeconds_db), 
+		.minDemand(incrementMinutes_db), 
 		.enableCounter(enableCounter), 
 		.forward(forward), 
 		.resetTimer(resetTimer),
