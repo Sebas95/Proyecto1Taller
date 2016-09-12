@@ -1,11 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Sep 11 13:09:56 2016
+// Written by: Map P.20131013 on Sun Sep 11 20:14:39 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "incrementMinutes" LOCATE = SITE "D9" LEVEL 1;
-PIN incrementMinutes_pin<0> = BEL "incrementMinutes" PINNAME PAD;
-PIN "incrementMinutes_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "incrementSeconds" LOCATE = SITE "C4" LEVEL 1;
 PIN incrementSeconds_pin<0> = BEL "incrementSeconds" PINNAME PAD;
 PIN "incrementSeconds_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
@@ -21,6 +18,9 @@ COMP "CLK_50MHZ" LOCATE = SITE "V10" LEVEL 1;
 COMP "rgb<0>" LOCATE = SITE "N7" LEVEL 1;
 COMP "rgb<1>" LOCATE = SITE "V6" LEVEL 1;
 COMP "rgb<2>" LOCATE = SITE "T7" LEVEL 1;
+COMP "incrementMinutes" LOCATE = SITE "D9" LEVEL 1;
+PIN incrementMinutes_pin<0> = BEL "incrementMinutes" PINNAME PAD;
+PIN "incrementMinutes_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 SCHEMATIC END;
 

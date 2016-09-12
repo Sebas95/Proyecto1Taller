@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-SEBASTIAN95::  Sun Sep 11 13:09:59 2016
+SEBASTIAN95::  Sun Sep 11 20:14:43 2016
 
 par -w -intstyle ise -ol high -mt off Temporizador_map.ncd Temporizador.ncd
 Temporizador.pcf 
@@ -22,16 +22,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   142 out of  18,224    1%
-    Number used as Flip Flops:                 128
+  Number of Slice Registers:                   141 out of  18,224    1%
+    Number used as Flip Flops:                 127
     Number used as Latches:                     14
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        236 out of   9,112    2%
-    Number used as logic:                      231 out of   9,112    2%
-      Number using O6 output only:             130
+  Number of Slice LUTs:                        232 out of   9,112    2%
+    Number used as logic:                      227 out of   9,112    2%
+      Number using O6 output only:             128
       Number using O5 output only:              58
-      Number using O5 and O6:                   43
+      Number using O5 and O6:                   41
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      5
@@ -40,12 +40,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    82 out of   2,278    3%
+  Number of occupied Slices:                    81 out of   2,278    3%
   Number of MUXCYs used:                        80 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          238
-    Number with an unused Flip Flop:           117 out of     238   49%
-    Number with an unused LUT:                   2 out of     238    1%
-    Number of fully used LUT-FF pairs:         119 out of     238   50%
+  Number of LUT Flip Flop pairs used:          243
+    Number with an unused Flip Flop:           128 out of     243   52%
+    Number with an unused LUT:                  11 out of     243    4%
+    Number of fully used LUT-FF pairs:         104 out of     243   42%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -88,8 +88,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 WARNING:Par:288 - The signal sw<0>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal sw<1>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -97,13 +97,13 @@ WARNING:Par:288 - The signal sw<2>_IBUF has no load.  PAR will not attempt to ro
 Starting Router
 
 
-Phase  1  : 1150 unrouted;      REAL time: 4 secs 
+Phase  1  : 1085 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 999 unrouted;      REAL time: 4 secs 
+Phase  2  : 934 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 413 unrouted;      REAL time: 4 secs 
+Phase  3  : 337 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 413 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  4  : 337 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
 Updating file: Temporizador.ncd with current fully routed design.
 
@@ -117,8 +117,8 @@ Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL 
 
 Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
-Total REAL time to Router completion: 6 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Total REAL time to Router completion: 5 secs 
 Total CPU time to Router completion: 5 secs 
 
 Partition Implementation Status
@@ -137,23 +137,21 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|     CLK_50MHZ_BUFGP | BUFGMUX_X3Y13| No   |   23 |  0.054     |  0.904      |
+|            clk_BUFG |  BUFGMUX_X2Y3| No   |   11 |  0.012     |  0.872      |
 +---------------------+--------------+------+------+------------+-------------+
-|            clk_BUFG |  BUFGMUX_X2Y3| No   |   10 |  0.014     |  0.873      |
-+---------------------+--------------+------+------+------------+-------------+
-|dbounce/debouncer4/s |              |      |      |            |             |
-|   tate_reg_FSM_FFd1 |         Local|      |    6 |  0.207     |  1.356      |
+|     CLK_50MHZ_BUFGP | BUFGMUX_X3Y13| No   |   23 |  0.044     |  0.901      |
 +---------------------+--------------+------+------+------------+-------------+
 |vgap/text_unit/score |              |      |      |            |             |
 |_on_state_on_OR_55_o |              |      |      |            |             |
-|                     |         Local|      |    7 |  0.696     |  1.192      |
-+---------------------+--------------+------+------+------------+-------------+
-|   mc/seconds/finish |         Local|      |    4 |  0.452     |  1.169      |
+|                     |         Local|      |    7 |  0.463     |  1.106      |
 +---------------------+--------------+------+------+------------+-------------+
 |dbounce/debouncer3/s |              |      |      |            |             |
-|   tate_reg_FSM_FFd1 |         Local|      |    6 |  0.586     |  2.604      |
+|   tate_reg_FSM_FFd1 |         Local|      |    4 |  0.000     |  1.325      |
 +---------------------+--------------+------+------+------------+-------------+
-|       mc/fd/clk_1Hz |         Local|      |    5 |  0.389     |  0.962      |
+|dbounce/debouncer4/s |              |      |      |            |             |
+|   tate_reg_FSM_FFd1 |         Local|      |    4 |  0.000     |  0.939      |
++---------------------+--------------+------+------+------------+-------------+
+|       mc/fd/clk_1Hz |         Local|      |    6 |  0.923     |  1.399      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -173,8 +171,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |    14.815ns|     5.185ns|       0|           0
-  s HIGH 40%                                | HOLD        |     0.410ns|            |       0|           0
+  NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |    15.569ns|     4.431ns|       0|           0
+  s HIGH 40%                                | HOLD        |     0.397ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

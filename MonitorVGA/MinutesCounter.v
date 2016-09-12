@@ -37,7 +37,6 @@ module MinutesCounter(
 	
 	wire	[5:0]minutes6bit;
 	wire	[5:0]seconds6bit;
-	wire minutesClock;
 	wire clk_1Hz;
 	
 	
@@ -53,19 +52,20 @@ module MinutesCounter(
  	.clk(clk_1Hz)     ,  
  	.reset(reset)   ,  
 	.forward(forward) , 
-	.increment(incrementSeconds),
-	.finish(minutesClock) // el clck de los minutos es el finish del contador de segundos
+	.increment(incrementSeconds)//,
+	//.finish(minutesClock) // el clck de los minutos es el finish del contador de segundos
 	//.finish(finish) // el clck de los minutos es el finish del contador de segundos
 	
 	);
 	
-	SixBitCounter minutes (
+	SixBitCounter_M minutes (
 	.out(minutes6bit)    , 
 	.enable(enable)  ,  
- 	.clk(minutesClock), // el clock del contador de minutes es el finish de los segundos 
+ 	.clk_1Hz(clk_1Hz), // el clock del contador de minutes es el finish de los segundos 
  	.reset(reset)   ,  
 	.forward(forward) ,
 	.increment(incrementMinutes),
+	.seconds(seconds6bit),
 	.finish(finish)
 	);
 	

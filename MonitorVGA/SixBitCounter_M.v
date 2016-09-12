@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    20:11:42 09/05/2016 
+// Create Date:    18:29:40 09/11/2016 
 // Design Name: 
-// Module Name:    SixBitCounter 
+// Module Name:    SixBitCounter_M 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,44 +18,51 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module SixBitCounter(
-	
+module SixBitCounter_M(
+  
 	input enable  ,  // enable for counter
- 	input clk     ,  // clock Input
+ 	input clk_1Hz    ,  // clock Input
  	input reset   ,  // reset Input
 	input forward , //forward input
 	input increment,
-	
-	output reg [5:0]out =0     // Output of the counter
-
+	input [5:0]seconds,
+	output reg [5:0]out =0,      // Output of the counter
+	output reg finish =0
  );
- 
+
 	reg [5:0]out2=0;
 	reg [5:0]out3=0;
 
-	
-	
 
- //-------------Code Starts Here-------
- 	always @(posedge clk)
-	begin
+	  
+	always @(posedge clk_1Hz)
+	begin 
 		if (enable && forward )
 			out3<=out2;
-		if (enable && ~forward )
+			
+		if(seconds==6'b0)
 		begin
-		// si se resetea se pone en cero
-			if (reset) 	
-				out3 <= 6'b0 ; 	
-			else 
-			if (out3== 6'b0) //si llega a cero se pone en 59
-				out3<= 6'b111011;
-			else 
-				out3 <= out3 - 1;
-				
-		end //end del if	
-	end //end del always
-	
-	//-----------------------------------------------------
+					finish <=0;
+					if (enable && ~forward )
+					begin
+					// si se resetea se pone en cero
+						if (reset) 	
+							out3 <= 6'b0 ; 
+						else if (out3== 6'b0) //si llega a cero termina
+							finish<= 1;
+						else 
+							out3 <= out3 - 1;
+							
+					end //end del if	
+					
+					
+		end
+		else  // posedge
+		begin
+			finish <=0;
+		end
+		
+	end		
 	
 	always @(posedge increment)
 	begin
@@ -87,7 +94,7 @@ module SixBitCounter(
 	
 
 	
-
+	
 	
 endmodule
 

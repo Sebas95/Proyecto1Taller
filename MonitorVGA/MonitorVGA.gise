@@ -83,6 +83,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SixBitCounter.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SixBitCounter.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SixBitCounter.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SixBitCounter_M.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SixBitCounter_M.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="SixBitCounter_M.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SixBitCounter_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SixBitCounter_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="SixBitCounter_summary.html"/>
@@ -139,7 +142,6 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TimerStateMachine_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TimerStateMachine_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TimerStateMachine_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TimerTest_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TimerTest_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TimerTest_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TwoDigitDeco.prj"/>
@@ -246,21 +248,23 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473559595" xil_pn:in_ck="-2182083157041806528" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1473559594">
+    <transform xil_pn:end_ts="1473643166" xil_pn:in_ck="2738417841323520669" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1473643166">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Debouncer.v"/>
       <outfile xil_pn:name="FrecuencyDivider.v"/>
       <outfile xil_pn:name="MinutesCounter.v"/>
       <outfile xil_pn:name="SixBitCounter.v"/>
+      <outfile xil_pn:name="SixBitCounter_M.v"/>
       <outfile xil_pn:name="StateMachineTest.v"/>
       <outfile xil_pn:name="Temporizador.v"/>
       <outfile xil_pn:name="TimerStateMachine.v"/>
       <outfile xil_pn:name="TimerTest.v"/>
+      <outfile xil_pn:name="TotalDebouncer.v"/>
       <outfile xil_pn:name="TwoDigitDeco.v"/>
       <outfile xil_pn:name="TwoDigitDeco_test.v"/>
       <outfile xil_pn:name="VgaPainter.v"/>
@@ -271,11 +275,11 @@
       <outfile xil_pn:name="vgaPainterTest.v"/>
       <outfile xil_pn:name="vga_sync.v"/>
     </transform>
-    <transform xil_pn:end_ts="1473559595" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2996985368266048104" xil_pn:start_ts="1473559595">
+    <transform xil_pn:end_ts="1473623257" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8518582589454513046" xil_pn:start_ts="1473623257">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473559595" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5712030201707772586" xil_pn:start_ts="1473559595">
+    <transform xil_pn:end_ts="1473623257" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3194490887156397908" xil_pn:start_ts="1473623257">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -283,7 +287,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473559595" xil_pn:in_ck="-2182083157041806528" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1473559595">
+    <transform xil_pn:end_ts="1473643166" xil_pn:in_ck="2738417841323520669" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1473643166">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -291,13 +295,16 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Debouncer.v"/>
       <outfile xil_pn:name="FrecuencyDivider.v"/>
       <outfile xil_pn:name="MinutesCounter.v"/>
       <outfile xil_pn:name="SixBitCounter.v"/>
+      <outfile xil_pn:name="SixBitCounter_M.v"/>
       <outfile xil_pn:name="StateMachineTest.v"/>
       <outfile xil_pn:name="Temporizador.v"/>
       <outfile xil_pn:name="TimerStateMachine.v"/>
       <outfile xil_pn:name="TimerTest.v"/>
+      <outfile xil_pn:name="TotalDebouncer.v"/>
       <outfile xil_pn:name="TwoDigitDeco.v"/>
       <outfile xil_pn:name="TwoDigitDeco_test.v"/>
       <outfile xil_pn:name="VgaPainter.v"/>
@@ -308,7 +315,7 @@
       <outfile xil_pn:name="vgaPainterTest.v"/>
       <outfile xil_pn:name="vga_sync.v"/>
     </transform>
-    <transform xil_pn:end_ts="1473559604" xil_pn:in_ck="-2182083157041806528" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6035555251822741265" xil_pn:start_ts="1473559595">
+    <transform xil_pn:end_ts="1473643171" xil_pn:in_ck="2738417841323520669" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4563973034265704459" xil_pn:start_ts="1473643166">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -316,22 +323,22 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TimerTest_beh.prj"/>
-      <outfile xil_pn:name="TimerTest_isim_beh.exe"/>
+      <outfile xil_pn:name="counter_test_beh.prj"/>
+      <outfile xil_pn:name="counter_test_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1473559604" xil_pn:in_ck="7306387282925408410" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4586200554295199374" xil_pn:start_ts="1473559604">
+    <transform xil_pn:end_ts="1473643171" xil_pn:in_ck="7306387282925408410" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2271277456845575406" xil_pn:start_ts="1473643171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="counter_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1473538836" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1473538836">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -361,7 +368,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473620981" xil_pn:in_ck="-3777632638652559882" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5524547352802433875" xil_pn:start_ts="1473620968">
+    <transform xil_pn:end_ts="1473646460" xil_pn:in_ck="4352950389655496857" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5524547352802433875" xil_pn:start_ts="1473646446">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -386,7 +393,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473620988" xil_pn:in_ck="-566243841070367542" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8753277989874969051" xil_pn:start_ts="1473620981">
+    <transform xil_pn:end_ts="1473646469" xil_pn:in_ck="-566243841070367542" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8753277989874969051" xil_pn:start_ts="1473646460">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.bld"/>
@@ -395,11 +402,9 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473620998" xil_pn:in_ck="5470253375235226549" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473620988">
+    <transform xil_pn:end_ts="1473646481" xil_pn:in_ck="5470253375235226549" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1473646469">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Temporizador.pcf"/>
       <outfile xil_pn:name="Temporizador_map.map"/>
       <outfile xil_pn:name="Temporizador_map.mrp"/>
@@ -410,7 +415,7 @@
       <outfile xil_pn:name="Temporizador_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473621014" xil_pn:in_ck="-6699170229987105447" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473620998">
+    <transform xil_pn:end_ts="1473646498" xil_pn:in_ck="-6699170229987105447" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1473646481">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -425,7 +430,7 @@
       <outfile xil_pn:name="Temporizador_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1473621032" xil_pn:in_ck="5488069108988440488" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473621014">
+    <transform xil_pn:end_ts="1473646515" xil_pn:in_ck="5488069108988440488" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1473646498">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -438,11 +443,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1473621048" xil_pn:in_ck="8830488558822265033" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473621047">
+    <transform xil_pn:end_ts="1473646523" xil_pn:in_ck="8830488558822265033" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1473646522">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1473621014" xil_pn:in_ck="6909523726171318949" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473621008">
+    <transform xil_pn:end_ts="1473646498" xil_pn:in_ck="6909523726171318949" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1473646491">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Temporizador.twr"/>

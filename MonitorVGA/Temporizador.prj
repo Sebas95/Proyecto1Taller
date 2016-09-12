@@ -1,6 +1,7 @@
 verilog work "vga_sync.v"
 verilog work "TwoDigitDeco.v"
 verilog work "timer_text.v"
+verilog work "SixBitCounter_M.v"
 verilog work "SixBitCounter.v"
 verilog work "FrecuencyDivider.v"
 verilog work "font_rom.v"
