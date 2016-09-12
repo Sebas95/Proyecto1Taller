@@ -52,6 +52,7 @@ module MinutesCounter(
  	.clk(clk_1Hz)     ,  
  	.reset(reset)   ,  
 	.forward(forward) , 
+	.finish(finish),
 	.increment(incrementSeconds)//,
 	//.finish(minutesClock) // el clck de los minutos es el finish del contador de segundos
 	//.finish(finish) // el clck de los minutos es el finish del contador de segundos

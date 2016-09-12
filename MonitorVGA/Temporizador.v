@@ -28,7 +28,8 @@ module Temporizador(
 	input wire [2:0] sw,
 	input wire delete,
    output wire hsync, vsync,
-   output wire [2:0] rgb
+   output wire [2:0] rgb,
+	output finish
    );
   
 	//ground
@@ -109,7 +110,7 @@ module Temporizador(
 			.secondsUnits(sUnit)     ,  // Output of the counter
 			.minutesDecimals(mDecimal)     ,  // Output of the counter
 			.minutesUnits(mUnit)     ,  // Output of the counter	
-			.finish()
+			.finish(finish)
     );
 	 
 

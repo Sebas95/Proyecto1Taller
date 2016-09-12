@@ -25,6 +25,7 @@ module SixBitCounter(
  	input reset   ,  // reset Input
 	input forward , //forward input
 	input increment,
+	input finish,
 	
 	output reg [5:0]out =0     // Output of the counter
 
@@ -41,7 +42,7 @@ module SixBitCounter(
 	begin
 		if (enable && forward )
 			out3<=out2;
-		if (enable && ~forward )
+		if (enable && ~forward && ~finish )
 		begin
 		// si se resetea se pone en cero
 			if (reset) 	
@@ -59,7 +60,7 @@ module SixBitCounter(
 	
 	always @(posedge increment)
 	begin
-		
+		out2<=out;
 		if(enable && forward )
 		begin
 			// si se resetea se pone en cero
@@ -78,10 +79,12 @@ module SixBitCounter(
 	//--------------------------------------------------------------
 	always @*
 	begin
-			if(forward)
-				out<=out2;
-			else
-				out<=out3;
+		if(reset)
+			out<=6'b0;
+		else if(forward)
+			out<=out2;
+		else if(~forward)
+			out<=out3;
 	end
 	
 	
