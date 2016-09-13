@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 2042 paths analyzed, 267 endpoints analyzed, 0 failing endpoints
+ 1901 paths analyzed, 196 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.431ns.
+ Minimum period is   4.524ns.
 --------------------------------------------------------------------------------
 
-Paths for end point vgap/text_unit/text_rgb_1 (SLICE_X10Y31.C3), 8 paths
+Paths for end point vgap/text_unit/text_rgb_1 (SLICE_X6Y24.B3), 3 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.569ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
+Slack (setup path):     15.476ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tsm/actualState_FSM_FFd2 (FF)
   Destination:          vgap/text_unit/text_rgb_1 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.344ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.436 - 0.488)
+  Data Path Delay:      4.483ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.444 - 0.450)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -52,31 +52,33 @@ Slack (setup path):     15.569ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
+  Maximum Data Path at Slow Process Corner: tsm/actualState_FSM_FFd2 to vgap/text_unit/text_rgb_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y16.DOA1    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X4Y32.D3       net (fanout=1)        1.041   vgap/font_word<1>
-    SLICE_X4Y32.CMUX     Topdc                 0.338   vgap/text_unit/bit_addr[2]_inv_39_OUT<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y31.C3      net (fanout=2)        0.826   vgap/text_unit/font_bit
-    SLICE_X10Y31.CLK     Tas                   0.289   vgap/text_unit/text_rgb<1>
+    SLICE_X14Y45.CQ      Tcko                  0.447   tsm/actualState_FSM_FFd2
+                                                       tsm/actualState_FSM_FFd2
+    SLICE_X8Y22.B4       net (fanout=42)       2.131   tsm/actualState_FSM_FFd2
+    SLICE_X8Y22.B        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on_SW0
+    SLICE_X8Y22.C4       net (fanout=2)        0.346   N4
+    SLICE_X8Y22.C        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on
+    SLICE_X6Y24.B3       net (fanout=3)        0.860   txt_on<0>
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
                                                        vgap/text_unit/text_rgb_1_rstpot1
                                                        vgap/text_unit/text_rgb_1
     -------------------------------------------------  ---------------------------
-    Total                                      4.344ns (2.477ns logic, 1.867ns route)
-                                                       (57.0% logic, 43.0% route)
+    Total                                      4.483ns (1.146ns logic, 3.337ns route)
+                                                       (25.6% logic, 74.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.653ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
+Slack (setup path):     15.631ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tsm/actualState_FSM_FFd3 (FF)
   Destination:          vgap/text_unit/text_rgb_1 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.260ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.436 - 0.488)
+  Data Path Delay:      4.327ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.444 - 0.451)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -87,104 +89,216 @@ Slack (setup path):     15.653ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
+  Maximum Data Path at Slow Process Corner: tsm/actualState_FSM_FFd3 to vgap/text_unit/text_rgb_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   vgap/font_unit/Mram_data
+    SLICE_X14Y46.CQ      Tcko                  0.447   tsm/actualState_FSM_FFd3
+                                                       tsm/actualState_FSM_FFd3
+    SLICE_X8Y22.C5       net (fanout=45)       2.526   tsm/actualState_FSM_FFd3
+    SLICE_X8Y22.C        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on
+    SLICE_X6Y24.B3       net (fanout=3)        0.860   txt_on<0>
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_1_rstpot1
+                                                       vgap/text_unit/text_rgb_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.327ns (0.941ns logic, 3.386ns route)
+                                                       (21.7% logic, 78.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.803ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tsm/actualState_FSM_FFd1 (FF)
+  Destination:          vgap/text_unit/text_rgb_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.156ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.444 - 0.450)
+  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tsm/actualState_FSM_FFd1 to vgap/text_unit/text_rgb_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y45.BQ      Tcko                  0.447   tsm/actualState_FSM_FFd2
+                                                       tsm/actualState_FSM_FFd1
+    SLICE_X8Y22.B5       net (fanout=12)       1.804   tsm/actualState_FSM_FFd1
+    SLICE_X8Y22.B        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on_SW0
+    SLICE_X8Y22.C4       net (fanout=2)        0.346   N4
+    SLICE_X8Y22.C        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on
+    SLICE_X6Y24.B3       net (fanout=3)        0.860   txt_on<0>
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_1_rstpot1
+                                                       vgap/text_unit/text_rgb_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.156ns (1.146ns logic, 3.010ns route)
+                                                       (27.6% logic, 72.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point vgap/text_unit/text_rgb_0 (SLICE_X6Y24.A4), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.566ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tsm/actualState_FSM_FFd2 (FF)
+  Destination:          vgap/text_unit/text_rgb_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.393ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.444 - 0.450)
+  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tsm/actualState_FSM_FFd2 to vgap/text_unit/text_rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y45.CQ      Tcko                  0.447   tsm/actualState_FSM_FFd2
+                                                       tsm/actualState_FSM_FFd2
+    SLICE_X8Y22.B4       net (fanout=42)       2.131   tsm/actualState_FSM_FFd2
+    SLICE_X8Y22.B        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on_SW0
+    SLICE_X8Y22.C4       net (fanout=2)        0.346   N4
+    SLICE_X8Y22.C        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on
+    SLICE_X6Y24.A4       net (fanout=3)        0.770   txt_on<0>
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_0_rstpot
+                                                       vgap/text_unit/text_rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.393ns (1.146ns logic, 3.247ns route)
+                                                       (26.1% logic, 73.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.721ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tsm/actualState_FSM_FFd3 (FF)
+  Destination:          vgap/text_unit/text_rgb_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.237ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.444 - 0.451)
+  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tsm/actualState_FSM_FFd3 to vgap/text_unit/text_rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y46.CQ      Tcko                  0.447   tsm/actualState_FSM_FFd3
+                                                       tsm/actualState_FSM_FFd3
+    SLICE_X8Y22.C5       net (fanout=45)       2.526   tsm/actualState_FSM_FFd3
+    SLICE_X8Y22.C        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on
+    SLICE_X6Y24.A4       net (fanout=3)        0.770   txt_on<0>
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_0_rstpot
+                                                       vgap/text_unit/text_rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.237ns (0.941ns logic, 3.296ns route)
+                                                       (22.2% logic, 77.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.893ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tsm/actualState_FSM_FFd1 (FF)
+  Destination:          vgap/text_unit/text_rgb_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.066ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.444 - 0.450)
+  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: tsm/actualState_FSM_FFd1 to vgap/text_unit/text_rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y45.BQ      Tcko                  0.447   tsm/actualState_FSM_FFd2
+                                                       tsm/actualState_FSM_FFd1
+    SLICE_X8Y22.B5       net (fanout=12)       1.804   tsm/actualState_FSM_FFd1
+    SLICE_X8Y22.B        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on_SW0
+    SLICE_X8Y22.C4       net (fanout=2)        0.346   N4
+    SLICE_X8Y22.C        Tilo                  0.205   rgb_1_OBUF
+                                                       vgap/text_unit/state_on
+    SLICE_X6Y24.A4       net (fanout=3)        0.770   txt_on<0>
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_0_rstpot
+                                                       vgap/text_unit/text_rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.066ns (1.146ns logic, 2.920ns route)
+                                                       (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point vgap/text_unit/text_rgb_0 (SLICE_X6Y24.A2), 8 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.659ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               vgap/font_unit/Mram_data (RAM)
+  Destination:          vgap/text_unit/text_rgb_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.281ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.267 - 0.292)
+  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y12.DOA5    Trcko_DOA             1.850   vgap/font_unit/Mram_data
                                                        vgap/font_unit/Mram_data
-    SLICE_X4Y32.C5       net (fanout=1)        0.952   vgap/font_word<5>
-    SLICE_X4Y32.CMUX     Tilo                  0.343   vgap/text_unit/bit_addr[2]_inv_39_OUT<2>
+    SLICE_X6Y24.C1       net (fanout=1)        1.151   vgap/font_word<5>
+    SLICE_X6Y24.CMUX     Tilo                  0.361   vgap/text_unit/text_rgb<1>
                                                        vgap/text_unit/Mmux_font_bit_3
                                                        vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y31.C3      net (fanout=2)        0.826   vgap/text_unit/font_bit
-    SLICE_X10Y31.CLK     Tas                   0.289   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot1
-                                                       vgap/text_unit/text_rgb_1
-    -------------------------------------------------  ---------------------------
-    Total                                      4.260ns (2.482ns logic, 1.778ns route)
-                                                       (58.3% logic, 41.7% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     15.683ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.230ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.436 - 0.488)
-  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X0Y16.DOA3    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X4Y32.D2       net (fanout=1)        0.927   vgap/font_word<3>
-    SLICE_X4Y32.CMUX     Topdc                 0.338   vgap/text_unit/bit_addr[2]_inv_39_OUT<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y31.C3      net (fanout=2)        0.826   vgap/text_unit/font_bit
-    SLICE_X10Y31.CLK     Tas                   0.289   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot1
-                                                       vgap/text_unit/text_rgb_1
-    -------------------------------------------------  ---------------------------
-    Total                                      4.230ns (2.477ns logic, 1.753ns route)
-                                                       (58.6% logic, 41.4% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point vgap/text_unit/text_rgb_0 (SLICE_X10Y31.A6), 8 paths
---------------------------------------------------------------------------------
-Slack (setup path):     15.757ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_0 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.156ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.436 - 0.488)
-  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X0Y16.DOA1    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X4Y32.D3       net (fanout=1)        1.041   vgap/font_word<1>
-    SLICE_X4Y32.CMUX     Topdc                 0.338   vgap/text_unit/bit_addr[2]_inv_39_OUT<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y31.A6      net (fanout=2)        0.638   vgap/text_unit/font_bit
-    SLICE_X10Y31.CLK     Tas                   0.289   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot1
+    SLICE_X6Y24.A2       net (fanout=2)        0.630   vgap/text_unit/font_bit
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_0_rstpot
                                                        vgap/text_unit/text_rgb_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.156ns (2.477ns logic, 1.679ns route)
-                                                       (59.6% logic, 40.4% route)
+    Total                                      4.281ns (2.500ns logic, 1.781ns route)
+                                                       (58.4% logic, 41.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.841ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     15.836ns (requirement - (data path - clock path skew + uncertainty))
   Source:               vgap/font_unit/Mram_data (RAM)
   Destination:          vgap/text_unit/text_rgb_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.072ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.436 - 0.488)
+  Data Path Delay:      4.104ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.267 - 0.292)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -199,27 +313,27 @@ Slack (setup path):     15.841ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   vgap/font_unit/Mram_data
+    RAMB16_X0Y12.DOA6    Trcko_DOA             1.850   vgap/font_unit/Mram_data
                                                        vgap/font_unit/Mram_data
-    SLICE_X4Y32.C5       net (fanout=1)        0.952   vgap/font_word<5>
-    SLICE_X4Y32.CMUX     Tilo                  0.343   vgap/text_unit/bit_addr[2]_inv_39_OUT<2>
+    SLICE_X6Y24.C3       net (fanout=1)        0.974   vgap/font_word<6>
+    SLICE_X6Y24.CMUX     Tilo                  0.361   vgap/text_unit/text_rgb<1>
                                                        vgap/text_unit/Mmux_font_bit_3
                                                        vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y31.A6      net (fanout=2)        0.638   vgap/text_unit/font_bit
-    SLICE_X10Y31.CLK     Tas                   0.289   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot1
+    SLICE_X6Y24.A2       net (fanout=2)        0.630   vgap/text_unit/font_bit
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_0_rstpot
                                                        vgap/text_unit/text_rgb_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.072ns (2.482ns logic, 1.590ns route)
-                                                       (61.0% logic, 39.0% route)
+    Total                                      4.104ns (2.500ns logic, 1.604ns route)
+                                                       (60.9% logic, 39.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.871ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     15.940ns (requirement - (data path - clock path skew + uncertainty))
   Source:               vgap/font_unit/Mram_data (RAM)
   Destination:          vgap/text_unit/text_rgb_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.042ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.436 - 0.488)
+  Data Path Delay:      4.000ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.267 - 0.292)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -234,168 +348,26 @@ Slack (setup path):     15.871ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y16.DOA3    Trcko_DOA             1.850   vgap/font_unit/Mram_data
+    RAMB16_X0Y12.DOA2    Trcko_DOA             1.850   vgap/font_unit/Mram_data
                                                        vgap/font_unit/Mram_data
-    SLICE_X4Y32.D2       net (fanout=1)        0.927   vgap/font_word<3>
-    SLICE_X4Y32.CMUX     Topdc                 0.338   vgap/text_unit/bit_addr[2]_inv_39_OUT<2>
+    SLICE_X6Y24.D5       net (fanout=1)        0.863   vgap/font_word<2>
+    SLICE_X6Y24.CMUX     Topdc                 0.368   vgap/text_unit/text_rgb<1>
                                                        vgap/text_unit/Mmux_font_bit_4
                                                        vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y31.A6      net (fanout=2)        0.638   vgap/text_unit/font_bit
-    SLICE_X10Y31.CLK     Tas                   0.289   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot1
+    SLICE_X6Y24.A2       net (fanout=2)        0.630   vgap/text_unit/font_bit
+    SLICE_X6Y24.CLK      Tas                   0.289   vgap/text_unit/text_rgb<1>
+                                                       vgap/text_unit/text_rgb_0_rstpot
                                                        vgap/text_unit/text_rgb_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.042ns (2.477ns logic, 1.565ns route)
-                                                       (61.3% logic, 38.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point dbounce/debouncer0/state_reg_FSM_FFd2 (SLICE_X13Y52.B5), 19 paths
---------------------------------------------------------------------------------
-Slack (setup path):     15.919ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               dbounce/debouncer3/q_reg_15 (FF)
-  Destination:          dbounce/debouncer0/state_reg_FSM_FFd2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.030ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.340 - 0.356)
-  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: dbounce/debouncer3/q_reg_15 to dbounce/debouncer0/state_reg_FSM_FFd2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X16Y47.DQ      Tcko                  0.408   dbounce/debouncer3/q_reg<15>
-                                                       dbounce/debouncer3/q_reg_15
-    SLICE_X17Y47.D3      net (fanout=2)        1.358   dbounce/debouncer3/q_reg<15>
-    SLICE_X17Y47.D       Tilo                  0.259   dbounce/debouncer4/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/m_tick<18>11
-    SLICE_X17Y47.A4      net (fanout=1)        0.440   dbounce/debouncer0/m_tick<18>1
-    SLICE_X17Y47.A       Tilo                  0.259   dbounce/debouncer4/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/m_tick<18>14
-    SLICE_X13Y52.B5      net (fanout=10)       0.984   dbounce/debouncer0/m_tick
-    SLICE_X13Y52.CLK     Tas                   0.322   dbounce/debouncer0/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/state_reg_FSM_FFd2-In1
-                                                       dbounce/debouncer0/state_reg_FSM_FFd2
-    -------------------------------------------------  ---------------------------
-    Total                                      4.030ns (1.248ns logic, 2.782ns route)
-                                                       (31.0% logic, 69.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     16.654ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               dbounce/debouncer3/q_reg_18 (FF)
-  Destination:          dbounce/debouncer0/state_reg_FSM_FFd2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.301ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.010ns (0.250 - 0.260)
-  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: dbounce/debouncer3/q_reg_18 to dbounce/debouncer0/state_reg_FSM_FFd2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X16Y48.CQ      Tcko                  0.408   dbounce/debouncer3/q_reg<18>
-                                                       dbounce/debouncer3/q_reg_18
-    SLICE_X17Y47.D1      net (fanout=2)        0.629   dbounce/debouncer3/q_reg<18>
-    SLICE_X17Y47.D       Tilo                  0.259   dbounce/debouncer4/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/m_tick<18>11
-    SLICE_X17Y47.A4      net (fanout=1)        0.440   dbounce/debouncer0/m_tick<18>1
-    SLICE_X17Y47.A       Tilo                  0.259   dbounce/debouncer4/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/m_tick<18>14
-    SLICE_X13Y52.B5      net (fanout=10)       0.984   dbounce/debouncer0/m_tick
-    SLICE_X13Y52.CLK     Tas                   0.322   dbounce/debouncer0/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/state_reg_FSM_FFd2-In1
-                                                       dbounce/debouncer0/state_reg_FSM_FFd2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.301ns (1.248ns logic, 2.053ns route)
-                                                       (37.8% logic, 62.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     16.661ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               dbounce/debouncer3/q_reg_14 (FF)
-  Destination:          dbounce/debouncer0/state_reg_FSM_FFd2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.288ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.340 - 0.356)
-  Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: dbounce/debouncer3/q_reg_14 to dbounce/debouncer0/state_reg_FSM_FFd2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X16Y47.CQ      Tcko                  0.408   dbounce/debouncer3/q_reg<15>
-                                                       dbounce/debouncer3/q_reg_14
-    SLICE_X17Y46.A2      net (fanout=2)        0.604   dbounce/debouncer3/q_reg<14>
-    SLICE_X17Y46.A       Tilo                  0.259   dbounce/debouncer0/m_tick<18>11
-                                                       dbounce/debouncer0/m_tick<18>12
-    SLICE_X17Y47.A3      net (fanout=1)        0.452   dbounce/debouncer0/m_tick<18>11
-    SLICE_X17Y47.A       Tilo                  0.259   dbounce/debouncer4/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/m_tick<18>14
-    SLICE_X13Y52.B5      net (fanout=10)       0.984   dbounce/debouncer0/m_tick
-    SLICE_X13Y52.CLK     Tas                   0.322   dbounce/debouncer0/state_reg_FSM_FFd2
-                                                       dbounce/debouncer0/state_reg_FSM_FFd2-In1
-                                                       dbounce/debouncer0/state_reg_FSM_FFd2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.288ns (1.248ns logic, 2.040ns route)
-                                                       (38.0% logic, 62.0% route)
+    Total                                      4.000ns (2.507ns logic, 1.493ns route)
+                                                       (62.7% logic, 37.3% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 --------------------------------------------------------------------------------
 
-Paths for end point dbounce/debouncer3/state_reg_FSM_FFd3 (SLICE_X12Y51.B5), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.397ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dbounce/debouncer3/state_reg_FSM_FFd2 (FF)
-  Destination:          dbounce/debouncer3/state_reg_FSM_FFd3 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.397ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHZ_BUFGP rising at 20.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: dbounce/debouncer3/state_reg_FSM_FFd2 to dbounce/debouncer3/state_reg_FSM_FFd3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y51.BQ      Tcko                  0.200   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd2
-    SLICE_X12Y51.B5      net (fanout=2)        0.076   dbounce/debouncer3/state_reg_FSM_FFd2
-    SLICE_X12Y51.CLK     Tah         (-Th)    -0.121   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd3-In1
-                                                       dbounce/debouncer3/state_reg_FSM_FFd3
-    -------------------------------------------------  ---------------------------
-    Total                                      0.397ns (0.321ns logic, 0.076ns route)
-                                                       (80.9% logic, 19.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point dbounce/debouncer4/state_reg_FSM_FFd3 (SLICE_X17Y47.C5), 1 path
+Paths for end point dbounce/debouncer4/state_reg_FSM_FFd3 (SLICE_X17Y53.C5), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - data path))
   Source:               dbounce/debouncer4/state_reg_FSM_FFd2 (FF)
@@ -411,10 +383,10 @@ Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y47.CQ      Tcko                  0.198   dbounce/debouncer4/state_reg_FSM_FFd2
+    SLICE_X17Y53.CQ      Tcko                  0.198   dbounce/debouncer4/state_reg_FSM_FFd2
                                                        dbounce/debouncer4/state_reg_FSM_FFd2
-    SLICE_X17Y47.C5      net (fanout=2)        0.056   dbounce/debouncer4/state_reg_FSM_FFd2
-    SLICE_X17Y47.CLK     Tah         (-Th)    -0.155   dbounce/debouncer4/state_reg_FSM_FFd2
+    SLICE_X17Y53.C5      net (fanout=2)        0.056   dbounce/debouncer4/state_reg_FSM_FFd2
+    SLICE_X17Y53.CLK     Tah         (-Th)    -0.155   dbounce/debouncer4/state_reg_FSM_FFd2
                                                        dbounce/debouncer4/state_reg_FSM_FFd3-In1
                                                        dbounce/debouncer4/state_reg_FSM_FFd3
     -------------------------------------------------  ---------------------------
@@ -423,31 +395,59 @@ Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point dbounce/debouncer3/state_reg_FSM_FFd1 (SLICE_X12Y51.A6), 1 path
+Paths for end point dbounce/debouncer2/state_reg_FSM_FFd3 (SLICE_X17Y54.B5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.421ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dbounce/debouncer3/state_reg_FSM_FFd1 (FF)
-  Destination:          dbounce/debouncer3/state_reg_FSM_FFd1 (FF)
+Slack (hold path):      0.426ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dbounce/debouncer2/state_reg_FSM_FFd2 (FF)
+  Destination:          dbounce/debouncer2/state_reg_FSM_FFd3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.421ns (Levels of Logic = 1)
+  Data Path Delay:      0.426ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_50MHZ_BUFGP rising at 20.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: dbounce/debouncer3/state_reg_FSM_FFd1 to dbounce/debouncer3/state_reg_FSM_FFd1
+  Minimum Data Path at Fast Process Corner: dbounce/debouncer2/state_reg_FSM_FFd2 to dbounce/debouncer2/state_reg_FSM_FFd3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y51.AQ      Tcko                  0.200   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd1
-    SLICE_X12Y51.A6      net (fanout=4)        0.031   dbounce/debouncer3/state_reg_FSM_FFd1
-    SLICE_X12Y51.CLK     Tah         (-Th)    -0.190   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd1-In1
-                                                       dbounce/debouncer3/state_reg_FSM_FFd1
+    SLICE_X17Y54.BQ      Tcko                  0.198   dbounce/debouncer2/state_reg_FSM_FFd2
+                                                       dbounce/debouncer2/state_reg_FSM_FFd2
+    SLICE_X17Y54.B5      net (fanout=2)        0.073   dbounce/debouncer2/state_reg_FSM_FFd2
+    SLICE_X17Y54.CLK     Tah         (-Th)    -0.155   dbounce/debouncer2/state_reg_FSM_FFd2
+                                                       dbounce/debouncer2/state_reg_FSM_FFd3-In1
+                                                       dbounce/debouncer2/state_reg_FSM_FFd3
     -------------------------------------------------  ---------------------------
-    Total                                      0.421ns (0.390ns logic, 0.031ns route)
-                                                       (92.6% logic, 7.4% route)
+    Total                                      0.426ns (0.353ns logic, 0.073ns route)
+                                                       (82.9% logic, 17.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dbounce/debouncer3/state_reg_FSM_FFd3 (SLICE_X14Y46.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.429ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dbounce/debouncer3/state_reg_FSM_FFd2 (FF)
+  Destination:          dbounce/debouncer3/state_reg_FSM_FFd3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.429ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_50MHZ_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: dbounce/debouncer3/state_reg_FSM_FFd2 to dbounce/debouncer3/state_reg_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y46.BQ      Tcko                  0.234   tsm/actualState_FSM_FFd3
+                                                       dbounce/debouncer3/state_reg_FSM_FFd2
+    SLICE_X14Y46.B5      net (fanout=2)        0.064   dbounce/debouncer3/state_reg_FSM_FFd2
+    SLICE_X14Y46.CLK     Tah         (-Th)    -0.131   tsm/actualState_FSM_FFd3
+                                                       dbounce/debouncer3/state_reg_FSM_FFd3-In1
+                                                       dbounce/debouncer3/state_reg_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.429ns (0.365ns logic, 0.064ns route)
+                                                       (85.1% logic, 14.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -458,7 +458,7 @@ Slack: 16.876ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: vgap/font_unit/Mram_data/CLKA
   Logical resource: vgap/font_unit/Mram_data/CLKA
-  Location pin: RAMB16_X0Y16.CLKA
+  Location pin: RAMB16_X0Y12.CLKA
   Clock network: CLK_50MHZ_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.270ns (period - min period limit)
@@ -472,9 +472,9 @@ Slack: 18.270ns (period - min period limit)
 Slack: 19.570ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: dbounce/debouncer3/q_reg<3>/CLK
-  Logical resource: clk/CK
-  Location pin: SLICE_X16Y44.CLK
+  Physical resource: dbounce/debouncer4/q_reg<3>/CLK
+  Logical resource: dbounce/debouncer4/q_reg_1/CK
+  Location pin: SLICE_X16Y50.CLK
   Clock network: CLK_50MHZ_BUFGP
 --------------------------------------------------------------------------------
 
@@ -491,7 +491,7 @@ Clock to Setup on destination clock CLK_50MHZ
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    4.431|         |         |         |
+CLK_50MHZ      |    4.524|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -500,23 +500,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 2042 paths, 0 nets, and 314 connections
+Constraints cover 1901 paths, 0 nets, and 249 connections
 
 Design statistics:
-   Minimum period:   4.431ns{1}   (Maximum frequency: 225.683MHz)
+   Minimum period:   4.524ns{1}   (Maximum frequency: 221.043MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Sep 11 20:14:56 2016 
+Analysis completed Tue Sep 13 09:52:25 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 241 MB
+Peak Memory Usage: 243 MB
 
 
 

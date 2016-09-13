@@ -48,12 +48,13 @@ module VgaPainter(
 	input wire clk2,
    output wire hsync, vsync,
    output wire [2:0] rgb,
-	output wire video_on
+	output wire video_on,
+	output wire [1:0] text_on
     );
 
    wire [9:0] pixel_x, pixel_y;
 	//
-   wire [3:0]  text_on=0;
+   //wire [3:0]  text_on=0;
    wire [10:0] rom_addr;
 	wire [7:0]  font_word;
 

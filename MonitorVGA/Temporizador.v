@@ -38,6 +38,9 @@ module Temporizador(
 	wire enableCounter;
    wire resetTimer;	
 	wire forward;
+	wire video_on;
+	wire [1:0] txt_on;
+	wire [2:0] nextRGB;	
 	wire [2:0] actualState;
 	wire [3:0] mDecimal ;
 	wire [3:0] mUnit;
@@ -96,8 +99,9 @@ module Temporizador(
 		.actualState(actualState),
 		.hsync(hsync), 
 		.vsync(vsync), 
-		.rgb(rgb),
-		.video_on(video_on)
+		.rgb(nextRGB),
+		.video_on(video_on),
+		.text_on(txt_on)
 	);	
 	
 		
@@ -131,10 +135,14 @@ module Temporizador(
 		.incrementSeg(incrementSeg),
 		.incrementMin(incrementMin)
 	);
-	/*
-	reg [2:0] rgb_reg;
-	   always @*
-         rgb_reg <= sw;
-   // output */
+	
+	
+	vgaColorConfig colorConfg (
+		.nextRGB(nextRGB), 
+		.video_on(video_on), 
+		.rgb(rgb),
+		.txt_on(txt_on)
+	);
+	
 
 endmodule

@@ -165,7 +165,7 @@ module textPainter
    //-------------------------------------------
    always @*
    begin
-      nextRGB = 3'b110;  // background, yellow
+      nextRGB = 3'b000;  // background, yellow
       if (score_on)
          begin
             char_addr = char_addr_s;
