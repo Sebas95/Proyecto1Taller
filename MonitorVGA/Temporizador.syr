@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: Temporizador.prj
 
@@ -670,17 +670,17 @@ Top Level Output File Name         : Temporizador.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 465
+# BELS                             : 458
 #      GND                         : 1
 #      INV                         : 7
 #      LUT1                        : 62
-#      LUT2                        : 26
+#      LUT2                        : 25
 #      LUT3                        : 32
 #      LUT4                        : 47
-#      LUT5                        : 77
-#      LUT6                        : 77
+#      LUT5                        : 76
+#      LUT6                        : 74
 #      MUXCY                       : 75
-#      MUXF7                       : 3
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 57
 # FlipFlops/Latches                : 156
@@ -707,14 +707,14 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             156  out of  18224     0%  
- Number of Slice LUTs:                  328  out of   9112     3%  
-    Number used as Logic:               328  out of   9112     3%  
+ Number of Slice LUTs:                  323  out of   9112     3%  
+    Number used as Logic:               323  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    334
-   Number with an unused Flip Flop:     178  out of    334    53%  
-   Number with an unused LUT:             6  out of    334     1%  
-   Number of fully used LUT-FF pairs:   150  out of    334    44%  
+ Number of LUT Flip Flop pairs used:    329
+   Number with an unused Flip Flop:     173  out of    329    52%  
+   Number with an unused LUT:             6  out of    329     1%  
+   Number of fully used LUT-FF pairs:   150  out of    329    45%  
    Number of unique control sets:        12
 
 IO Utilization: 
@@ -772,7 +772,7 @@ Speed Grade: -3
 
    Minimum period: 5.442ns (Maximum Frequency: 183.742MHz)
    Minimum input arrival time before clock: 2.522ns
-   Maximum output required time after clock: 8.990ns
+   Maximum output required time after clock: 8.976ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -781,27 +781,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50MHZ'
-  Clock period: 4.495ns (frequency: 222.467MHz)
+  Clock period: 4.374ns (frequency: 228.628MHz)
   Total number of paths / destination ports: 2104 / 78
 -------------------------------------------------------------------------
-Delay:               4.495ns (Levels of Logic = 3)
+Delay:               4.374ns (Levels of Logic = 3)
   Source:            tsm/state_FSM_FFd2 (FF)
-  Destination:       mc/decoSeconds/decimals_3 (FF)
+  Destination:       mc/decoSeconds/units_1 (FF)
   Source Clock:      CLK_50MHZ rising
   Destination Clock: CLK_50MHZ rising
 
-  Data Path: tsm/state_FSM_FFd2 to mc/decoSeconds/decimals_3
+  Data Path: tsm/state_FSM_FFd2 to mc/decoSeconds/units_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              62   0.447   1.855  tsm/state_FSM_FFd2 (tsm/state_FSM_FFd2)
-     LUT5:I2->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<3>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<3>)
-     LDC:D->Q             15   0.471   1.210  mc/seconds/out_3 (mc/seconds/out_3)
-     LUT5:I2->O            1   0.205   0.000  mc/decoSeconds_Mram__n007331 (mc/decoSeconds/_n0073<3>)
-     FD:D                      0.102          mc/decoSeconds/decimals_3
+     FD:C->Q              60   0.447   1.842  tsm/state_FSM_FFd2 (tsm/state_FSM_FFd2)
+     LUT5:I2->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<4>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<4>)
+     LDC:D->Q             10   0.471   1.104  mc/seconds/out_4 (mc/seconds/out_4)
+     LUT4:I0->O            1   0.203   0.000  mc/decoSeconds_Mram__n007351 (mc/decoSeconds/_n0073<5>)
+     FD:D                      0.102          mc/decoSeconds/units_1
     ----------------------------------------
-    Total                      4.495ns (1.430ns logic, 3.065ns route)
-                                       (31.8% logic, 68.2% route)
+    Total                      4.374ns (1.428ns logic, 2.946ns route)
+                                       (32.6% logic, 67.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'incrementSeg'
@@ -828,10 +828,10 @@ Delay:               3.782ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'incrementMin'
-  Clock period: 3.840ns (frequency: 260.400MHz)
+  Clock period: 3.782ns (frequency: 264.438MHz)
   Total number of paths / destination ports: 57 / 12
 -------------------------------------------------------------------------
-Delay:               3.840ns (Levels of Logic = 2)
+Delay:               3.782ns (Levels of Logic = 2)
   Source:            mc/minutes/out2_4 (FF)
   Destination:       mc/minutes/out2_0 (FF)
   Source Clock:      incrementMin rising
@@ -841,20 +841,20 @@ Delay:               3.840ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             7   0.447   1.002  mc/minutes/out2_4 (mc/minutes/out2_4)
+     FDRE:C->Q             5   0.447   0.943  mc/minutes/out2_4 (mc/minutes/out2_4)
      LUT4:I1->O            1   0.205   0.808  mc/minutes/Mcount_out2_val_SW0 (N42)
      LUT5:I2->O            6   0.205   0.744  mc/minutes/Mcount_out2_val (mc/minutes/Mcount_out2_val)
      FDRE:R                    0.430          mc/minutes/out2_0
     ----------------------------------------
-    Total                      3.840ns (1.287ns logic, 2.553ns route)
-                                       (33.5% logic, 66.5% route)
+    Total                      3.782ns (1.287ns logic, 2.495ns route)
+                                       (34.0% logic, 66.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'vgap/fd/clk_1Hz'
-  Clock period: 5.134ns (frequency: 194.784MHz)
-  Total number of paths / destination ports: 233 / 20
+  Clock period: 5.260ns (frequency: 190.118MHz)
+  Total number of paths / destination ports: 231 / 20
 -------------------------------------------------------------------------
-Delay:               5.134ns (Levels of Logic = 4)
+Delay:               5.260ns (Levels of Logic = 4)
   Source:            mc/seconds/out3_5 (FF)
   Destination:       mc/minutes/out3_5 (FF)
   Source Clock:      vgap/fd/clk_1Hz rising
@@ -866,13 +866,13 @@ Delay:               5.134ns (Levels of Logic = 4)
     ----------------------------------------  ------------
      FDRE:C->Q             8   0.447   0.803  mc/seconds/out3_5 (mc/seconds/out3_5)
      LUT5:I4->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<5>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<5>)
-     LDC:D->Q             10   0.471   0.961  mc/seconds/out_5 (mc/seconds/out_5)
-     LUT5:I3->O            7   0.203   0.774  mc/minutes/Mmux_out3[5]_out3[5]_mux_10_OUT612 (mc/minutes/Mmux_out3[5]_out3[5]_mux_10_OUT612)
-     LUT6:I5->O            6   0.205   0.744  mc/minutes/_n0089_inv1 (mc/minutes/_n0089_inv)
+     LDC:D->Q             10   0.471   1.085  mc/seconds/out_5 (mc/seconds/out_5)
+     LUT6:I3->O            7   0.205   0.774  mc/minutes/seconds[5]_GND_38_o_equal_6_o<5>1 (mc/minutes/seconds[5]_GND_38_o_equal_6_o)
+     LUT5:I4->O            6   0.205   0.744  mc/minutes/_n0090_inv1 (mc/minutes/_n0090_inv)
      FDE:CE                    0.322          mc/minutes/out3_0
     ----------------------------------------
-    Total                      5.134ns (1.853ns logic, 3.281ns route)
-                                       (36.1% logic, 63.9% route)
+    Total                      5.260ns (1.855ns logic, 3.405ns route)
+                                       (35.3% logic, 64.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -933,7 +933,7 @@ Offset:              6.190ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               2   0.498   0.981  vgap/text_unit/bit_addr_0 (vgap/text_unit/bit_addr_0)
-     LUT6:I0->O            1   0.203   0.000  vgap/text_unit/Mmux_font_bit_2_f7_G (N82)
+     LUT6:I0->O            1   0.203   0.000  vgap/text_unit/Mmux_font_bit_2_f7_G (N73)
      MUXF7:I1->O           3   0.140   1.015  vgap/text_unit/Mmux_font_bit_2_f7 (vgap/text_unit/font_bit)
      LUT6:I0->O            1   0.203   0.579  colorConfg/Mmux_rgbAux33 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
@@ -945,7 +945,7 @@ Offset:              6.190ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHZ'
   Total number of paths / destination ports: 50 / 3
 -------------------------------------------------------------------------
-Offset:              8.990ns (Levels of Logic = 5)
+Offset:              8.976ns (Levels of Logic = 5)
   Source:            tsm/state_FSM_FFd3 (FF)
   Destination:       rgb<1> (PAD)
   Source Clock:      CLK_50MHZ rising
@@ -954,14 +954,14 @@ Offset:              8.990ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              65   0.447   1.875  tsm/state_FSM_FFd3 (tsm/state_FSM_FFd3)
+     FD:C->Q              63   0.447   1.862  tsm/state_FSM_FFd3 (tsm/state_FSM_FFd3)
      LUT5:I2->O            2   0.205   0.617  vgap/text_unit/Mmux_state_on1_SW0 (N26)
      LUT6:I5->O           17   0.205   1.256  vgap/text_unit/score_on_state_on_OR_97_o1 (vgap/text_unit/score_on_state_on_OR_97_o)
      LUT5:I2->O            1   0.205   0.827  colorConfg/Mmux_rgbAux22 (colorConfg/Mmux_rgbAux21)
      LUT6:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux24 (rgb_1_OBUF)
      OBUF:I->O                 2.571          rgb_1_OBUF (rgb<1>)
     ----------------------------------------
-    Total                      8.990ns (3.836ns logic, 5.154ns route)
+    Total                      8.976ns (3.836ns logic, 5.140ns route)
                                        (42.7% logic, 57.3% route)
 
 =========================================================================
@@ -1018,10 +1018,10 @@ Clock to Setup on destination clock CLK_50MHZ
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-CLK_50MHZ                               |    4.495|         |         |         |
-incrementMin                            |    3.620|         |         |         |
-incrementSeg                            |    3.732|         |         |         |
-vgap/fd/clk_1Hz                         |    3.470|         |         |         |
+CLK_50MHZ                               |    4.374|         |         |         |
+incrementMin                            |    3.600|         |         |         |
+incrementSeg                            |    3.661|         |         |         |
+vgap/fd/clk_1Hz                         |    3.474|         |         |         |
 vgap/text_unit/score_on_state_on_OR_97_o|         |    1.427|         |         |
 ----------------------------------------+---------+---------+---------+---------+
 
@@ -1038,10 +1038,10 @@ Clock to Setup on destination clock clk_INV_1_o_norst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |         |         |    2.507|         |
-incrementMin   |         |         |    1.851|         |
+CLK_50MHZ      |         |         |    2.494|         |
+incrementMin   |         |         |    1.824|         |
 incrementSeg   |         |         |    1.824|         |
-vgap/fd/clk_1Hz|         |         |    1.642|         |
+vgap/fd/clk_1Hz|         |         |    1.700|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock incrementMin
@@ -1049,8 +1049,8 @@ Clock to Setup on destination clock incrementMin
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    5.129|         |         |         |
-incrementMin   |    3.840|         |         |         |
+CLK_50MHZ      |    5.121|         |         |         |
+incrementMin   |    3.782|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock incrementSeg
@@ -1058,7 +1058,7 @@ Clock to Setup on destination clock incrementSeg
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    5.129|         |         |         |
+CLK_50MHZ      |    5.121|         |         |         |
 incrementSeg   |    3.782|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -1067,7 +1067,7 @@ Clock to Setup on destination clock tsm/state[2]_GND_47_o_Mux_20_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |         |         |    2.438|         |
+CLK_50MHZ      |         |         |    2.425|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock vgap/fd/clk_1Hz
@@ -1075,11 +1075,11 @@ Clock to Setup on destination clock vgap/fd/clk_1Hz
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-CLK_50MHZ                     |    6.187|         |         |         |
-incrementMin                  |    3.699|         |         |         |
-incrementSeg                  |    5.423|         |         |         |
+CLK_50MHZ                     |    6.301|         |         |         |
+incrementMin                  |    2.859|         |         |         |
+incrementSeg                  |    5.604|         |         |         |
 tsm/state[2]_GND_47_o_Mux_20_o|         |    1.487|         |         |
-vgap/fd/clk_1Hz               |    5.134|         |         |         |
+vgap/fd/clk_1Hz               |    5.260|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock vgap/text_unit/actualState[2]_actualState[2]_OR_76_o
@@ -1087,7 +1087,7 @@ Clock to Setup on destination clock vgap/text_unit/actualState[2]_actualState[2]
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |         |         |    4.248|         |
+CLK_50MHZ      |         |         |    4.235|         |
 clk            |         |         |    3.722|         |
 ---------------+---------+---------+---------+---------+
 
@@ -1104,8 +1104,8 @@ vgap/text_unit/actualState[2]_actualState[2]_OR_76_o|         |         |    1.6
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.22 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.97 secs
  
 --> 
 
