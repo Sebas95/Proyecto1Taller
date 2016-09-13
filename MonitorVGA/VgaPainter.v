@@ -46,6 +46,7 @@ module VgaPainter(
 	input wire [2:0] actualState,
 	input wire clk,
 	input wire clk2,
+	input wire finish,
    output wire hsync, vsync,
    output wire [2:0] rgb,
 	output wire video_on,
@@ -53,6 +54,7 @@ module VgaPainter(
     );
 
    wire [9:0] pixel_x, pixel_y;
+	wire clk1Hz;
 	//
    //wire [3:0]  text_on=0;
    wire [10:0] rom_addr;
@@ -77,6 +79,7 @@ module VgaPainter(
    // instantiate text module
    textPainter text_unit
       (.clk(clk2),
+		 .clk1Hz(clk1Hz),
 		 .actualState(actualState),
        .pix_x(pixel_x), 
 		 .pix_y(pixel_y),
@@ -88,7 +91,14 @@ module VgaPainter(
 		 .text_rgb(rgb),
 		 .rom_addr(rom_addr),
 		 .font_word(font_word),
-		.pixel_tick(pixel_tick)
+		 .pixel_tick(pixel_tick),
+		 .finish(finish)
+	);
+	
+		FrecuencyDivider fd (
+		.clk_100MHz(clk2),
+		.clk_1Hz(clk1Hz),
+		.counter()
 	);
 
 

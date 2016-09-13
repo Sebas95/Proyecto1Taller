@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1944 paths analyzed, 229 endpoints analyzed, 0 failing endpoints
+ 1888 paths analyzed, 194 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.923ns.
+ Minimum period is   3.776ns.
 --------------------------------------------------------------------------------
 
-Paths for end point vgap/text_unit/text_rgb_0 (SLICE_X11Y25.A5), 13 paths
+Paths for end point mc/fd/counter_25 (SLICE_X16Y48.SR), 49 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.077ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_0 (FF)
+Slack (setup path):     16.224ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mc/fd/counter_18 (FF)
+  Destination:          mc/fd/counter_25 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.838ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.050ns (0.250 - 0.300)
+  Data Path Delay:      3.722ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.336 - 0.355)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -52,34 +52,33 @@ Slack (setup path):     15.077ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_0
+  Maximum Data Path at Slow Process Corner: mc/fd/counter_18 to mc/fd/counter_25
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA2    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D3      net (fanout=1)        1.263   vgap/font_word<2>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X11Y25.B5      net (fanout=4)        0.589   vgap/text_unit/font_bit
-    SLICE_X11Y25.B       Tilo                  0.259   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot_G
-    SLICE_X11Y25.A5      net (fanout=1)        0.187   N57
-    SLICE_X11Y25.CLK     Tas                   0.322   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot1
-                                                       vgap/text_unit/text_rgb_0
+    SLICE_X17Y46.BQ      Tcko                  0.391   mc/fd/counter<20>
+                                                       mc/fd/counter_18
+    SLICE_X14Y43.D2      net (fanout=4)        1.284   mc/fd/counter<18>
+    SLICE_X14Y43.COUT    Topcyd                0.274   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lutdi3
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.455   mc/fd/counter<26>
+                                                       mc/fd/counter_25
     -------------------------------------------------  ---------------------------
-    Total                                      4.838ns (2.799ns logic, 2.039ns route)
-                                                       (57.9% logic, 42.1% route)
+    Total                                      3.722ns (1.404ns logic, 2.318ns route)
+                                                       (37.7% logic, 62.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.081ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_0 (FF)
+Slack (setup path):     16.237ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mc/fd/counter_18 (FF)
+  Destination:          mc/fd/counter_25 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.834ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.050ns (0.250 - 0.300)
+  Data Path Delay:      3.709ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.336 - 0.355)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -90,34 +89,33 @@ Slack (setup path):     15.081ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_0
+  Maximum Data Path at Slow Process Corner: mc/fd/counter_18 to mc/fd/counter_25
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA0    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D4      net (fanout=1)        1.259   vgap/font_word<0>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X11Y25.B5      net (fanout=4)        0.589   vgap/text_unit/font_bit
-    SLICE_X11Y25.B       Tilo                  0.259   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot_G
-    SLICE_X11Y25.A5      net (fanout=1)        0.187   N57
-    SLICE_X11Y25.CLK     Tas                   0.322   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot1
-                                                       vgap/text_unit/text_rgb_0
+    SLICE_X17Y46.BQ      Tcko                  0.391   mc/fd/counter<20>
+                                                       mc/fd/counter_18
+    SLICE_X14Y43.D2      net (fanout=4)        1.284   mc/fd/counter<18>
+    SLICE_X14Y43.COUT    Topcyd                0.261   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lut<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.455   mc/fd/counter<26>
+                                                       mc/fd/counter_25
     -------------------------------------------------  ---------------------------
-    Total                                      4.834ns (2.799ns logic, 2.035ns route)
-                                                       (57.9% logic, 42.1% route)
+    Total                                      3.709ns (1.391ns logic, 2.318ns route)
+                                                       (37.5% logic, 62.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.174ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_0 (FF)
+Slack (setup path):     16.258ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dbounce/debouncer4/q_reg_4 (FF)
+  Destination:          mc/fd/counter_25 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.741ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.050ns (0.250 - 0.300)
+  Data Path Delay:      3.683ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.024ns (0.336 - 0.360)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -128,37 +126,36 @@ Slack (setup path):     15.174ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_0
+  Maximum Data Path at Slow Process Corner: dbounce/debouncer4/q_reg_4 to mc/fd/counter_25
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA3    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D2      net (fanout=1)        1.166   vgap/font_word<3>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X11Y25.B5      net (fanout=4)        0.589   vgap/text_unit/font_bit
-    SLICE_X11Y25.B       Tilo                  0.259   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot_G
-    SLICE_X11Y25.A5      net (fanout=1)        0.187   N57
-    SLICE_X11Y25.CLK     Tas                   0.322   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_0_rstpot1
-                                                       vgap/text_unit/text_rgb_0
+    SLICE_X14Y46.AQ      Tcko                  0.447   dbounce/debouncer4/q_reg<7>
+                                                       dbounce/debouncer4/q_reg_4
+    SLICE_X14Y43.A1      net (fanout=5)        1.077   dbounce/debouncer4/q_reg<4>
+    SLICE_X14Y43.COUT    Topcya                0.386   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lutdi
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.455   mc/fd/counter<26>
+                                                       mc/fd/counter_25
     -------------------------------------------------  ---------------------------
-    Total                                      4.741ns (2.799ns logic, 1.942ns route)
-                                                       (59.0% logic, 41.0% route)
+    Total                                      3.683ns (1.572ns logic, 2.111ns route)
+                                                       (42.7% logic, 57.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point vgap/text_unit/text_rgb_1 (SLICE_X11Y25.C6), 13 paths
+Paths for end point mc/fd/counter_24 (SLICE_X16Y48.SR), 49 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.102ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_1 (FF)
+Slack (setup path):     16.235ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mc/fd/counter_18 (FF)
+  Destination:          mc/fd/counter_24 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.813ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.050ns (0.250 - 0.300)
+  Data Path Delay:      3.711ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.336 - 0.355)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -169,34 +166,33 @@ Slack (setup path):     15.102ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
+  Maximum Data Path at Slow Process Corner: mc/fd/counter_18 to mc/fd/counter_24
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA2    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D3      net (fanout=1)        1.263   vgap/font_word<2>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X11Y25.D4      net (fanout=4)        0.633   vgap/text_unit/font_bit
-    SLICE_X11Y25.D       Tilo                  0.259   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot_G
-    SLICE_X11Y25.C6      net (fanout=1)        0.118   N55
-    SLICE_X11Y25.CLK     Tas                   0.322   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot1
-                                                       vgap/text_unit/text_rgb_1
+    SLICE_X17Y46.BQ      Tcko                  0.391   mc/fd/counter<20>
+                                                       mc/fd/counter_18
+    SLICE_X14Y43.D2      net (fanout=4)        1.284   mc/fd/counter<18>
+    SLICE_X14Y43.COUT    Topcyd                0.274   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lutdi3
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.444   mc/fd/counter<26>
+                                                       mc/fd/counter_24
     -------------------------------------------------  ---------------------------
-    Total                                      4.813ns (2.799ns logic, 2.014ns route)
-                                                       (58.2% logic, 41.8% route)
+    Total                                      3.711ns (1.393ns logic, 2.318ns route)
+                                                       (37.5% logic, 62.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.106ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_1 (FF)
+Slack (setup path):     16.248ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mc/fd/counter_18 (FF)
+  Destination:          mc/fd/counter_24 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.809ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.050ns (0.250 - 0.300)
+  Data Path Delay:      3.698ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.336 - 0.355)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -207,34 +203,33 @@ Slack (setup path):     15.106ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
+  Maximum Data Path at Slow Process Corner: mc/fd/counter_18 to mc/fd/counter_24
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA0    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D4      net (fanout=1)        1.259   vgap/font_word<0>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X11Y25.D4      net (fanout=4)        0.633   vgap/text_unit/font_bit
-    SLICE_X11Y25.D       Tilo                  0.259   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot_G
-    SLICE_X11Y25.C6      net (fanout=1)        0.118   N55
-    SLICE_X11Y25.CLK     Tas                   0.322   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot1
-                                                       vgap/text_unit/text_rgb_1
+    SLICE_X17Y46.BQ      Tcko                  0.391   mc/fd/counter<20>
+                                                       mc/fd/counter_18
+    SLICE_X14Y43.D2      net (fanout=4)        1.284   mc/fd/counter<18>
+    SLICE_X14Y43.COUT    Topcyd                0.261   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lut<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.444   mc/fd/counter<26>
+                                                       mc/fd/counter_24
     -------------------------------------------------  ---------------------------
-    Total                                      4.809ns (2.799ns logic, 2.010ns route)
-                                                       (58.2% logic, 41.8% route)
+    Total                                      3.698ns (1.380ns logic, 2.318ns route)
+                                                       (37.3% logic, 62.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.199ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_1 (FF)
+Slack (setup path):     16.269ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dbounce/debouncer4/q_reg_4 (FF)
+  Destination:          mc/fd/counter_24 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.716ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.050ns (0.250 - 0.300)
+  Data Path Delay:      3.672ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.024ns (0.336 - 0.360)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -245,37 +240,36 @@ Slack (setup path):     15.199ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
+  Maximum Data Path at Slow Process Corner: dbounce/debouncer4/q_reg_4 to mc/fd/counter_24
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA3    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D2      net (fanout=1)        1.166   vgap/font_word<3>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X11Y25.D4      net (fanout=4)        0.633   vgap/text_unit/font_bit
-    SLICE_X11Y25.D       Tilo                  0.259   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot_G
-    SLICE_X11Y25.C6      net (fanout=1)        0.118   N55
-    SLICE_X11Y25.CLK     Tas                   0.322   vgap/text_unit/text_rgb<1>
-                                                       vgap/text_unit/text_rgb_1_rstpot1
-                                                       vgap/text_unit/text_rgb_1
+    SLICE_X14Y46.AQ      Tcko                  0.447   dbounce/debouncer4/q_reg<7>
+                                                       dbounce/debouncer4/q_reg_4
+    SLICE_X14Y43.A1      net (fanout=5)        1.077   dbounce/debouncer4/q_reg<4>
+    SLICE_X14Y43.COUT    Topcya                0.386   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lutdi
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.444   mc/fd/counter<26>
+                                                       mc/fd/counter_24
     -------------------------------------------------  ---------------------------
-    Total                                      4.716ns (2.799ns logic, 1.917ns route)
-                                                       (59.4% logic, 40.6% route)
+    Total                                      3.672ns (1.561ns logic, 2.111ns route)
+                                                       (42.5% logic, 57.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point vgap/text_unit/text_rgb_2 (SLICE_X10Y28.A5), 8 paths
+Paths for end point mc/fd/counter_26 (SLICE_X16Y48.SR), 49 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.331ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_2 (FF)
+Slack (setup path):     16.258ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mc/fd/counter_18 (FF)
+  Destination:          mc/fd/counter_26 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.590ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.044ns (0.256 - 0.300)
+  Data Path Delay:      3.688ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.336 - 0.355)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -286,31 +280,33 @@ Slack (setup path):     15.331ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_2
+  Maximum Data Path at Slow Process Corner: mc/fd/counter_18 to mc/fd/counter_26
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA2    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D3      net (fanout=1)        1.263   vgap/font_word<2>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y28.A5      net (fanout=4)        0.820   vgap/text_unit/font_bit
-    SLICE_X10Y28.CLK     Tas                   0.289   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/text_rgb_2_rstpot
-                                                       vgap/text_unit/text_rgb_2
+    SLICE_X17Y46.BQ      Tcko                  0.391   mc/fd/counter<20>
+                                                       mc/fd/counter_18
+    SLICE_X14Y43.D2      net (fanout=4)        1.284   mc/fd/counter<18>
+    SLICE_X14Y43.COUT    Topcyd                0.274   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lutdi3
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.421   mc/fd/counter<26>
+                                                       mc/fd/counter_26
     -------------------------------------------------  ---------------------------
-    Total                                      4.590ns (2.507ns logic, 2.083ns route)
-                                                       (54.6% logic, 45.4% route)
+    Total                                      3.688ns (1.370ns logic, 2.318ns route)
+                                                       (37.1% logic, 62.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.335ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_2 (FF)
+Slack (setup path):     16.271ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mc/fd/counter_18 (FF)
+  Destination:          mc/fd/counter_26 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.586ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.044ns (0.256 - 0.300)
+  Data Path Delay:      3.675ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.336 - 0.355)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -321,31 +317,33 @@ Slack (setup path):     15.335ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_2
+  Maximum Data Path at Slow Process Corner: mc/fd/counter_18 to mc/fd/counter_26
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA0    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D4      net (fanout=1)        1.259   vgap/font_word<0>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y28.A5      net (fanout=4)        0.820   vgap/text_unit/font_bit
-    SLICE_X10Y28.CLK     Tas                   0.289   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/text_rgb_2_rstpot
-                                                       vgap/text_unit/text_rgb_2
+    SLICE_X17Y46.BQ      Tcko                  0.391   mc/fd/counter<20>
+                                                       mc/fd/counter_18
+    SLICE_X14Y43.D2      net (fanout=4)        1.284   mc/fd/counter<18>
+    SLICE_X14Y43.COUT    Topcyd                0.261   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lut<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.421   mc/fd/counter<26>
+                                                       mc/fd/counter_26
     -------------------------------------------------  ---------------------------
-    Total                                      4.586ns (2.507ns logic, 2.079ns route)
-                                                       (54.7% logic, 45.3% route)
+    Total                                      3.675ns (1.357ns logic, 2.318ns route)
+                                                       (36.9% logic, 63.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.428ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               vgap/font_unit/Mram_data (RAM)
-  Destination:          vgap/text_unit/text_rgb_2 (FF)
+Slack (setup path):     16.292ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dbounce/debouncer4/q_reg_4 (FF)
+  Destination:          mc/fd/counter_26 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.493ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.044ns (0.256 - 0.300)
+  Data Path Delay:      3.649ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.024ns (0.336 - 0.360)
   Source Clock:         CLK_50MHZ_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -356,58 +354,32 @@ Slack (setup path):     15.428ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_2
+  Maximum Data Path at Slow Process Corner: dbounce/debouncer4/q_reg_4 to mc/fd/counter_26
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X0Y14.DOA3    Trcko_DOA             1.850   vgap/font_unit/Mram_data
-                                                       vgap/font_unit/Mram_data
-    SLICE_X10Y28.D2      net (fanout=1)        1.166   vgap/font_word<3>
-    SLICE_X10Y28.CMUX    Topdc                 0.368   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/Mmux_font_bit_4
-                                                       vgap/text_unit/Mmux_font_bit_2_f7
-    SLICE_X10Y28.A5      net (fanout=4)        0.820   vgap/text_unit/font_bit
-    SLICE_X10Y28.CLK     Tas                   0.289   vgap/text_unit/text_rgb<2>
-                                                       vgap/text_unit/text_rgb_2_rstpot
-                                                       vgap/text_unit/text_rgb_2
+    SLICE_X14Y46.AQ      Tcko                  0.447   dbounce/debouncer4/q_reg<7>
+                                                       dbounce/debouncer4/q_reg_4
+    SLICE_X14Y43.A1      net (fanout=5)        1.077   dbounce/debouncer4/q_reg<4>
+    SLICE_X14Y43.COUT    Topcya                0.386   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_lutdi
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.003   mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<3>
+    SLICE_X14Y44.CMUX    Tcinc                 0.284   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+                                                       mc/fd/Mcompar_PWR_8_o_counter[26]_LessThan_2_o_cy<5>_inv1_cy
+    SLICE_X16Y48.SR      net (fanout=2)        1.031   mc/fd/PWR_8_o_counter[26]_LessThan_2_o
+    SLICE_X16Y48.CLK     Tsrck                 0.421   mc/fd/counter<26>
+                                                       mc/fd/counter_26
     -------------------------------------------------  ---------------------------
-    Total                                      4.493ns (2.507ns logic, 1.986ns route)
-                                                       (55.8% logic, 44.2% route)
+    Total                                      3.649ns (1.538ns logic, 2.111ns route)
+                                                       (42.1% logic, 57.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 --------------------------------------------------------------------------------
 
-Paths for end point dbounce/debouncer3/state_reg_FSM_FFd3 (SLICE_X12Y51.B5), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.397ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dbounce/debouncer3/state_reg_FSM_FFd2 (FF)
-  Destination:          dbounce/debouncer3/state_reg_FSM_FFd3 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.397ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHZ_BUFGP rising at 20.000ns
-  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: dbounce/debouncer3/state_reg_FSM_FFd2 to dbounce/debouncer3/state_reg_FSM_FFd3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X12Y51.BQ      Tcko                  0.200   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd2
-    SLICE_X12Y51.B5      net (fanout=2)        0.076   dbounce/debouncer3/state_reg_FSM_FFd2
-    SLICE_X12Y51.CLK     Tah         (-Th)    -0.121   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd3-In1
-                                                       dbounce/debouncer3/state_reg_FSM_FFd3
-    -------------------------------------------------  ---------------------------
-    Total                                      0.397ns (0.321ns logic, 0.076ns route)
-                                                       (80.9% logic, 19.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point dbounce/debouncer4/state_reg_FSM_FFd3 (SLICE_X11Y45.C5), 1 path
+Paths for end point dbounce/debouncer4/state_reg_FSM_FFd3 (SLICE_X15Y48.C5), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - data path))
   Source:               dbounce/debouncer4/state_reg_FSM_FFd2 (FF)
@@ -423,10 +395,10 @@ Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y45.CQ      Tcko                  0.198   dbounce/debouncer4/state_reg_FSM_FFd2
+    SLICE_X15Y48.CQ      Tcko                  0.198   dbounce/debouncer4/state_reg_FSM_FFd2
                                                        dbounce/debouncer4/state_reg_FSM_FFd2
-    SLICE_X11Y45.C5      net (fanout=2)        0.056   dbounce/debouncer4/state_reg_FSM_FFd2
-    SLICE_X11Y45.CLK     Tah         (-Th)    -0.155   dbounce/debouncer4/state_reg_FSM_FFd2
+    SLICE_X15Y48.C5      net (fanout=2)        0.056   dbounce/debouncer4/state_reg_FSM_FFd2
+    SLICE_X15Y48.CLK     Tah         (-Th)    -0.155   dbounce/debouncer4/state_reg_FSM_FFd2
                                                        dbounce/debouncer4/state_reg_FSM_FFd3-In1
                                                        dbounce/debouncer4/state_reg_FSM_FFd3
     -------------------------------------------------  ---------------------------
@@ -435,31 +407,59 @@ Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point dbounce/debouncer3/state_reg_FSM_FFd1 (SLICE_X12Y51.A6), 1 path
+Paths for end point dbounce/debouncer3/state_reg_FSM_FFd3 (SLICE_X15Y43.B5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.421ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               dbounce/debouncer3/state_reg_FSM_FFd1 (FF)
-  Destination:          dbounce/debouncer3/state_reg_FSM_FFd1 (FF)
+Slack (hold path):      0.426ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dbounce/debouncer3/state_reg_FSM_FFd2 (FF)
+  Destination:          dbounce/debouncer3/state_reg_FSM_FFd3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.421ns (Levels of Logic = 1)
+  Data Path Delay:      0.426ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_50MHZ_BUFGP rising at 20.000ns
   Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: dbounce/debouncer3/state_reg_FSM_FFd1 to dbounce/debouncer3/state_reg_FSM_FFd1
+  Minimum Data Path at Fast Process Corner: dbounce/debouncer3/state_reg_FSM_FFd2 to dbounce/debouncer3/state_reg_FSM_FFd3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y51.AQ      Tcko                  0.200   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd1
-    SLICE_X12Y51.A6      net (fanout=5)        0.031   dbounce/debouncer3/state_reg_FSM_FFd1
-    SLICE_X12Y51.CLK     Tah         (-Th)    -0.190   dbounce/debouncer3/state_reg_FSM_FFd2
-                                                       dbounce/debouncer3/state_reg_FSM_FFd1-In1
-                                                       dbounce/debouncer3/state_reg_FSM_FFd1
+    SLICE_X15Y43.BQ      Tcko                  0.198   tsm/state_FSM_FFd3
+                                                       dbounce/debouncer3/state_reg_FSM_FFd2
+    SLICE_X15Y43.B5      net (fanout=2)        0.073   dbounce/debouncer3/state_reg_FSM_FFd2
+    SLICE_X15Y43.CLK     Tah         (-Th)    -0.155   tsm/state_FSM_FFd3
+                                                       dbounce/debouncer3/state_reg_FSM_FFd3-In1
+                                                       dbounce/debouncer3/state_reg_FSM_FFd3
     -------------------------------------------------  ---------------------------
-    Total                                      0.421ns (0.390ns logic, 0.031ns route)
-                                                       (92.6% logic, 7.4% route)
+    Total                                      0.426ns (0.353ns logic, 0.073ns route)
+                                                       (82.9% logic, 17.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dbounce/debouncer1/state_reg_FSM_FFd3 (SLICE_X15Y52.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.426ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dbounce/debouncer1/state_reg_FSM_FFd2 (FF)
+  Destination:          dbounce/debouncer1/state_reg_FSM_FFd3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.426ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_50MHZ_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_50MHZ_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: dbounce/debouncer1/state_reg_FSM_FFd2 to dbounce/debouncer1/state_reg_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y52.BQ      Tcko                  0.198   dbounce/debouncer1/state_reg_FSM_FFd2
+                                                       dbounce/debouncer1/state_reg_FSM_FFd2
+    SLICE_X15Y52.B5      net (fanout=2)        0.073   dbounce/debouncer1/state_reg_FSM_FFd2
+    SLICE_X15Y52.CLK     Tah         (-Th)    -0.155   dbounce/debouncer1/state_reg_FSM_FFd2
+                                                       dbounce/debouncer1/state_reg_FSM_FFd3-In1
+                                                       dbounce/debouncer1/state_reg_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.426ns (0.353ns logic, 0.073ns route)
+                                                       (82.9% logic, 17.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -470,7 +470,7 @@ Slack: 16.876ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: vgap/font_unit/Mram_data/CLKA
   Logical resource: vgap/font_unit/Mram_data/CLKA
-  Location pin: RAMB16_X0Y14.CLKA
+  Location pin: RAMB16_X0Y12.CLKA
   Clock network: CLK_50MHZ_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.270ns (period - min period limit)
@@ -484,9 +484,9 @@ Slack: 18.270ns (period - min period limit)
 Slack: 19.570ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: clk/CLK
-  Logical resource: clk/CK
-  Location pin: SLICE_X12Y38.CLK
+  Physical resource: mc/fd/counter<23>/CLK
+  Logical resource: mc/fd/counter_22/CK
+  Location pin: SLICE_X16Y47.CLK
   Clock network: CLK_50MHZ_BUFGP
 --------------------------------------------------------------------------------
 
@@ -503,7 +503,7 @@ Clock to Setup on destination clock CLK_50MHZ
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    4.923|         |         |         |
+CLK_50MHZ      |    3.776|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -512,16 +512,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1944 paths, 0 nets, and 256 connections
+Constraints cover 1888 paths, 0 nets, and 267 connections
 
 Design statistics:
-   Minimum period:   4.923ns{1}   (Maximum frequency: 203.128MHz)
+   Minimum period:   3.776ns{1}   (Maximum frequency: 264.831MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Sep 13 11:31:14 2016 
+Analysis completed Tue Sep 13 14:18:11 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

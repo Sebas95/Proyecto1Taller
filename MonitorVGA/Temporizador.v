@@ -101,7 +101,8 @@ module Temporizador(
 		.vsync(vsync), 
 		.rgb(nextRGB),
 		.video_on(video_on),
-		.text_on(txt_on)
+		.text_on(txt_on),
+		.finish(stateFinish)
 	);	
 	
 		
@@ -128,12 +129,14 @@ module Temporizador(
 		.delete(delete_db), 
 		.segDemand(incrementSeconds_db), 
 		.minDemand(incrementMinutes_db), 
+		.finish(finish),
 		.enableCounter(enableCounter), 
 		.forward(forward), 
 		.resetTimer(resetTimer),
 		.actualState(actualState),
 		.incrementSeg(incrementSeg),
-		.incrementMin(incrementMin)
+		.incrementMin(incrementMin),
+		.stateFinish(stateFinish)
 	);
 	
 	

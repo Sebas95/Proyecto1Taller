@@ -25,12 +25,14 @@ module TimerStateMachine(
     input wire delete,
 	 input wire segDemand,
 	 input wire minDemand,	
+	 input wire finish,
 	 output reg enableCounter  = 0,
 	 output reg forward    = 0,
     output reg resetTimer = 0,
 	 output reg [2:0] actualState = 3'b000,
 	 output reg incrementSeg = 0,
-	 output reg incrementMin = 0
+	 output reg incrementMin = 0,
+	 output reg stateFinish = 0
     );
 	 
 	 reg [2:0] state     = 3'b000; 
@@ -40,6 +42,7 @@ module TimerStateMachine(
 	 localparam [2:0] countState   = 3'b010;
 	 localparam [2:0] stopState    = 3'b011;
 	 localparam [2:0] deleteState  = 3'b100;
+	 localparam [2:0] finalState   = 3'b101;
 		 
 	always @(state, start, stop, delete, initialState,countState,stopState, deleteState,
 				segDemand,minDemand)
@@ -49,11 +52,12 @@ module TimerStateMachine(
 				initialState:
 					begin
 						//Asigno las salidas de la maquina (estados del contador)
+						stateFinish = 0;
 						enableCounter  = 0; // el contador está detenido
 						resetTimer = 1; //reseteo el contador
 						forward    = 0;
-						incrementSeg=1;// reseteo el contador de seg progresivo en el posedge del increment
-						incrementMin=1;// reseteo el contador de min progresivo en el posedge del increment
+						incrementSeg = 1;// reseteo el contador de seg progresivo en el posedge del increment
+						incrementMin = 1;// reseteo el contador de min progresivo en el posedge del increment
 						if(start) nextState = countState;
 						else if (segDemand)
 						begin
@@ -101,6 +105,7 @@ module TimerStateMachine(
 						incrementSeg=0;
 						incrementMin=0;
 						if(stop) nextState = stopState;
+						else if(finish) nextState = finalState;
 						else nextState = countState;
 					end
 
@@ -125,6 +130,18 @@ module TimerStateMachine(
 						incrementSeg=0;
 						incrementMin=0;
 						nextState = initialState;
+					end
+				finalState:
+					begin
+						enableCounter  = 0;
+						resetTimer = 0;
+						forward    = 0; // reseteo el contador 
+						incrementSeg=0;
+						incrementMin=0;
+						stateFinish = 1;
+						if(start) nextState = initialState;
+						else nextState = finalState;
+						
 					end
 				 default:
 					begin 

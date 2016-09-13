@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: Temporizador.prj
 
@@ -155,14 +155,14 @@ WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\Mo
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 78: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 Elaborating module <textPainter>.
-WARNING:HDLCompiler:189 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 87: Size mismatch in connection of port <text_on>. Formal port size is 4-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:634 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 68: Net <reset> does not have a driver.
-
-Elaborating module <MinutesCounter>.
+WARNING:HDLCompiler:189 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 90: Size mismatch in connection of port <text_on>. Formal port size is 4-bit while actual signal size is 2-bit.
 
 Elaborating module <FrecuencyDivider>.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 47: Result of 28-bit expression is truncated to fit in 27-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 52: Result of 28-bit expression is truncated to fit in 27-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" Line 70: Net <reset> does not have a driver.
+
+Elaborating module <MinutesCounter>.
 
 Elaborating module <SixBitCounter>.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" Line 53: Result of 32-bit expression is truncated to fit in 6-bit target.
@@ -175,6 +175,7 @@ WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\Mo
 Elaborating module <TwoDigitDeco>.
 
 Elaborating module <TimerStateMachine>.
+WARNING:HDLCompiler:91 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TimerStateMachine.v" Line 108: Signal <finish> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <vgaColorConfig>.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v" Line 31: Result of 22-bit expression is truncated to fit in 3-bit target.
@@ -224,6 +225,7 @@ Unit <Debouncer> synthesized.
 
 Synthesizing Unit <VgaPainter>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v".
+INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" line 98: Output port <counter> of the instance <fd> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
@@ -263,9 +265,22 @@ Synthesizing Unit <textPainter>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\timer_text.v".
 WARNING:Xst:647 - Input <pix_x<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <pix_y<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 3-bit register for signal <text_rgb>.
-    Found 32x7-bit Read Only RAM for signal <_n0287>
-    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 229.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_tick> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <count>.
+    Found 32x7-bit Read Only RAM for signal <_n0340>
+    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 256.
+    Found 1-bit 5-to-1 multiplexer for signal <char_addr_st[6]_pix_x[7]_MUX_2156_o> created at line 91.
+    Found 1-bit 5-to-1 multiplexer for signal <char_addr_st[6]_pix_x[7]_MUX_2161_o> created at line 91.
+    Found 1-bit 5-to-1 multiplexer for signal <char_addr_st[6]_pix_x[7]_MUX_2166_o> created at line 91.
+    Found 1-bit 5-to-1 multiplexer for signal <char_addr_st[6]_pix_x[7]_MUX_2171_o> created at line 91.
+    Found 1-bit 5-to-1 multiplexer for signal <char_addr_st[6]_pix_x[7]_MUX_2176_o> created at line 91.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -280,19 +295,33 @@ WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<0>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 6-bit comparator greater for signal <pix_x[9]_PWR_7_o_LessThan_2_o> created at line 31
-    Found 6-bit comparator greater for signal <GND_7_o_pix_x[9]_LessThan_3_o> created at line 31
-    Found 6-bit comparator greater for signal <pix_x[9]_GND_7_o_LessThan_10_o> created at line 65
-    Found 6-bit comparator greater for signal <pix_x[9]_GND_7_o_LessThan_15_o> created at line 91
-    Found 5-bit comparator greater for signal <GND_7_o_pix_x[8]_LessThan_32_o> created at line 191
-    Found 5-bit comparator greater for signal <pix_x[8]_GND_7_o_LessThan_39_o> created at line 202
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr_st<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 6-bit comparator greater for signal <pix_x[9]_PWR_7_o_LessThan_2_o> created at line 33
+    Found 6-bit comparator greater for signal <GND_7_o_pix_x[9]_LessThan_3_o> created at line 33
+    Found 6-bit comparator greater for signal <pix_x[9]_GND_7_o_LessThan_10_o> created at line 67
+    Found 6-bit comparator greater for signal <pix_x[9]_GND_7_o_LessThan_23_o> created at line 167
+    Found 5-bit comparator greater for signal <GND_7_o_pix_x[8]_LessThan_57_o> created at line 221
+    Found 5-bit comparator greater for signal <pix_x[8]_GND_7_o_LessThan_66_o> created at line 234
     Summary:
 	inferred   1 RAM(s).
-	inferred   3 D-type flip-flop(s).
-	inferred  14 Latch(s).
+	inferred   1 D-type flip-flop(s).
+	inferred  21 Latch(s).
 	inferred   6 Comparator(s).
-	inferred  40 Multiplexer(s).
+	inferred  53 Multiplexer(s).
 Unit <textPainter> synthesized.
+
+Synthesizing Unit <FrecuencyDivider>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v".
+    Found 1-bit register for signal <clk_1Hz>.
+    Found 27-bit register for signal <counter>.
+    Found 27-bit adder for signal <counter[26]_GND_29_o_add_4_OUT> created at line 52.
+    Found 27-bit comparator greater for signal <PWR_8_o_counter[26]_LessThan_2_o> created at line 39
+    Found 27-bit comparator lessequal for signal <counter[26]_GND_29_o_LessThan_3_o> created at line 44
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <FrecuencyDivider> synthesized.
 
 Synthesizing Unit <MinutesCounter>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v".
@@ -300,19 +329,6 @@ INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\M
     Summary:
 	no macro.
 Unit <MinutesCounter> synthesized.
-
-Synthesizing Unit <FrecuencyDivider>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v".
-    Found 1-bit register for signal <clk_1Hz>.
-    Found 27-bit register for signal <counter>.
-    Found 27-bit adder for signal <counter[26]_GND_30_o_add_4_OUT> created at line 52.
-    Found 27-bit comparator greater for signal <PWR_9_o_counter[26]_LessThan_2_o> created at line 39
-    Found 27-bit comparator lessequal for signal <counter[26]_GND_30_o_LessThan_3_o> created at line 44
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  28 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-Unit <FrecuencyDivider> synthesized.
 
 Synthesizing Unit <SixBitCounter>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v".
@@ -366,20 +382,22 @@ Unit <TwoDigitDeco> synthesized.
 
 Synthesizing Unit <TimerStateMachine>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TimerStateMachine.v".
-    Register <state> equivalent to <actualState> has been removed
-    Found 3-bit register for signal <actualState>.
-    Found finite state machine <FSM_1> for signal <actualState>.
+    Register <actualState> equivalent to <state> has been removed
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 5                                              |
-    | Transitions        | 13                                             |
-    | Inputs             | 5                                              |
-    | Outputs            | 6                                              |
+    | States             | 6                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 8                                              |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | 000                                            |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <stateFinish>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
+	inferred   1 Latch(s).
 	inferred   7 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <TimerStateMachine> synthesized.
@@ -398,35 +416,36 @@ Macro Statistics
  2048x8-bit single-port Read Only RAM                  : 1
  32x7-bit single-port Read Only RAM                    : 1
  64x8-bit single-port Read Only RAM                    : 2
-# Adders/Subtractors                                   : 12
+# Adders/Subtractors                                   : 13
  10-bit adder                                          : 2
  19-bit adder                                          : 5
- 27-bit adder                                          : 1
+ 27-bit adder                                          : 2
  6-bit adder                                           : 2
  6-bit subtractor                                      : 2
-# Registers                                            : 22
- 1-bit register                                        : 6
+# Registers                                            : 24
+ 1-bit register                                        : 8
  10-bit register                                       : 2
  11-bit register                                       : 1
  19-bit register                                       : 5
- 27-bit register                                       : 1
- 3-bit register                                        : 1
+ 27-bit register                                       : 2
  6-bit register                                        : 4
  8-bit register                                        : 2
-# Latches                                              : 26
- 1-bit latch                                           : 26
-# Comparators                                          : 14
+# Latches                                              : 34
+ 1-bit latch                                           : 34
+# Comparators                                          : 16
  10-bit comparator greater                             : 2
  10-bit comparator lessequal                           : 4
- 27-bit comparator greater                             : 1
- 27-bit comparator lessequal                           : 1
+ 27-bit comparator greater                             : 2
+ 27-bit comparator lessequal                           : 2
  5-bit comparator greater                              : 2
  6-bit comparator greater                              : 4
-# Multiplexers                                         : 68
- 1-bit 2-to-1 multiplexer                              : 55
+# Multiplexers                                         : 81
+ 1-bit 2-to-1 multiplexer                              : 61
+ 1-bit 5-to-1 multiplexer                              : 5
  1-bit 8-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 6
  6-bit 2-to-1 multiplexer                              : 7
+ 7-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 6
 
 =========================================================================
@@ -486,7 +505,7 @@ INFO:Xst:3226 - The RAM <Mram_data> will be implemented as a BLOCK RAM, absorbin
 Unit <font_rom> synthesized (advanced).
 
 Synthesizing (advanced) Unit <textPainter>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0287> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0340> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -514,26 +533,28 @@ Macro Statistics
  64x8-bit single-port distributed Read Only RAM        : 2
 # Adders/Subtractors                                   : 1
  6-bit subtractor                                      : 1
-# Counters                                             : 11
+# Counters                                             : 12
  10-bit up counter                                     : 2
  19-bit up counter                                     : 5
- 27-bit up counter                                     : 1
+ 27-bit up counter                                     : 2
  6-bit down counter                                    : 1
  6-bit up counter                                      : 2
-# Registers                                            : 31
- Flip-Flops                                            : 31
-# Comparators                                          : 14
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+# Comparators                                          : 16
  10-bit comparator greater                             : 2
  10-bit comparator lessequal                           : 4
- 27-bit comparator greater                             : 1
- 27-bit comparator lessequal                           : 1
+ 27-bit comparator greater                             : 2
+ 27-bit comparator lessequal                           : 2
  5-bit comparator greater                              : 2
  6-bit comparator greater                              : 4
-# Multiplexers                                         : 66
- 1-bit 2-to-1 multiplexer                              : 54
+# Multiplexers                                         : 80
+ 1-bit 2-to-1 multiplexer                              : 61
+ 1-bit 5-to-1 multiplexer                              : 5
  1-bit 8-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 6
  6-bit 2-to-1 multiplexer                              : 6
+ 7-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 6
 
 =========================================================================
@@ -541,6 +562,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2146 - In block <Temporizador>, Counter <dbounce/debouncer4/q_reg> <dbounce/debouncer3/q_reg> <dbounce/debouncer2/q_reg> <dbounce/debouncer0/q_reg> <dbounce/debouncer1/q_reg> are equivalent, XST will keep only <dbounce/debouncer4/q_reg>.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_0> on signal <state_reg[1:3]> with user encoding.
 Optimizing FSM <FSM_0> on signal <state_reg[1:3]> with user encoding.
@@ -559,9 +581,8 @@ Optimizing FSM <FSM_0> on signal <state_reg[1:3]> with user encoding.
  110   | 110
  111   | 111
 -------------------
-INFO:Xst:2146 - In block <Temporizador>, Counter <dbounce/debouncer4/q_reg> <dbounce/debouncer2/q_reg> <dbounce/debouncer3/q_reg> <dbounce/debouncer1/q_reg> <dbounce/debouncer0/q_reg> are equivalent, XST will keep only <dbounce/debouncer4/q_reg>.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <tsm/FSM_1> on signal <actualState[1:3]> with user encoding.
+Optimizing FSM <tsm/FSM_1> on signal <state[1:3]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -569,6 +590,7 @@ Optimizing FSM <tsm/FSM_1> on signal <actualState[1:3]> with user encoding.
  001   | 001
  010   | 010
  100   | 100
+ 101   | 101
  011   | 011
 -------------------
 
@@ -585,20 +607,38 @@ Optimizing unit <SixBitCounter_M> ...
 Optimizing unit <TwoDigitDeco> ...
 
 Optimizing unit <TimerStateMachine> ...
-INFO:Xst:2261 - The FF/Latch <clk> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <dbounce/debouncer4/q_reg_0> <mc/fd/counter_0> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_1> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_1> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_2> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_2> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_3> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_3> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_4> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_4> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_5> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_5> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_6> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_6> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_7> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/counter_7> 
+INFO:Xst:2261 - The FF/Latch <clk> in Unit <Temporizador> is equivalent to the following 3 FFs/Latches, which will be removed : <dbounce/debouncer4/q_reg_0> <mc/fd/counter_0> <vgap/fd/counter_0> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_8> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_8> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_9> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_9> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_1> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_1> <vgap/fd/counter_1> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_2> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_2> <vgap/fd/counter_2> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_3> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_3> <vgap/fd/counter_3> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_4> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_4> <vgap/fd/counter_4> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_5> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_5> <vgap/fd/counter_5> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_6> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_6> <vgap/fd/counter_6> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_7> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_7> <vgap/fd/counter_7> 
+INFO:Xst:2261 - The FF/Latch <vgap/fd/clk_1Hz> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/clk_1Hz> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_10> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_10> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_11> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_11> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_12> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_12> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_13> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_13> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_14> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_14> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_15> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_15> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_20> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_20> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_16> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_16> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_21> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_21> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_17> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_17> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_22> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_22> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_18> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_18> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_23> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_23> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_19> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_19> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_24> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_24> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_25> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_25> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_26> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_26> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Temporizador, actual ratio is 3.
-FlipFlop tsm/actualState_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop tsm/actualState_FSM_FFd3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -606,8 +646,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 126
- Flip-Flops                                            : 126
+# Registers                                            : 122
+ Flip-Flops                                            : 122
 
 =========================================================================
 
@@ -630,26 +670,25 @@ Top Level Output File Name         : Temporizador.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 417
+# BELS                             : 465
 #      GND                         : 1
-#      INV                         : 8
+#      INV                         : 7
 #      LUT1                        : 62
-#      LUT2                        : 9
-#      LUT3                        : 29
-#      LUT4                        : 54
-#      LUT5                        : 56
-#      LUT6                        : 67
-#      MUXCY                       : 69
-#      MUXF7                       : 4
+#      LUT2                        : 26
+#      LUT3                        : 32
+#      LUT4                        : 47
+#      LUT5                        : 77
+#      LUT6                        : 77
+#      MUXCY                       : 75
+#      MUXF7                       : 3
 #      VCC                         : 1
 #      XORCY                       : 57
-# FlipFlops/Latches                : 152
-#      FD                          : 83
+# FlipFlops/Latches                : 156
+#      FD                          : 94
 #      FDE                         : 6
-#      FDR                         : 19
+#      FDR                         : 5
 #      FDRE                        : 17
-#      FDS                         : 1
-#      LD                          : 14
+#      LD                          : 22
 #      LDC                         : 12
 # RAMS                             : 1
 #      RAMB16BWER                  : 1
@@ -667,16 +706,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             152  out of  18224     0%  
- Number of Slice LUTs:                  285  out of   9112     3%  
-    Number used as Logic:               285  out of   9112     3%  
+ Number of Slice Registers:             156  out of  18224     0%  
+ Number of Slice LUTs:                  328  out of   9112     3%  
+    Number used as Logic:               328  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    292
-   Number with an unused Flip Flop:     140  out of    292    47%  
-   Number with an unused LUT:             7  out of    292     2%  
-   Number of fully used LUT-FF pairs:   145  out of    292    49%  
-   Number of unique control sets:        10
+ Number of LUT Flip Flop pairs used:    334
+   Number with an unused Flip Flop:     178  out of    334    53%  
+   Number with an unused LUT:             6  out of    334     1%  
+   Number of fully used LUT-FF pairs:   150  out of    334    44%  
+   Number of unique control sets:        12
 
 IO Utilization: 
  Number of IOs:                          16
@@ -705,18 +744,20 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------+------------------------------------+-------+
-Clock Signal                                                                         | Clock buffer(FF name)              | Load  |
--------------------------------------------------------------------------------------+------------------------------------+-------+
-CLK_50MHZ                                                                            | BUFGP                              | 79    |
-vgap/text_unit/score_on_state_on_OR_55_o(vgap/text_unit/score_on_state_on_OR_55_o1:O)| NONE(*)(vgap/text_unit/char_addr_0)| 14    |
-incrementSeg(tsm/Mmux_incrementSeg11:O)                                              | NONE(*)(mc/seconds/out2_5)         | 6     |
-clk_INV_1_o_norst                                                                    | NONE(mc/seconds/out_0)             | 12    |
-incrementMin(tsm/Mmux_incrementMin1:O)                                               | NONE(*)(mc/minutes/out2_0)         | 6     |
-mc/fd/clk_1Hz                                                                        | NONE(mc/minutes/out3_5)            | 13    |
-clk                                                                                  | BUFG                               | 23    |
--------------------------------------------------------------------------------------+------------------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
+-------------------------------------------------------------------------------------------------------------+---------------------------------------+-------+
+Clock Signal                                                                                                 | Clock buffer(FF name)                 | Load  |
+-------------------------------------------------------------------------------------------------------------+---------------------------------------+-------+
+CLK_50MHZ                                                                                                    | BUFGP                                 | 74    |
+vgap/text_unit/score_on_state_on_OR_97_o(vgap/text_unit/score_on_state_on_OR_97_o1:O)                        | NONE(*)(vgap/text_unit/char_addr_5)   | 14    |
+vgap/text_unit/actualState[2]_actualState[2]_OR_76_o(vgap/text_unit/actualState[2]_actualState[2]_OR_76_o1:O)| NONE(*)(vgap/text_unit/char_addr_st_5)| 7     |
+incrementSeg(tsm/Mmux_incrementSeg11:O)                                                                      | NONE(*)(mc/seconds/out2_5)            | 6     |
+clk_INV_1_o_norst                                                                                            | NONE(mc/seconds/out_0)                | 12    |
+incrementMin(tsm/Mmux_incrementMin1:O)                                                                       | NONE(*)(mc/minutes/out2_0)            | 6     |
+vgap/fd/clk_1Hz                                                                                              | NONE(mc/minutes/out3_5)               | 14    |
+tsm/state[2]_GND_47_o_Mux_20_o(tsm/state__n0057<4>1:O)                                                       | NONE(*)(tsm/stateFinish)              | 1     |
+clk                                                                                                          | BUFG                                  | 23    |
+-------------------------------------------------------------------------------------------------------------+---------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -729,9 +770,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.414ns (Maximum Frequency: 184.706MHz)
+   Minimum period: 5.442ns (Maximum Frequency: 183.742MHz)
    Minimum input arrival time before clock: 2.522ns
-   Maximum output required time after clock: 7.324ns
+   Maximum output required time after clock: 8.990ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -740,35 +781,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50MHZ'
-  Clock period: 5.157ns (frequency: 193.902MHz)
-  Total number of paths / destination ports: 2088 / 98
+  Clock period: 4.495ns (frequency: 222.467MHz)
+  Total number of paths / destination ports: 2104 / 78
 -------------------------------------------------------------------------
-Delay:               5.157ns (Levels of Logic = 4)
-  Source:            vgap/font_unit/Mram_data (RAM)
-  Destination:       vgap/text_unit/text_rgb_1 (FF)
+Delay:               4.495ns (Levels of Logic = 3)
+  Source:            tsm/state_FSM_FFd2 (FF)
+  Destination:       mc/decoSeconds/decimals_3 (FF)
   Source Clock:      CLK_50MHZ rising
   Destination Clock: CLK_50MHZ rising
 
-  Data Path: vgap/font_unit/Mram_data to vgap/text_unit/text_rgb_1
+  Data Path: tsm/state_FSM_FFd2 to mc/decoSeconds/decimals_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOA5    1   1.850   0.827  vgap/font_unit/Mram_data (vgap/font_word<5>)
-     LUT6:I2->O            1   0.203   0.000  vgap/text_unit/Mmux_font_bit_3 (vgap/text_unit/Mmux_font_bit_3)
-     MUXF7:I1->O           4   0.140   1.048  vgap/text_unit/Mmux_font_bit_2_f7 (vgap/text_unit/font_bit)
-     LUT6:I0->O            1   0.203   0.580  vgap/text_unit/text_rgb_1_rstpot_G (N55)
-     LUT3:I2->O            1   0.205   0.000  vgap/text_unit/text_rgb_1_rstpot1 (vgap/text_unit/text_rgb_1_rstpot)
-     FD:D                      0.102          vgap/text_unit/text_rgb_1
+     FD:C->Q              62   0.447   1.855  tsm/state_FSM_FFd2 (tsm/state_FSM_FFd2)
+     LUT5:I2->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<3>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<3>)
+     LDC:D->Q             15   0.471   1.210  mc/seconds/out_3 (mc/seconds/out_3)
+     LUT5:I2->O            1   0.205   0.000  mc/decoSeconds_Mram__n007331 (mc/decoSeconds/_n0073<3>)
+     FD:D                      0.102          mc/decoSeconds/decimals_3
     ----------------------------------------
-    Total                      5.157ns (2.703ns logic, 2.454ns route)
-                                       (52.4% logic, 47.6% route)
+    Total                      4.495ns (1.430ns logic, 3.065ns route)
+                                       (31.8% logic, 68.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'incrementSeg'
-  Clock period: 3.656ns (frequency: 273.553MHz)
+  Clock period: 3.782ns (frequency: 264.438MHz)
   Total number of paths / destination ports: 57 / 12
 -------------------------------------------------------------------------
-Delay:               3.656ns (Levels of Logic = 2)
+Delay:               3.782ns (Levels of Logic = 2)
   Source:            mc/seconds/out2_4 (FF)
   Destination:       mc/seconds/out2_5 (FF)
   Source Clock:      incrementSeg rising
@@ -779,19 +819,19 @@ Delay:               3.656ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             5   0.447   0.943  mc/seconds/out2_4 (mc/seconds/out2_4)
-     LUT4:I1->O            1   0.205   0.684  mc/seconds/Mcount_out2_val_SW0 (N12)
-     LUT6:I4->O            6   0.203   0.744  mc/seconds/Mcount_out2_val (mc/seconds/Mcount_out2_val)
+     LUT4:I1->O            1   0.205   0.808  mc/seconds/Mcount_out2_val_SW0 (N34)
+     LUT5:I2->O            6   0.205   0.744  mc/seconds/Mcount_out2_val (mc/seconds/Mcount_out2_val)
      FDRE:R                    0.430          mc/seconds/out2_0
     ----------------------------------------
-    Total                      3.656ns (1.285ns logic, 2.371ns route)
-                                       (35.2% logic, 64.8% route)
+    Total                      3.782ns (1.287ns logic, 2.495ns route)
+                                       (34.0% logic, 66.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'incrementMin'
-  Clock period: 3.656ns (frequency: 273.553MHz)
+  Clock period: 3.840ns (frequency: 260.400MHz)
   Total number of paths / destination ports: 57 / 12
 -------------------------------------------------------------------------
-Delay:               3.656ns (Levels of Logic = 2)
+Delay:               3.840ns (Levels of Logic = 2)
   Source:            mc/minutes/out2_4 (FF)
   Destination:       mc/minutes/out2_0 (FF)
   Source Clock:      incrementMin rising
@@ -801,63 +841,63 @@ Delay:               3.656ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             5   0.447   0.943  mc/minutes/out2_4 (mc/minutes/out2_4)
-     LUT4:I1->O            1   0.205   0.684  mc/minutes/Mcount_out2_val_SW0 (N20)
-     LUT6:I4->O            6   0.203   0.744  mc/minutes/Mcount_out2_val (mc/minutes/Mcount_out2_val)
+     FDRE:C->Q             7   0.447   1.002  mc/minutes/out2_4 (mc/minutes/out2_4)
+     LUT4:I1->O            1   0.205   0.808  mc/minutes/Mcount_out2_val_SW0 (N42)
+     LUT5:I2->O            6   0.205   0.744  mc/minutes/Mcount_out2_val (mc/minutes/Mcount_out2_val)
      FDRE:R                    0.430          mc/minutes/out2_0
     ----------------------------------------
-    Total                      3.656ns (1.285ns logic, 2.371ns route)
-                                       (35.2% logic, 64.8% route)
+    Total                      3.840ns (1.287ns logic, 2.553ns route)
+                                       (33.5% logic, 66.5% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'mc/fd/clk_1Hz'
-  Clock period: 4.977ns (frequency: 200.904MHz)
-  Total number of paths / destination ports: 237 / 19
+Timing constraint: Default period analysis for Clock 'vgap/fd/clk_1Hz'
+  Clock period: 5.134ns (frequency: 194.784MHz)
+  Total number of paths / destination ports: 233 / 20
 -------------------------------------------------------------------------
-Delay:               4.977ns (Levels of Logic = 4)
+Delay:               5.134ns (Levels of Logic = 4)
   Source:            mc/seconds/out3_5 (FF)
   Destination:       mc/minutes/out3_5 (FF)
-  Source Clock:      mc/fd/clk_1Hz rising
-  Destination Clock: mc/fd/clk_1Hz rising
+  Source Clock:      vgap/fd/clk_1Hz rising
+  Destination Clock: vgap/fd/clk_1Hz rising
 
   Data Path: mc/seconds/out3_5 to mc/minutes/out3_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             8   0.447   0.803  mc/seconds/out3_5 (mc/seconds/out3_5)
-     LUT4:I3->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<5>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<5>)
+     LUT5:I4->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<5>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<5>)
      LDC:D->Q             10   0.471   0.961  mc/seconds/out_5 (mc/seconds/out_5)
-     LUT5:I3->O            2   0.203   0.617  mc/minutes/Mmux_out3[5]_out3[5]_mux_10_OUT612 (mc/minutes/Mmux_out3[5]_out3[5]_mux_10_OUT612)
+     LUT5:I3->O            7   0.203   0.774  mc/minutes/Mmux_out3[5]_out3[5]_mux_10_OUT612 (mc/minutes/Mmux_out3[5]_out3[5]_mux_10_OUT612)
      LUT6:I5->O            6   0.205   0.744  mc/minutes/_n0089_inv1 (mc/minutes/_n0089_inv)
      FDE:CE                    0.322          mc/minutes/out3_0
     ----------------------------------------
-    Total                      4.977ns (1.853ns logic, 3.124ns route)
-                                       (37.2% logic, 62.8% route)
+    Total                      5.134ns (1.853ns logic, 3.281ns route)
+                                       (36.1% logic, 63.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.414ns (frequency: 184.706MHz)
+  Clock period: 5.442ns (frequency: 183.742MHz)
   Total number of paths / destination ports: 587 / 23
 -------------------------------------------------------------------------
-Delay:               5.414ns (Levels of Logic = 4)
-  Source:            vgap/vsync_unit/h_count_reg_7 (FF)
+Delay:               5.442ns (Levels of Logic = 4)
+  Source:            vgap/vsync_unit/h_count_reg_4 (FF)
   Destination:       vgap/vsync_unit/v_count_reg_9 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: vgap/vsync_unit/h_count_reg_7 to vgap/vsync_unit/v_count_reg_9
+  Data Path: vgap/vsync_unit/h_count_reg_4 to vgap/vsync_unit/v_count_reg_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              29   0.447   1.250  vgap/vsync_unit/h_count_reg_7 (vgap/vsync_unit/h_count_reg_7)
-     LUT5:I4->O            1   0.205   0.580  vgap/vsync_unit/h_end<9>_SW0 (N10)
+     FD:C->Q              31   0.447   1.278  vgap/vsync_unit/h_count_reg_4 (vgap/vsync_unit/h_count_reg_4)
+     LUT5:I4->O            1   0.205   0.580  vgap/vsync_unit/h_end<9>_SW0 (N32)
      LUT6:I5->O           21   0.205   1.114  vgap/vsync_unit/h_end<9> (vgap/vsync_unit/h_end)
      LUT6:I5->O           10   0.205   1.104  vgap/vsync_unit/_n0058 (vgap/vsync_unit/_n0058)
      LUT4:I0->O            1   0.203   0.000  vgap/vsync_unit/v_count_reg_9_rstpot (vgap/vsync_unit/v_count_reg_9_rstpot)
      FD:D                      0.102          vgap/vsync_unit/v_count_reg_9
     ----------------------------------------
-    Total                      5.414ns (1.367ns logic, 4.047ns route)
-                                       (25.2% logic, 74.8% route)
+    Total                      5.442ns (1.367ns logic, 4.075ns route)
+                                       (25.1% logic, 74.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50MHZ'
@@ -880,67 +920,93 @@ Offset:              2.522ns (Levels of Logic = 2)
                                        (60.5% logic, 39.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHZ'
-  Total number of paths / destination ports: 12 / 3
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgap/text_unit/score_on_state_on_OR_97_o'
+  Total number of paths / destination ports: 15 / 3
 -------------------------------------------------------------------------
-Offset:              6.658ns (Levels of Logic = 4)
-  Source:            tsm/actualState_FSM_FFd1 (FF)
+Offset:              6.190ns (Levels of Logic = 4)
+  Source:            vgap/text_unit/bit_addr_0 (LATCH)
   Destination:       rgb<2> (PAD)
-  Source Clock:      CLK_50MHZ rising
+  Source Clock:      vgap/text_unit/score_on_state_on_OR_97_o falling
 
-  Data Path: tsm/actualState_FSM_FFd1 to rgb<2>
+  Data Path: vgap/text_unit/bit_addr_0 to rgb<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              15   0.447   0.982  tsm/actualState_FSM_FFd1 (tsm/actualState_FSM_FFd1)
-     LUT6:I5->O            2   0.205   0.617  vgap/text_unit/state_on_SW0 (N4)
-     LUT6:I5->O            6   0.205   0.849  vgap/text_unit/state_on (txt_on<0>)
-     LUT4:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
+     LD:G->Q               2   0.498   0.981  vgap/text_unit/bit_addr_0 (vgap/text_unit/bit_addr_0)
+     LUT6:I0->O            1   0.203   0.000  vgap/text_unit/Mmux_font_bit_2_f7_G (N82)
+     MUXF7:I1->O           3   0.140   1.015  vgap/text_unit/Mmux_font_bit_2_f7 (vgap/text_unit/font_bit)
+     LUT6:I0->O            1   0.203   0.579  colorConfg/Mmux_rgbAux33 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
-    Total                      6.658ns (3.631ns logic, 3.027ns route)
-                                       (54.5% logic, 45.5% route)
+    Total                      6.190ns (3.615ns logic, 2.575ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHZ'
+  Total number of paths / destination ports: 50 / 3
+-------------------------------------------------------------------------
+Offset:              8.990ns (Levels of Logic = 5)
+  Source:            tsm/state_FSM_FFd3 (FF)
+  Destination:       rgb<1> (PAD)
+  Source Clock:      CLK_50MHZ rising
+
+  Data Path: tsm/state_FSM_FFd3 to rgb<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              65   0.447   1.875  tsm/state_FSM_FFd3 (tsm/state_FSM_FFd3)
+     LUT5:I2->O            2   0.205   0.617  vgap/text_unit/Mmux_state_on1_SW0 (N26)
+     LUT6:I5->O           17   0.205   1.256  vgap/text_unit/score_on_state_on_OR_97_o1 (vgap/text_unit/score_on_state_on_OR_97_o)
+     LUT5:I2->O            1   0.205   0.827  colorConfg/Mmux_rgbAux22 (colorConfg/Mmux_rgbAux21)
+     LUT6:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux24 (rgb_1_OBUF)
+     OBUF:I->O                 2.571          rgb_1_OBUF (rgb<1>)
+    ----------------------------------------
+    Total                      8.990ns (3.836ns logic, 5.154ns route)
+                                       (42.7% logic, 57.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 77 / 5
+  Total number of paths / destination ports: 163 / 5
 -------------------------------------------------------------------------
-Offset:              7.324ns (Levels of Logic = 4)
+Offset:              8.692ns (Levels of Logic = 5)
   Source:            vgap/vsync_unit/h_count_reg_6 (FF)
-  Destination:       rgb<2> (PAD)
+  Destination:       rgb<1> (PAD)
   Source Clock:      clk rising
 
-  Data Path: vgap/vsync_unit/h_count_reg_6 to rgb<2>
+  Data Path: vgap/vsync_unit/h_count_reg_6 to rgb<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              33   0.447   1.650  vgap/vsync_unit/h_count_reg_6 (vgap/vsync_unit/h_count_reg_6)
-     LUT6:I1->O            2   0.203   0.617  vgap/text_unit/state_on_SW0 (N4)
-     LUT6:I5->O            6   0.205   0.849  vgap/text_unit/state_on (txt_on<0>)
-     LUT4:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
-     OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
+     FD:C->Q              28   0.447   1.579  vgap/vsync_unit/h_count_reg_6 (vgap/vsync_unit/h_count_reg_6)
+     LUT5:I0->O            2   0.203   0.617  vgap/text_unit/Mmux_state_on1_SW0 (N26)
+     LUT6:I5->O           17   0.205   1.256  vgap/text_unit/score_on_state_on_OR_97_o1 (vgap/text_unit/score_on_state_on_OR_97_o)
+     LUT5:I2->O            1   0.205   0.827  colorConfg/Mmux_rgbAux22 (colorConfg/Mmux_rgbAux21)
+     LUT6:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux24 (rgb_1_OBUF)
+     OBUF:I->O                 2.571          rgb_1_OBUF (rgb<1>)
     ----------------------------------------
-    Total                      7.324ns (3.629ns logic, 3.695ns route)
-                                       (49.5% logic, 50.5% route)
+    Total                      8.692ns (3.834ns logic, 4.858ns route)
+                                       (44.1% logic, 55.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'mc/fd/clk_1Hz'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgap/fd/clk_1Hz'
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              3.597ns (Levels of Logic = 1)
-  Source:            mc/minutes/finish (FF)
-  Destination:       finish (PAD)
-  Source Clock:      mc/fd/clk_1Hz rising
+Offset:              5.585ns (Levels of Logic = 3)
+  Source:            vgap/text_unit/count (FF)
+  Destination:       rgb<1> (PAD)
+  Source Clock:      vgap/fd/clk_1Hz rising
 
-  Data Path: mc/minutes/finish to finish
+  Data Path: vgap/text_unit/count to rgb<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.579  mc/minutes/finish (mc/minutes/finish)
-     OBUF:I->O                 2.571          finish_OBUF (finish)
+     FD:C->Q               3   0.447   0.755  vgap/text_unit/count (vgap/text_unit/count)
+     LUT5:I3->O            1   0.203   0.827  colorConfg/Mmux_rgbAux22 (colorConfg/Mmux_rgbAux21)
+     LUT6:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux24 (rgb_1_OBUF)
+     OBUF:I->O                 2.571          rgb_1_OBUF (rgb<1>)
     ----------------------------------------
-    Total                      3.597ns (3.018ns logic, 0.579ns route)
-                                       (83.9% logic, 16.1% route)
+    Total                      5.585ns (3.424ns logic, 2.161ns route)
+                                       (61.3% logic, 38.7% route)
 
 =========================================================================
 
@@ -952,12 +1018,11 @@ Clock to Setup on destination clock CLK_50MHZ
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-CLK_50MHZ                               |    5.157|         |         |         |
-clk                                     |    5.429|         |         |         |
-incrementMin                            |    3.503|         |         |         |
-incrementSeg                            |    3.593|         |         |         |
-mc/fd/clk_1Hz                           |    3.433|         |         |         |
-vgap/text_unit/score_on_state_on_OR_55_o|         |    4.147|         |         |
+CLK_50MHZ                               |    4.495|         |         |         |
+incrementMin                            |    3.620|         |         |         |
+incrementSeg                            |    3.732|         |         |         |
+vgap/fd/clk_1Hz                         |    3.470|         |         |         |
+vgap/text_unit/score_on_state_on_OR_97_o|         |    1.427|         |         |
 ----------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -965,7 +1030,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.414|         |         |         |
+clk            |    5.442|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_INV_1_o_norst
@@ -973,10 +1038,10 @@ Clock to Setup on destination clock clk_INV_1_o_norst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |         |         |    2.371|         |
-incrementMin   |         |         |    1.727|         |
-incrementSeg   |         |         |    1.727|         |
-mc/fd/clk_1Hz  |         |         |    1.625|         |
+CLK_50MHZ      |         |         |    2.507|         |
+incrementMin   |         |         |    1.851|         |
+incrementSeg   |         |         |    1.824|         |
+vgap/fd/clk_1Hz|         |         |    1.642|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock incrementMin
@@ -984,8 +1049,8 @@ Clock to Setup on destination clock incrementMin
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    5.178|         |         |         |
-incrementMin   |    3.656|         |         |         |
+CLK_50MHZ      |    5.129|         |         |         |
+incrementMin   |    3.840|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock incrementSeg
@@ -993,41 +1058,60 @@ Clock to Setup on destination clock incrementSeg
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    5.178|         |         |         |
-incrementSeg   |    3.656|         |         |         |
+CLK_50MHZ      |    5.129|         |         |         |
+incrementSeg   |    3.782|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock mc/fd/clk_1Hz
+Clock to Setup on destination clock tsm/state[2]_GND_47_o_Mux_20_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |    5.894|         |         |         |
-incrementMin   |    2.584|         |         |         |
-incrementSeg   |    5.170|         |         |         |
-mc/fd/clk_1Hz  |    4.977|         |         |         |
+CLK_50MHZ      |         |         |    2.438|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock vgap/text_unit/score_on_state_on_OR_55_o
+Clock to Setup on destination clock vgap/fd/clk_1Hz
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+CLK_50MHZ                     |    6.187|         |         |         |
+incrementMin                  |    3.699|         |         |         |
+incrementSeg                  |    5.423|         |         |         |
+tsm/state[2]_GND_47_o_Mux_20_o|         |    1.487|         |         |
+vgap/fd/clk_1Hz               |    5.134|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vgap/text_unit/actualState[2]_actualState[2]_OR_76_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHZ      |         |         |    5.253|         |
-clk            |         |         |    5.797|         |
+CLK_50MHZ      |         |         |    4.248|         |
+clk            |         |         |    3.722|         |
 ---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vgap/text_unit/score_on_state_on_OR_97_o
+----------------------------------------------------+---------+---------+---------+---------+
+                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------+---------+---------+---------+---------+
+CLK_50MHZ                                           |         |         |    3.288|         |
+clk                                                 |         |         |    4.069|         |
+vgap/text_unit/actualState[2]_actualState[2]_OR_76_o|         |         |    1.682|         |
+----------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.54 secs
+Total CPU time to Xst completion: 11.22 secs
  
 --> 
 
 Total memory usage is 294072 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   45 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of warnings :   56 (   0 filtered)
+Number of infos    :   35 (   0 filtered)
 
