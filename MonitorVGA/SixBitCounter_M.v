@@ -39,23 +39,19 @@ module SixBitCounter_M(
 	begin 
 		if (enable && forward )
 			out3<=out2;
+			// si se resetea se pone en cero
+		if (reset) 	
+			out3 <= 6'b0 ; 
 			
-		if(seconds==6'b0)
+		if(seconds==6'b1 && out3== 6'b0 && ~forward)
+			finish<= 1;
+			
+		else if(seconds==6'b0)
 		begin
-					finish <=0;
-					if (enable && ~forward )
-					begin
-					// si se resetea se pone en cero
-						if (reset) 	
-							out3 <= 6'b0 ; 
-						else if (out3== 6'b0) //si llega a cero termina
-							finish<= 1;
-						else 
-							out3 <= out3 - 1;
-							
-					end //end del if	
-					
-					
+			finish <=0;
+			if (enable && ~forward && out3 != 6'b0 )
+				out3 <= out3 - 1;
+										
 		end
 		else  // posedge
 		begin
@@ -66,7 +62,8 @@ module SixBitCounter_M(
 	
 	always @(posedge increment)
 	begin
-		out2<= out;
+		if(~forward )
+			out2<= 6'b0;
 		if(enable && forward )
 		begin
 			// si se resetea se pone en cero

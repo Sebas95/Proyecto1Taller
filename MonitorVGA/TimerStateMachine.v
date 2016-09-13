@@ -28,7 +28,9 @@ module TimerStateMachine(
 	 output reg enableCounter  = 0,
 	 output reg forward    = 0,
     output reg resetTimer = 0,
-	 output reg [2:0] actualState = 3'b000
+	 output reg [2:0] actualState = 3'b000,
+	 output reg incrementSeg = 0,
+	 output reg incrementMin = 0
     );
 	 
 	 reg [2:0] state     = 3'b000; 
@@ -47,11 +49,22 @@ module TimerStateMachine(
 				initialState:
 					begin
 						//Asigno las salidas de la maquina (estados del contador)
-						enableCounter  = 0;
-						resetTimer = 1;
+						enableCounter  = 0; // el contador está detenido
+						resetTimer = 1; //reseteo el contador
 						forward    = 0;
+						incrementSeg=1;// reseteo el contador de seg progresivo en el posedge del increment
+						incrementMin=1;// reseteo el contador de min progresivo en el posedge del increment
 						if(start) nextState = countState;
-						else if (segDemand || minDemand) nextState = settingState;
+						else if (segDemand)
+						begin
+							nextState = settingState;
+							incrementSeg=1;
+						end
+						else if ( minDemand) 
+						begin
+							nextState = settingState;
+							incrementMin=1;
+						end
 						else nextState = initialState;
 					end								
 				//Aqui van los estados de establecer
@@ -62,7 +75,18 @@ module TimerStateMachine(
 						enableCounter  = 1;
 						resetTimer = 0;
 						forward    = 1;
-						if((segDemand || minDemand) && ~start && ~delete) nextState = settingState;
+						incrementSeg=0;
+						incrementMin=0;
+						if(segDemand && ~start && ~delete)
+						begin
+							nextState = settingState;
+							incrementSeg=1;
+						end
+						else if (minDemand && ~start && ~delete)
+						begin
+							nextState = settingState;
+							incrementMin=1;
+						end
 						else if(start && ~delete) nextState = countState;
 						else if(delete) nextState = deleteState;
 						else nextState = settingState;
@@ -74,6 +98,8 @@ module TimerStateMachine(
 						enableCounter  = 1;
 						resetTimer = 0;
 						forward    = 0;
+						incrementSeg=0;
+						incrementMin=0;
 						if(stop) nextState = stopState;
 						else nextState = countState;
 					end
@@ -84,6 +110,8 @@ module TimerStateMachine(
 						enableCounter  = 0;
 						resetTimer = 0;
 						forward    = 0;
+						incrementSeg=0;
+						incrementMin=0;
 						if(start && ~delete) nextState = countState;
 						else if(delete) nextState = deleteState;
 						else nextState = stopState;					
@@ -93,11 +121,15 @@ module TimerStateMachine(
 						//Asigno las salidas de la maquina (entradas del contador)
 						enableCounter  = 0;
 						resetTimer = 1;
-						forward    = 0;
+						forward    = 0; // reseteo el contador 
+						incrementSeg=0;
+						incrementMin=0;
 						nextState = initialState;
 					end
 				 default:
 					begin 
+						incrementSeg=0;
+						incrementMin=0;
 						enableCounter  = 0;
 						resetTimer = 1;
 						forward    = 1;

@@ -50,6 +50,8 @@ module Temporizador(
 	wire incrementSeconds_db;
 	wire incrementMinutes_db;
 	
+	wire incrementSeg;
+	wire incrementMin;
 	
 	//devisor de frecuencia pra el controlador VGA
 	reg clk;
@@ -104,8 +106,8 @@ module Temporizador(
 			.clk(CLK_50MHZ)     ,  // clock Input
 			.reset(resetTimer)   ,  // reset Input
 			.forward(forward), //forward input
-			.incrementSeconds(incrementSeconds_db),
-			.incrementMinutes(incrementMinutes_db),
+			.incrementSeconds(incrementSeg),
+			.incrementMinutes(incrementMin),
 			.secondsDecimals(sDecimal)     ,  // Output of the counter
 			.secondsUnits(sUnit)     ,  // Output of the counter
 			.minutesDecimals(mDecimal)     ,  // Output of the counter
@@ -125,7 +127,9 @@ module Temporizador(
 		.enableCounter(enableCounter), 
 		.forward(forward), 
 		.resetTimer(resetTimer),
-		.actualState(actualState)
+		.actualState(actualState),
+		.incrementSeg(incrementSeg),
+		.incrementMin(incrementMin)
 	);
 	/*
 	reg [2:0] rgb_reg;

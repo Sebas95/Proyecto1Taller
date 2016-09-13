@@ -42,12 +42,11 @@ module SixBitCounter(
 	begin
 		if (enable && forward )
 			out3<=out2;
-		if (enable && ~forward && ~finish )
-		begin
 		// si se resetea se pone en cero
-			if (reset) 	
+		if (reset) 	
 				out3 <= 6'b0 ; 	
-			else 
+		if (enable && ~forward  )
+		begin
 			if (out3== 6'b0) //si llega a cero se pone en 59
 				out3<= 6'b111011;
 			else 
@@ -60,7 +59,8 @@ module SixBitCounter(
 	
 	always @(posedge increment)
 	begin
-		out2<=out;
+		if(~forward )
+			out2<= 6'b0;
 		if(enable && forward )
 		begin
 			// si se resetea se pone en cero
