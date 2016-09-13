@@ -5,11 +5,11 @@ module textPainter
     input wire  [3:0] dig0, dig1, dig2, dig3,
 	 input wire [2:0] actualState,
     input wire  [9:0] pix_x, pix_y,
+	 input wire [7:0] font_word,
+	 input wire pixel_tick,	 
     output wire [3:0] text_on,
     output reg  [2:0] text_rgb,
-	 output wire [10:0] rom_addr,
-	 input wire [7:0] font_word,
-	 input wire pixel_tick
+	 output wire [10:0] rom_addr
    );
 
    // signal declaration
@@ -172,24 +172,54 @@ module textPainter
             row_addr = row_addr_s;
             bit_addr = bit_addr_s;
             if (font_bit)
-               nextRGB = 3'b001;
+					begin
+						if(actualState == 3'b001)
+							nextRGB = 3'b001;							
+						else if(actualState == 3'b010)
+							nextRGB = 3'b010;
+						else if(actualState == 3'b011)
+							nextRGB = 3'b100;
+						else
+							nextRGB = 3'b111;
+					end
          end
       else if (state_on)
          begin
             char_addr = char_addr_st;
             row_addr = row_addr_st;
             bit_addr = bit_addr_st;
-            if (font_bit)
-               nextRGB = 3'b111;
+            if (font_bit && pix_x[8:4] > 4'h6)
+					begin
+						if(actualState == 3'b001)
+							nextRGB = 3'b001;						
+						else if(actualState == 3'b010)
+							nextRGB = 3'b010;
+						else if(actualState == 3'b011)
+							nextRGB = 3'b100;						
+						else
+							nextRGB = 3'b111;
+					end
+            else if (font_bit && pix_x[8:4] < 4'h7)
+               nextRGB = 3'b111;					
+				else
+					nextRGB = 3'b000;
          end		
 
    end
+	
+	reg [2:0] text_rgb_Aux0 = 0;
+	reg [2:0] text_rgb_Aux1 = 0;
 	
 	always@(posedge clk)
 		begin
 			if (pixel_tick)
 				text_rgb = nextRGB;						
 		end
+		
+/*	always@*
+		begin
+			text_rgb = text_rgb_Aux0;
+		end*/
 
    assign text_on = {score_on,state_on};
    //-------------------------------------------

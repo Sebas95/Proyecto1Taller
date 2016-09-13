@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Sep 13 09:52:02 2016
+// Written by: Map P.20131013 on Tue Sep 13 11:30:49 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -18,9 +18,9 @@ COMP "start" LOCATE = SITE "A8" LEVEL 1;
 COMP "vsync" LOCATE = SITE "P7" LEVEL 1;
 COMP "delete" LOCATE = SITE "C9" LEVEL 1;
 COMP "CLK_50MHZ" LOCATE = SITE "V10" LEVEL 1;
-COMP "rgb<0>" LOCATE = SITE "N7" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "T7" LEVEL 1;
 COMP "rgb<1>" LOCATE = SITE "V6" LEVEL 1;
-COMP "rgb<2>" LOCATE = SITE "T7" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "N7" LEVEL 1;
 COMP "finish" LOCATE = SITE "T11" LEVEL 1;
 NET "CLK_50MHZ_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 SCHEMATIC END;
