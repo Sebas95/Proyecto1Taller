@@ -37,29 +37,30 @@ module SixBitCounter_M(
 	  
 	always @(posedge clk_1Hz)
 	begin 
-		if (enable && forward )
-			out3<=out2;
-			// si se resetea se pone en cero
+	// si se resetea se pone en cero
 		if (reset) 	
 			out3 <= 6'b0 ; 
-			
-		if(seconds==6'b1 && out3== 6'b0 && ~forward)
-			finish<= 1;
-			
-		else if(seconds==6'b0)
+		if (enable)
 		begin
-			finish <=0;
-			if (enable && ~forward && out3 != 6'b0 )
-				out3 <= out3 - 1;
-										
+			if (forward)
+				out3<=out2;
+				
+			if(seconds==6'b1 && out3== 6'b0 && ~forward)
+				finish<= 1;
+				
+			else if(seconds==6'b0 && ~forward)
+			begin
+				finish <= 0;
+				if ( out3 != 6'b0 )
+					out3 <= out3 - 1;
+			end
+			else  // posedge
+			begin
+				finish <=0;
+			end
 		end
-		else  // posedge
-		begin
-			finish <=0;
-		end
-		
 	end		
-	
+	//----------------------------------------------------------------
 	always @(posedge increment)
 	begin
 		if(~forward )

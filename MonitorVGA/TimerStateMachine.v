@@ -58,8 +58,9 @@ module TimerStateMachine(
 						forward    = 0;
 						incrementSeg = 1;// reseteo el contador de seg progresivo en el posedge del increment
 						incrementMin = 1;// reseteo el contador de min progresivo en el posedge del increment
-						if(start) nextState = countState;
-						else if (segDemand)
+						//if(start) nextState = countState; 
+						//else if (segDemand)
+						if (segDemand)
 						begin
 							nextState = settingState;
 							incrementSeg=1;
