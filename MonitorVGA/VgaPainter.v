@@ -44,8 +44,7 @@ module VgaPainter(
 	input wire [3:0] sUnit,
 	input wire [3:0] sDecimal,
 	input wire [2:0] actualState,
-	input wire clk,
-	input wire clk2,
+	input wire clk_100MHz,
 	input wire finish,
    output wire hsync, vsync,
    output wire [2:0] rgb,
@@ -61,12 +60,21 @@ module VgaPainter(
 	wire [7:0]  font_word;
 
 
+
+	//devisor de frecuencia pra el controlador VGA
+	reg clk_50MHz;
+	always @(posedge clk_100MHz)
+		clk_50MHz<= ~clk_50MHz;
+
+
+
+
    font_rom font_unit
-      (.clk(clk2), .addr(rom_addr), .data(font_word));	
+      (.clk(clk_100MHz), .addr(rom_addr), .data(font_word));	
 		
    // instantiate video synchronization unit
    vga_sync vsync_unit
-      (.clk(clk), 
+      (.clk(clk_50MHz), 
 		.reset(reset), 
 		.hsync(hsync), 
 		.vsync(vsync),
@@ -78,7 +86,7 @@ module VgaPainter(
 	
    // instantiate text module
    textPainter text_unit
-      (.clk(clk2),
+      (.clk(clk_100MHz),
 		 .clk1Hz(clk1Hz),
 		 .actualState(actualState),
        .pix_x(pixel_x), 
@@ -96,7 +104,7 @@ module VgaPainter(
 	);
 	
 		FrecuencyDivider fd (
-		.clk_100MHz(clk2),
+		.clk_100MHz(clk_100MHz),
 		.clk_1Hz(clk1Hz),
 		.counter()
 	);

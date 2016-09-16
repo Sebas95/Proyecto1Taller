@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Temporizador(
-	input wire CLK_50MHZ,
+	input wire CLK_100MHZ,
 	input wire incrementSeconds,
 	input wire incrementMinutes,
 	input wire reset,
@@ -56,11 +56,7 @@ module Temporizador(
 	wire incrementSeg;
 	wire incrementMin;
 	
-	//devisor de frecuencia pra el controlador VGA
-	reg clk;
-	//reg enable = 1;
-	always @(posedge CLK_50MHZ)
-		clk <= ~clk;
+	
 
 	//-------------------Debouncer-----------------------------
 	TotalDebouncer dbounce (	
@@ -69,7 +65,7 @@ module Temporizador(
 		.button2(delete),
 		.button3(incrementSeconds),
 		.button4(incrementMinutes),
-		.clk(CLK_50MHZ),
+		.clk(CLK_100MHZ),
 		.reset(gnd),
 		.db0(start_db),
 		.db1(stop_db),
@@ -93,9 +89,8 @@ module Temporizador(
 		.mDecimal(mDecimal), 
 		.mUnit(mUnit), 
 		.sUnit(sUnit), 
-		.sDecimal(sDecimal), 
-		.clk(clk), 
-		.clk2(CLK_50MHZ), 
+		.sDecimal(sDecimal),  
+		.clk_100MHz(CLK_100MHZ), 
 		.actualState(actualState),
 		.hsync(hsync), 
 		.vsync(vsync), 
@@ -108,7 +103,7 @@ module Temporizador(
 		
 	 MinutesCounter mc (	
 			.enable(enableCounter)  ,  // enable for counter
-			.clk(CLK_50MHZ)     ,  // clock Input
+			.clk(CLK_100MHZ)     ,  // clock Input
 			.reset(resetTimer)   ,  // reset Input
 			.forward(forward), //forward input
 			.incrementSeconds(incrementSeg),
@@ -123,7 +118,7 @@ module Temporizador(
 
 
 	TimerStateMachine tsm (
-		.clk(CLK_50MHZ), 
+		.clk(CLK_100MHZ), 
 		.start(start_db), 
 		.stop(stop_db), 
 		.delete(delete_db), 
