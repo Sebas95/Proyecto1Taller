@@ -19,16 +19,16 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module TwoDigitDeco(
-		input clk,
-		input [5:0]number,
-		output reg [3:0]decimals,
-		output reg [3:0] units
+		input clk, //reloj
+		input [5:0]number, //numero de 6 bit
+		output reg [3:0]decimals, //decenas
+		output reg [3:0] units //unidades
     );
 	 
-	 
+	 //aquí se decodifica
 	 always @(posedge clk)
 	 begin	
-		case (number)
+		case (number) //pregunta que numero de 6 bits le entra
          6'b000000: //00
 			begin
 				units <=		 4'b0000;

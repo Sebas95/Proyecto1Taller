@@ -18,21 +18,23 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
+//cronómetro para segundos
 module SixBitCounter(
 	
 	input enable  ,  // enable for counter
  	input clk     ,  // clock Input
  	input reset   ,  // reset Input
 	input forward , //forward input
-	input increment,
-	input finish,
+	input increment, //pulso de incrementar
+	input finish, //bandera de finalización del cronómetro
 	
 	output reg [5:0]out =0     // Output of the counter
 
  );
  
-	reg [5:0]out2=0;
-	reg [5:0]out3=0;
+	reg [5:0]out2=0; //contador progresivo
+	reg [5:0]out3=0;//contador regresivo
 
 	
 	
@@ -72,19 +74,19 @@ module SixBitCounter(
 				out2<= 6'b000000;
 				
 			else
-				out2 <= out2 + 1;
+				out2 <= out2 + 1; //aumento el contador progrsivo 1 seg
 		end
 	end
 	
 	//--------------------------------------------------------------
 	always @*
 	begin
-		if(reset)
+		if(reset) //se resetea
 			out<=6'b0;
-		else if(forward)
+		else if(forward) //modo rprogresivo
 			out<=out2;
-		else if(~forward)
-			out<=out3;
+		else if(~forward) //regresivo
+			out<=out3; 
 	end
 	
 	

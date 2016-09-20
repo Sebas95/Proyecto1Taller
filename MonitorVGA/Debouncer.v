@@ -21,8 +21,8 @@
 module Debouncer
 	 (
     input wire clk, reset,
-    input wire sw,
-    output reg db
+    input wire sw, //swith de entrada
+    output reg db //salida corregida
    );
 
    // declaracion de los estados
@@ -39,7 +39,7 @@ module Debouncer
    // number of counter bits (2^N * 20ns = 10ms tick)
    localparam N =19;
 
-   // signal declaration
+   // declaración de variables
    reg [N-1:0] q_reg;
    wire [N-1:0] q_next;
    wire m_tick;
@@ -59,7 +59,7 @@ module Debouncer
  
    // Máquina de estados
   
-   // state register
+   // controlador deestados
     always @(posedge clk, posedge reset)
        if (reset)
           state_reg <= cero;
@@ -130,6 +130,7 @@ module Debouncer
 				
          default: state_next = cero;
       endcase
-   end
+		
+   end //end delalways 
 
 endmodule
