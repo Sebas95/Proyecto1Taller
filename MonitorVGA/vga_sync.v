@@ -18,13 +18,13 @@ module vga_sync
    localparam VR = 2;   // v. retrace
 
    // mod-2 counter
-   reg mod2_reg;
+   reg mod2_reg = 0;
    wire mod2_next;
    // sync counters
-   reg [9:0] h_count_reg, h_count_next;
-   reg [9:0] v_count_reg, v_count_next;
+   reg [9:0] h_count_reg=0;reg [9:0] h_count_next=0;
+   reg [9:0] v_count_reg=0;reg [9:0] v_count_next=0;
    // output buffer
-   reg v_sync_reg, h_sync_reg;
+   reg v_sync_reg=0, h_sync_reg=0;
    wire v_sync_next, h_sync_next;
    // status signal
    wire h_end, v_end, pixel_tick;

@@ -36,9 +36,6 @@ module Temporizador(
 	wire enableCounter;
    wire resetTimer;	
 	wire forward;
-	wire video_on;
-	wire [3:0] txt_on;
-	wire [2:0] nextRGB;	
 	wire [2:0] actualState;
 	wire [3:0] mDecimal ;
 	wire [3:0] mUnit;
@@ -54,7 +51,18 @@ module Temporizador(
 	wire incrementSeg;
 	wire incrementMin;
 	
-	
+	VGAPainterColorConfig vgaPCC (
+	.mDecimal(mDecimal),
+	.mUnit(mUnit),
+	.sUnit(sUnit),
+	.sDecimal(sDecimal),
+	.actualState(actualState),
+	.clk_100MHz(CLK_100MHZ),
+	.finish(stateFinish),
+   .hsync(hsync), 
+	.vsync(vsync),
+	.rgb(rgb)
+    );
 
 	//-------------------Debouncer-----------------------------
 	TotalDebouncer dbounce (	
@@ -83,20 +91,7 @@ module Temporizador(
 	
 	
 	
-	VgaPainter vgap (
-		.mDecimal(mDecimal), 
-		.mUnit(mUnit), 
-		.sUnit(sUnit), 
-		.sDecimal(sDecimal),  
-		.clk_100MHz(CLK_100MHZ), 
-		.actualState(actualState),
-		.hsync(hsync), 
-		.vsync(vsync), 
-		.rgb(nextRGB),
-		.video_on(video_on),
-		.text_on(txt_on),
-		.finish(stateFinish)
-	);	
+
 	
 		
 	 MinutesCounter mc (	
@@ -133,12 +128,7 @@ module Temporizador(
 	);
 	
 	
-	vgaColorConfig colorConfg (
-		.nextRGB(nextRGB), 
-		.video_on(video_on), 
-		.rgb(rgb),
-		.txt_on(txt_on)
-	);
+
 	
 
 endmodule

@@ -31,7 +31,7 @@ module FrecuencyDivider(
 	reg [26:0]counter=0;
 	
 	
-	reg  clk_1Hz; 
+	reg  clk_1Hz=0; 
 	  
 	always @(posedge clk_100MHz)
 	begin 

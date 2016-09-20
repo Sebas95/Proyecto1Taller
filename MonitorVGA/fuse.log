@@ -1,19 +1,28 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test_isim_beh.exe -prj C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test_beh.prj work.counter_test work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest2_isim_beh.exe -prj C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest2_beh.prj work.vgaPainterTest2 work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/SixBitCounter.v" into library work
-Analyzing Verilog file "C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test.v" into library work
+Analyzing Verilog file "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vga_sync.v" into library work
+Analyzing Verilog file "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/timer_text.v" into library work
+Analyzing Verilog file "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/FrecuencyDivider.v" into library work
+Analyzing Verilog file "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/font_rom.v" into library work
+Analyzing Verilog file "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/VgaPainter.v" into library work
+Analyzing Verilog file "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest2.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/VgaPainter.v" Line 78: Size mismatch in connection of port <reset>. Formal port size is 1-bit while actual signal size is 32-bit.
 Completed static elaboration
-Compiling module SixBitCounter
-Compiling module counter_test
+Compiling module font_rom
+Compiling module vga_sync
+Compiling module textPainter
+Compiling module FrecuencyDivider
+Compiling module VgaPainter
+Compiling module vgaPainterTest2
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 3 Verilog Units
-Built simulation executable C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test_isim_beh.exe
-Fuse Memory Usage: 27480 KB
-Fuse CPU Usage: 687 ms
+Compiled 7 Verilog Units
+Built simulation executable C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest2_isim_beh.exe
+Fuse Memory Usage: 34552 KB
+Fuse CPU Usage: 984 ms

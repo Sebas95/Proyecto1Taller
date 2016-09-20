@@ -37,6 +37,7 @@ module TimerStateMachine(
 	 
 	 reg [2:0] state     = 3'b000; 
 	 reg [2:0] nextState = 3'b000;
+	 //Estados disponibles de la maquina de estados con sus valores respectivos
 	 localparam [2:0] initialState = 3'b000;
 	 localparam [2:0] settingState = 3'b001;
 	 localparam [2:0] countState   = 3'b010;
@@ -77,20 +78,20 @@ module TimerStateMachine(
 				settingState: 
 					begin
 						//Asigno las salidas de la maquina (estados del contador)
-						enableCounter  = 1;
-						resetTimer = 0;
-						forward    = 1;
-						incrementSeg=0;
-						incrementMin=0;
+						enableCounter  = 1; //se activa en contador
+						resetTimer = 0;		//no se resetea
+						forward    = 1;		//cuenta hacia adelante
+						incrementSeg=0; //Aumentar desactivado
+						incrementMin=0; //Aumentar desactivado
 						if(segDemand && ~start && ~delete)
 						begin
-							nextState = settingState;
-							incrementSeg=1;
+							nextState = settingState; 
+							incrementSeg=1; //Si se solicita incrementar segundos entonces activa dicho aumento
 						end
 						else if (minDemand && ~start && ~delete)
 						begin
 							nextState = settingState;
-							incrementMin=1;
+							incrementMin=1; //Si se solicita incrementar minutos entonces activa dicho aumento
 						end
 						else if(start && ~delete) nextState = countState;
 						else if(delete) nextState = deleteState;
@@ -100,11 +101,11 @@ module TimerStateMachine(
 				countState: 
 					begin
 						//Asigno las salidas de la maquina (entradas del contador)
-						enableCounter  = 1;
-						resetTimer = 0;
-						forward    = 0;
-						incrementSeg=0;
-						incrementMin=0;
+						enableCounter  = 1; //se activa en contador
+						resetTimer = 0; // no reseteo el contador
+						forward    = 0; //cuenta hacia atras
+						incrementSeg=0; //Aumentar desactivado
+						incrementMin=0; //Aumentar desactivado
 						if(stop) nextState = stopState;
 						else if(finish) nextState = finalState;
 						else nextState = countState;
@@ -113,11 +114,11 @@ module TimerStateMachine(
 				stopState: 
 					begin
 						//Asigno las salidas de la maquina (entradas del contador)
-						enableCounter  = 0;
-						resetTimer = 0;
-						forward    = 0;
-						incrementSeg=0;
-						incrementMin=0;
+						enableCounter  = 0; //se desactiva en contador
+						resetTimer = 0; // no reseteo el contador
+						forward    = 0; //cuenta hacia atras
+						incrementSeg=0; //Aumentar desactivado
+						incrementMin=0; //Aumentar desactivado
 						if(start && ~delete) nextState = countState;
 						else if(delete) nextState = deleteState;
 						else nextState = stopState;					
@@ -125,20 +126,20 @@ module TimerStateMachine(
 				deleteState:
 					begin
 						//Asigno las salidas de la maquina (entradas del contador)
-						enableCounter  = 0;
-						resetTimer = 1;
-						forward    = 0; // reseteo el contador 
-						incrementSeg=0;
-						incrementMin=0;
+						enableCounter  = 0;//se desactiva en contador
+						resetTimer = 1;  // reseteo el contador
+						forward    = 0;  //cuenta hacia atras
+						incrementSeg=0;  //Aumentar desactivado
+						incrementMin=0;  //Aumentar desactivado
 						nextState = initialState;
 					end
 				finalState:
 					begin
-						enableCounter  = 0;
-						resetTimer = 0;
+						enableCounter  = 0; //se desactiva en contador
+						resetTimer = 0; // no reseteo el contador
 						forward    = 0; // reseteo el contador 
-						incrementSeg=0;
-						incrementMin=0;
+						incrementSeg=0; //Aumentar desactivado
+						incrementMin=0; //Aumentar desactivado
 						stateFinish = 1;
 						if(start) nextState = initialState;
 						else nextState = finalState;
@@ -146,11 +147,11 @@ module TimerStateMachine(
 					end
 				 default:
 					begin 
-						incrementSeg=0;
-						incrementMin=0;
-						enableCounter  = 0;
-						resetTimer = 1;
-						forward    = 1;
+						incrementSeg=0; //Aumentar desactivado
+						incrementMin=0; //Aumentar desactivado
+						enableCounter  = 0; //contador desactivado
+						resetTimer = 1; // reseteo el contador 
+						forward    = 1; //cuenta hacia adelante
 					end
 			endcase
 		end	

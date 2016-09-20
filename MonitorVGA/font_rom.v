@@ -9,11 +9,11 @@ module font_rom
    (
     input wire clk,
     input wire [10:0] addr,
-    output reg [7:0] data
+    output reg [7:0] data = 0
    );
    
    // signal declaration
-   reg [10:0] addr_reg; 
+   reg [10:0] addr_reg = 0; 
 
    // body
    always @(posedge clk) 

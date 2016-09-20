@@ -10,25 +10,24 @@ module textPainter
 	 input wire pixel_tick,	 
 	 input wire finish,
     output wire [3:0] text_on,
-    output reg  [2:0] text_rgb,
+    output reg  [2:0] text_rgb =0,
 	 output wire [10:0] rom_addr
    );
 
    // signal declaration
-   reg  [6:0] char_addr, char_addr_s, char_addr_st;
-   reg  [3:0] row_addr;
-   wire [3:0] row_addr_s, row_addr_st;
-   reg  [2:0] bit_addr;
-   wire [2:0] bit_addr_s, bit_addr_st;
+   reg  [6:0] char_addr=0;reg  [6:0] char_addr_s = 0;reg  [6:0] char_addr_st = 0;
+   reg  [3:0] row_addr=0;
+   wire [3:0] row_addr_s;wire [3:0] row_addr_st;
+   reg  [2:0] bit_addr=0;
+   wire [2:0] bit_addr_s;wire [2:0] bit_addr_st;
    wire font_bit, score_on;
 	reg state_on = 0;
 	reg [2:0] nextRGB = 3'b000;
 
    //-------------------------------------------
-   // score region
-   //  - display two-digit score, ball on top left
-   //  - scale to 16-by-32 font
-   //  - line 1, 16 chars: "Score:DD Ball:D"
+   // Temporizador
+   //  - Seccion donde se despliega el temporizador
+   //  - escala  16-32 
    //-------------------------------------------
    assign score_on = (pix_y[9:5]==7) && (pix_x[9:4]<32  && pix_x[9:4]>15);
    assign row_addr_s = pix_y[4:1];
@@ -37,11 +36,11 @@ module textPainter
       case (pix_x[7:4])	
 			4'h0: char_addr_s = 7'h00; //		
 			4'h1: char_addr_s = 7'h00; //			
-         4'h2: char_addr_s = {3'b011,dig0};  // 
-         4'h3: char_addr_s = {3'b011,dig1}; // 			
+         4'h2: char_addr_s = {3'b011,dig0}; //Aqui escojo segun el digito entrante el que coloco en pantalla
+         4'h3: char_addr_s = {3'b011,dig1}; //Aqui escojo segun el digito entrante el que coloco en pantalla		
          4'h4: char_addr_s = 7'h3a; // :
-         4'h5: char_addr_s = {3'b011,dig2}; 
-         4'h6: char_addr_s = {3'b011,dig3}; 
+         4'h5: char_addr_s = {3'b011,dig2}; //Aqui escojo segun el digito entrante el que coloco en pantalla
+         4'h6: char_addr_s = {3'b011,dig3}; //Aqui escojo segun el digito entrante el que coloco en pantalla
 			4'h7: char_addr_s = 7'h00; //
 			4'h8: char_addr_s = 7'h00; //
 			4'h9: char_addr_s = 7'h00; //
@@ -55,10 +54,10 @@ module textPainter
       endcase
 		
    //-------------------------------------------
-   // State region
-   //  - display two-digit score, ball on top left
-   //  - scale to 16-by-32 font
-   //  - line 1, 16 chars: "Score:DD Ball:D"
+   // Estados
+   //  - Despliega la palabra estado con cada uno de los diferentes estados
+	//  inicial,establecer,contando,borrar,detener,final
+   //  - Escala  16-32 
    //-------------------------------------------
    assign row_addr_st = pix_y[4:1];
    assign bit_addr_st = pix_x[3:1];
@@ -192,15 +191,15 @@ module textPainter
 			end
 	end				
    //-------------------------------------------
-   // mux for font ROM addresses and rgb
+   // Aqui se escoge cual color enviar a colocar mientras se encuentre cada elemento encima
    //-------------------------------------------
 	localparam red = 3'b001;
    always @*
-   begin
+   begin //Para sincronizar con el pixel y evitar indeseados erroes
 	if(pixel_tick)
 	begin
-      text_rgb = 3'b000;  // background, yellow
-      if (score_on)
+      text_rgb = 3'b000;  // fonodo negro
+      if (score_on) //Si estan los numeros encima
          begin
             char_addr = char_addr_s;
             row_addr = row_addr_s;
@@ -220,7 +219,7 @@ module textPainter
 							text_rgb = 3'b111;
 					end
          end
-      else if (state_on)
+      else if (state_on) //Si esta el estado encima
          begin
             char_addr = char_addr_st;
             row_addr = row_addr_st;
@@ -251,7 +250,7 @@ module textPainter
 
    assign text_on = {score_on,state_on};
    //-------------------------------------------
-   // font rom interface
+   // Direccion de la rom para escoger el numero deseado
    //-------------------------------------------
    assign rom_addr = {char_addr, row_addr};
    assign font_bit = font_word[~bit_addr];

@@ -1,13 +1,16 @@
 ISim log file
-Running: C:\Users\Sebastian\Documents\GitHub\Proyecto1Taller\MonitorVGA\counter_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Sebastian/Documents/GitHub/Proyecto1Taller/MonitorVGA/counter_test_isim_beh.wdb 
+Running: C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaPainterTest2_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest2_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
+WARNING:  For instance uut/vsync_unit/, width 1 of formal port reset is not equal to width 32 of actual constant.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 5.00s
+Stopped at time : 266437455 ns : File "C:/Users/Giovanni/Documents/GitHub/Proyecto1Taller/MonitorVGA/vgaPainterTest2.v" Line 58

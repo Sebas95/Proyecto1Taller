@@ -8,9 +8,6 @@
 <msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v" Line 34: Using initial value of <arg fmt="%s" index="1">gnd</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Debouncer.v" Line 55: Result of <arg fmt="%d" index="1">20</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">19</arg>-bit target.
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" Line 68: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
@@ -26,6 +23,27 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 52: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 48: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">video_on</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">3</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 49: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">text_on</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">3</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v" Line 34: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 56: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">video_on</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">3</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 58: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">txt_on</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">3</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 50: Net &lt;<arg fmt="%s" index="1">stateFinish</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Debouncer.v" Line 55: Result of <arg fmt="%d" index="1">20</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">19</arg>-bit target.
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" Line 53: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
@@ -38,10 +56,13 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter_M.v" Line 79: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v" Line 31: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">finish</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v</arg>&quot; line <arg fmt="%s" index="2">106</arg>: Output port &lt;<arg fmt="%s" index="3">counter</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">fd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">stateFinish</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">counter</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">fd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">pix_x&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -107,6 +128,9 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">text_rgb&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">txt_on&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v</arg>&quot; line <arg fmt="%s" index="2">43</arg>: Output port &lt;<arg fmt="%s" index="3">counter</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">fd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
@@ -152,9 +176,6 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">stateFinish</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">txt_on&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0073</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
@@ -168,88 +189,88 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tsm/stateFinish</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vgap/clk_50MHz</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;dbounce/debouncer4/q_reg_0&gt; &lt;mc/fd/counter_0&gt; &lt;vgap/fd/counter_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vgaPCC/vgap/fd/clk_1Hz</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/clk_1Hz&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_1&gt; &lt;vgap/fd/counter_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_1&gt; &lt;vgaPCC/vgap/fd/counter_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_2&gt; &lt;vgap/fd/counter_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_2&gt; &lt;vgaPCC/vgap/fd/counter_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_3&gt; &lt;vgap/fd/counter_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_3&gt; &lt;vgaPCC/vgap/fd/counter_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_4&gt; &lt;vgap/fd/counter_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_4&gt; &lt;vgaPCC/vgap/fd/counter_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_5&gt; &lt;vgap/fd/counter_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_5&gt; &lt;vgaPCC/vgap/fd/counter_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_6&gt; &lt;vgap/fd/counter_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_6&gt; &lt;vgaPCC/vgap/fd/counter_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_7&gt; &lt;vgap/fd/counter_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">dbounce/debouncer4/q_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/counter_7&gt; &lt;vgaPCC/vgap/fd/counter_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vgap/fd/clk_1Hz</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mc/fd/clk_1Hz&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_20&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_21&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_17&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_22&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_22&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_18&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_18&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_23&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_23&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_19&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_24&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_24&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_25&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_25&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgaPCC/vgap/fd/counter_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mc/fd/counter_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vgap/fd/counter_26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vgaPCC/vgap/clk_50MHz</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Temporizador</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;dbounce/debouncer4/q_reg_0&gt; &lt;mc/fd/counter_0&gt; &lt;vgaPCC/vgap/fd/counter_0&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

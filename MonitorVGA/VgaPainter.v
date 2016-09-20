@@ -62,13 +62,13 @@ module VgaPainter(
 
 
 	//devisor de frecuencia pra el controlador VGA
-	reg clk_50MHz;
+	reg clk_50MHz = 0;
 	always @(posedge clk_100MHz)
 		clk_50MHz<= ~clk_50MHz;
 
 
 
-
+	//Instanciación de la memoria de las configuraciones
    font_rom font_unit
       (.clk(clk_100MHz), .addr(rom_addr), .data(font_word));	
 		
@@ -84,7 +84,7 @@ module VgaPainter(
 		.pixel_y(pixel_y)		
 	);
 	
-   // instantiate text module
+   // instanciacion para desplegar el texto
    textPainter text_unit
       (.clk(clk_100MHz),
 		 .clk1Hz(clk1Hz),
@@ -102,6 +102,8 @@ module VgaPainter(
 		 .pixel_tick(pixel_tick),
 		 .finish(finish)
 	);
+	
+	//Divisor de frecuencia de 1HZ
 	
 		FrecuencyDivider fd (
 		.clk_100MHz(clk_100MHz),

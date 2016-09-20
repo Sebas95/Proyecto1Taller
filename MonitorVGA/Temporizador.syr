@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: Temporizador.prj
 
@@ -107,24 +107,26 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v" into library work
 Parsing module <vga_sync>.
-Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TwoDigitDeco.v" into library work
-Parsing module <TwoDigitDeco>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\timer_text.v" into library work
 Parsing module <textPainter>.
-Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter_M.v" into library work
-Parsing module <SixBitCounter_M>.
-Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" into library work
-Parsing module <SixBitCounter>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" into library work
 Parsing module <FrecuencyDivider>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\font_rom.v" into library work
 Parsing module <font_rom>.
-Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Debouncer.v" into library work
-Parsing module <Debouncer>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" into library work
 Parsing module <VgaPainter>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v" into library work
 Parsing module <vgaColorConfig>.
+Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TwoDigitDeco.v" into library work
+Parsing module <TwoDigitDeco>.
+Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter_M.v" into library work
+Parsing module <SixBitCounter_M>.
+Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\SixBitCounter.v" into library work
+Parsing module <SixBitCounter>.
+Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Debouncer.v" into library work
+Parsing module <Debouncer>.
+Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" into library work
+Parsing module <VGAPainterColorConfig>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TotalDebouncer.v" into library work
 Parsing module <TotalDebouncer>.
 Analyzing Verilog file "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TimerStateMachine.v" into library work
@@ -141,10 +143,7 @@ Parsing module <Temporizador>.
 Elaborating module <Temporizador>.
 WARNING:HDLCompiler:872 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Temporizador.v" Line 34: Using initial value of gnd since it is never assigned
 
-Elaborating module <TotalDebouncer>.
-
-Elaborating module <Debouncer>.
-WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Debouncer.v" Line 55: Result of 20-bit expression is truncated to fit in 19-bit target.
+Elaborating module <VGAPainterColorConfig>.
 
 Elaborating module <VgaPainter>.
 
@@ -160,6 +159,19 @@ Elaborating module <textPainter>.
 Elaborating module <FrecuencyDivider>.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 47: Result of 28-bit expression is truncated to fit in 27-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v" Line 52: Result of 28-bit expression is truncated to fit in 27-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 48: Size mismatch in connection of port <video_on>. Formal port size is 1-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 49: Size mismatch in connection of port <text_on>. Formal port size is 4-bit while actual signal size is 3-bit.
+
+Elaborating module <vgaColorConfig>.
+WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v" Line 34: Result of 22-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 56: Size mismatch in connection of port <video_on>. Formal port size is 1-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 58: Size mismatch in connection of port <txt_on>. Formal port size is 4-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:634 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v" Line 50: Net <stateFinish> does not have a driver.
+
+Elaborating module <TotalDebouncer>.
+
+Elaborating module <Debouncer>.
+WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\Debouncer.v" Line 55: Result of 20-bit expression is truncated to fit in 19-bit target.
 
 Elaborating module <MinutesCounter>.
 
@@ -175,9 +187,6 @@ Elaborating module <TwoDigitDeco>.
 
 Elaborating module <TimerStateMachine>.
 
-Elaborating module <vgaColorConfig>.
-WARNING:HDLCompiler:413 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v" Line 31: Result of 22-bit expression is truncated to fit in 3-bit target.
-
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
@@ -187,6 +196,117 @@ Synthesizing Unit <Temporizador>.
     Summary:
 	no macro.
 Unit <Temporizador> synthesized.
+
+Synthesizing Unit <VGAPainterColorConfig>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VGAPainterColorConfig.v".
+WARNING:Xst:647 - Input <finish> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <stateFinish> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <VGAPainterColorConfig> synthesized.
+
+Synthesizing Unit <VgaPainter>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v".
+INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" line 108: Output port <counter> of the instance <fd> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <clk_50MHz>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <VgaPainter> synthesized.
+
+Synthesizing Unit <font_rom>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\font_rom.v".
+    Found 11-bit register for signal <addr_reg>.
+    Found 2048x8-bit Read Only RAM for signal <data>
+    Summary:
+	inferred   1 RAM(s).
+	inferred  11 D-type flip-flop(s).
+Unit <font_rom> synthesized.
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v".
+    Found 10-bit register for signal <v_count_reg>.
+    Found 10-bit register for signal <h_count_reg>.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 1-bit register for signal <mod2_reg>.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_5_o_add_4_OUT> created at line 68.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_5_o_add_7_OUT> created at line 78.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 84
+    Found 10-bit comparator lessequal for signal <n0017> created at line 85
+    Found 10-bit comparator lessequal for signal <n0020> created at line 87
+    Found 10-bit comparator lessequal for signal <n0022> created at line 88
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_5_o_LessThan_15_o> created at line 91
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_5_o_LessThan_16_o> created at line 91
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_sync> synthesized.
+
+Synthesizing Unit <textPainter>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\timer_text.v".
+WARNING:Xst:647 - Input <pix_x<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pix_y<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <finish> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32x7-bit Read Only RAM for signal <_n0389>
+    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 256.
+    Found 1-bit 6-to-1 multiplexer for signal <char_addr_st<6>> created at line 222.
+    Found 1-bit 6-to-1 multiplexer for signal <char_addr_st<5>> created at line 222.
+    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<4>> created at line 222.
+    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<3>> created at line 222.
+    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<2>> created at line 222.
+    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<1>> created at line 222.
+    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<0>> created at line 222.
+WARNING:Xst:737 - Found 1-bit latch for signal <text_rgb<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <text_rgb<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <text_rgb<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 6-bit comparator greater for signal <pix_x[9]_PWR_6_o_LessThan_2_o> created at line 32
+    Found 6-bit comparator greater for signal <GND_6_o_pix_x[9]_LessThan_3_o> created at line 32
+    Found 6-bit comparator greater for signal <pix_x[9]_GND_6_o_LessThan_10_o> created at line 66
+    Found 6-bit comparator greater for signal <pix_x[9]_GND_6_o_LessThan_23_o> created at line 171
+    Found 5-bit comparator greater for signal <GND_6_o_pix_x[8]_LessThan_57_o> created at line 227
+    Found 5-bit comparator greater for signal <pix_x[8]_GND_6_o_LessThan_66_o> created at line 240
+    Summary:
+	inferred   1 RAM(s).
+	inferred  17 Latch(s).
+	inferred   6 Comparator(s).
+	inferred  71 Multiplexer(s).
+Unit <textPainter> synthesized.
+
+Synthesizing Unit <FrecuencyDivider>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v".
+    Found 1-bit register for signal <clk_1Hz>.
+    Found 27-bit register for signal <counter>.
+    Found 27-bit adder for signal <counter[26]_GND_24_o_add_4_OUT> created at line 52.
+    Found 27-bit comparator greater for signal <PWR_7_o_counter[26]_LessThan_2_o> created at line 39
+    Found 27-bit comparator lessequal for signal <counter[26]_GND_24_o_LessThan_3_o> created at line 44
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <FrecuencyDivider> synthesized.
+
+Synthesizing Unit <vgaColorConfig>.
+    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v".
+WARNING:Xst:647 - Input <txt_on<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <vgaColorConfig> synthesized.
 
 Synthesizing Unit <TotalDebouncer>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\TotalDebouncer.v".
@@ -218,102 +338,6 @@ Synthesizing Unit <Debouncer>.
 	inferred   1 Finite State Machine(s).
 Unit <Debouncer> synthesized.
 
-Synthesizing Unit <VgaPainter>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v".
-INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\VgaPainter.v" line 106: Output port <counter> of the instance <fd> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <clk_50MHz>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <VgaPainter> synthesized.
-
-Synthesizing Unit <font_rom>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\font_rom.v".
-    Found 11-bit register for signal <addr_reg>.
-    Found 2048x8-bit Read Only RAM for signal <data>
-    Summary:
-	inferred   1 RAM(s).
-	inferred  11 D-type flip-flop(s).
-Unit <font_rom> synthesized.
-
-Synthesizing Unit <vga_sync>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vga_sync.v".
-    Found 10-bit register for signal <v_count_reg>.
-    Found 10-bit register for signal <h_count_reg>.
-    Found 1-bit register for signal <v_sync_reg>.
-    Found 1-bit register for signal <h_sync_reg>.
-    Found 1-bit register for signal <mod2_reg>.
-    Found 10-bit adder for signal <h_count_reg[9]_GND_6_o_add_4_OUT> created at line 68.
-    Found 10-bit adder for signal <v_count_reg[9]_GND_6_o_add_7_OUT> created at line 78.
-    Found 10-bit comparator lessequal for signal <n0015> created at line 84
-    Found 10-bit comparator lessequal for signal <n0017> created at line 85
-    Found 10-bit comparator lessequal for signal <n0020> created at line 87
-    Found 10-bit comparator lessequal for signal <n0022> created at line 88
-    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_6_o_LessThan_15_o> created at line 91
-    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_6_o_LessThan_16_o> created at line 91
-    Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  23 D-type flip-flop(s).
-	inferred   6 Comparator(s).
-Unit <vga_sync> synthesized.
-
-Synthesizing Unit <textPainter>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\timer_text.v".
-WARNING:Xst:647 - Input <pix_x<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <pix_y<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <finish> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32x7-bit Read Only RAM for signal <_n0389>
-    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 257.
-    Found 1-bit 6-to-1 multiplexer for signal <char_addr_st<6>> created at line 223.
-    Found 1-bit 6-to-1 multiplexer for signal <char_addr_st<5>> created at line 223.
-    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<4>> created at line 223.
-    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<3>> created at line 223.
-    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<2>> created at line 223.
-    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<1>> created at line 223.
-    Found 1-bit 7-to-1 multiplexer for signal <char_addr_st<0>> created at line 223.
-WARNING:Xst:737 - Found 1-bit latch for signal <text_rgb<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <text_rgb<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <char_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <row_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <bit_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <text_rgb<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 6-bit comparator greater for signal <pix_x[9]_PWR_7_o_LessThan_2_o> created at line 33
-    Found 6-bit comparator greater for signal <GND_7_o_pix_x[9]_LessThan_3_o> created at line 33
-    Found 6-bit comparator greater for signal <pix_x[9]_GND_7_o_LessThan_10_o> created at line 67
-    Found 6-bit comparator greater for signal <pix_x[9]_GND_7_o_LessThan_23_o> created at line 172
-    Found 5-bit comparator greater for signal <GND_7_o_pix_x[8]_LessThan_57_o> created at line 228
-    Found 5-bit comparator greater for signal <pix_x[8]_GND_7_o_LessThan_66_o> created at line 241
-    Summary:
-	inferred   1 RAM(s).
-	inferred  17 Latch(s).
-	inferred   6 Comparator(s).
-	inferred  71 Multiplexer(s).
-Unit <textPainter> synthesized.
-
-Synthesizing Unit <FrecuencyDivider>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\FrecuencyDivider.v".
-    Found 1-bit register for signal <clk_1Hz>.
-    Found 27-bit register for signal <counter>.
-    Found 27-bit adder for signal <counter[26]_GND_25_o_add_4_OUT> created at line 52.
-    Found 27-bit comparator greater for signal <PWR_8_o_counter[26]_LessThan_2_o> created at line 39
-    Found 27-bit comparator lessequal for signal <counter[26]_GND_25_o_LessThan_3_o> created at line 44
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  28 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-Unit <FrecuencyDivider> synthesized.
-
 Synthesizing Unit <MinutesCounter>.
     Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v".
 INFO:Xst:3210 - "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\MinutesCounter.v" line 43: Output port <counter> of the instance <fd> is unconnected or connected to loadless signal.
@@ -326,8 +350,8 @@ Synthesizing Unit <SixBitCounter>.
 WARNING:Xst:647 - Input <finish> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 6-bit register for signal <out2>.
     Found 6-bit register for signal <out3>.
-    Found 6-bit adder for signal <out2[5]_GND_27_o_add_11_OUT> created at line 75.
-    Found 6-bit subtractor for signal <GND_27_o_GND_27_o_sub_5_OUT<5:0>> created at line 53.
+    Found 6-bit adder for signal <out2[5]_GND_31_o_add_11_OUT> created at line 75.
+    Found 6-bit subtractor for signal <GND_31_o_GND_31_o_sub_5_OUT<5:0>> created at line 53.
 WARNING:Xst:737 - Found 1-bit latch for signal <out<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <out<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <out<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -346,8 +370,8 @@ Synthesizing Unit <SixBitCounter_M>.
     Found 1-bit register for signal <finish>.
     Found 6-bit register for signal <out2>.
     Found 6-bit register for signal <out3>.
-    Found 6-bit adder for signal <out2[5]_GND_34_o_add_16_OUT> created at line 79.
-    Found 6-bit subtractor for signal <GND_34_o_GND_34_o_sub_8_OUT<5:0>> created at line 55.
+    Found 6-bit adder for signal <out2[5]_GND_38_o_add_16_OUT> created at line 79.
+    Found 6-bit subtractor for signal <GND_38_o_GND_38_o_sub_8_OUT<5:0>> created at line 55.
 WARNING:Xst:737 - Found 1-bit latch for signal <out<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <out<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <out<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -392,13 +416,6 @@ WARNING:Xst:737 - Found 1-bit latch for signal <stateFinish>. Latches may be gen
 	inferred   7 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <TimerStateMachine> synthesized.
-
-Synthesizing Unit <vgaColorConfig>.
-    Related source file is "C:\Users\Giovanni\Documents\GitHub\Proyecto1Taller\MonitorVGA\vgaColorConfig.v".
-WARNING:Xst:647 - Input <txt_on<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	inferred   2 Multiplexer(s).
-Unit <vgaColorConfig> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -556,7 +573,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <Temporizador>, Counter <dbounce/debouncer4/q_reg> <dbounce/debouncer3/q_reg> <dbounce/debouncer2/q_reg> <dbounce/debouncer0/q_reg> <dbounce/debouncer1/q_reg> are equivalent, XST will keep only <dbounce/debouncer4/q_reg>.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_0> on signal <state_reg[1:3]> with user encoding.
 Optimizing FSM <FSM_0> on signal <state_reg[1:3]> with user encoding.
@@ -575,6 +591,7 @@ Optimizing FSM <FSM_0> on signal <state_reg[1:3]> with user encoding.
  110   | 110
  111   | 111
 -------------------
+INFO:Xst:2146 - In block <Temporizador>, Counter <dbounce/debouncer4/q_reg> <dbounce/debouncer2/q_reg> <dbounce/debouncer3/q_reg> <dbounce/debouncer1/q_reg> <dbounce/debouncer0/q_reg> are equivalent, XST will keep only <dbounce/debouncer4/q_reg>.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <tsm/FSM_1> on signal <state[1:3]> with user encoding.
 -------------------
@@ -602,38 +619,40 @@ Optimizing unit <TwoDigitDeco> ...
 
 Optimizing unit <TimerStateMachine> ...
 WARNING:Xst:2677 - Node <tsm/stateFinish> of sequential type is unconnected in block <Temporizador>.
-INFO:Xst:2261 - The FF/Latch <vgap/clk_50MHz> in Unit <Temporizador> is equivalent to the following 3 FFs/Latches, which will be removed : <dbounce/debouncer4/q_reg_0> <mc/fd/counter_0> <vgap/fd/counter_0> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_8> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_8> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_9> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_9> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_1> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_1> <vgap/fd/counter_1> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_2> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_2> <vgap/fd/counter_2> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_3> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_3> <vgap/fd/counter_3> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_4> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_4> <vgap/fd/counter_4> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_5> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_5> <vgap/fd/counter_5> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_6> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_6> <vgap/fd/counter_6> 
-INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_7> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_7> <vgap/fd/counter_7> 
-INFO:Xst:2261 - The FF/Latch <vgap/fd/clk_1Hz> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/clk_1Hz> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_10> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_10> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_11> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_11> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_12> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_12> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_13> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_13> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_14> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_14> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_15> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_15> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_20> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_20> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_16> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_16> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_21> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_21> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_17> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_17> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_22> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_22> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_18> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_18> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_23> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_23> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_19> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_19> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_24> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_24> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_25> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_25> 
-INFO:Xst:2261 - The FF/Latch <mc/fd/counter_26> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgap/fd/counter_26> 
+INFO:Xst:2261 - The FF/Latch <vgaPCC/vgap/fd/clk_1Hz> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <mc/fd/clk_1Hz> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_8> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_8> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_9> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_9> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_1> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_1> <vgaPCC/vgap/fd/counter_1> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_2> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_2> <vgaPCC/vgap/fd/counter_2> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_3> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_3> <vgaPCC/vgap/fd/counter_3> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_4> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_4> <vgaPCC/vgap/fd/counter_4> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_5> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_5> <vgaPCC/vgap/fd/counter_5> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_6> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_6> <vgaPCC/vgap/fd/counter_6> 
+INFO:Xst:2261 - The FF/Latch <dbounce/debouncer4/q_reg_7> in Unit <Temporizador> is equivalent to the following 2 FFs/Latches, which will be removed : <mc/fd/counter_7> <vgaPCC/vgap/fd/counter_7> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_10> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_10> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_11> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_11> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_12> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_12> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_13> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_13> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_14> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_14> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_15> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_15> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_20> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_20> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_16> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_16> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_21> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_21> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_17> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_17> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_22> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_22> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_18> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_18> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_23> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_23> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_19> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_19> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_24> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_24> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_25> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_25> 
+INFO:Xst:2261 - The FF/Latch <mc/fd/counter_26> in Unit <Temporizador> is equivalent to the following FF/Latch, which will be removed : <vgaPCC/vgap/fd/counter_26> 
+INFO:Xst:2261 - The FF/Latch <vgaPCC/vgap/clk_50MHz> in Unit <Temporizador> is equivalent to the following 3 FFs/Latches, which will be removed : <dbounce/debouncer4/q_reg_0> <mc/fd/counter_0> <vgaPCC/vgap/fd/counter_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Temporizador, actual ratio is 3.
+FlipFlop vgaPCC/vgap/vsync_unit/h_count_reg_7 has been replicated 1 time(s)
+FlipFlop vgaPCC/vgap/vsync_unit/mod2_reg has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -641,8 +660,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 121
- Flip-Flops                                            : 121
+# Registers                                            : 123
+ Flip-Flops                                            : 123
 
 =========================================================================
 
@@ -665,24 +684,24 @@ Top Level Output File Name         : Temporizador.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 461
+# BELS                             : 440
 #      GND                         : 1
 #      INV                         : 7
 #      LUT1                        : 62
 #      LUT2                        : 26
-#      LUT3                        : 27
-#      LUT4                        : 45
-#      LUT5                        : 81
-#      LUT6                        : 76
+#      LUT3                        : 16
+#      LUT4                        : 34
+#      LUT5                        : 79
+#      LUT6                        : 79
 #      MUXCY                       : 75
 #      MUXF7                       : 3
 #      VCC                         : 1
 #      XORCY                       : 57
-# FlipFlops/Latches                : 150
-#      FD                          : 93
+# FlipFlops/Latches                : 152
+#      FD                          : 84
 #      FDE                         : 6
 #      FDR                         : 5
-#      FDRE                        : 17
+#      FDRE                        : 28
 #      LD                          : 3
 #      LDC                         : 12
 #      LDE                         : 14
@@ -702,16 +721,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             150  out of  18224     0%  
- Number of Slice LUTs:                  324  out of   9112     3%  
-    Number used as Logic:               324  out of   9112     3%  
+ Number of Slice Registers:             152  out of  18224     0%  
+ Number of Slice LUTs:                  303  out of   9112     3%  
+    Number used as Logic:               303  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    330
-   Number with an unused Flip Flop:     180  out of    330    54%  
-   Number with an unused LUT:             6  out of    330     1%  
-   Number of fully used LUT-FF pairs:   144  out of    330    43%  
-   Number of unique control sets:        11
+ Number of LUT Flip Flop pairs used:    311
+   Number with an unused Flip Flop:     159  out of    311    51%  
+   Number with an unused LUT:             8  out of    311     2%  
+   Number of fully used LUT-FF pairs:   144  out of    311    46%  
+   Number of unique control sets:        12
 
 IO Utilization: 
  Number of IOs:                          12
@@ -740,17 +759,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------+--------------------------------+-------+
-Clock Signal                           | Clock buffer(FF name)          | Load  |
----------------------------------------+--------------------------------+-------+
-CLK_100MHZ                             | BUFGP                          | 74    |
-vgap/vsync_unit/mod2_reg               | NONE(vgap/text_unit/text_rgb_2)| 17    |
-incrementSeg(tsm/Mmux_incrementSeg11:O)| NONE(*)(mc/seconds/out2_5)     | 6     |
-N0                                     | NONE(mc/seconds/out_0)         | 12    |
-incrementMin(tsm/Mmux_incrementMin1:O) | NONE(*)(mc/minutes/out2_0)     | 6     |
-vgap/fd/clk_1Hz                        | NONE(mc/minutes/out3_5)        | 13    |
-vgap/clk_50MHz                         | BUFG                           | 23    |
----------------------------------------+--------------------------------+-------+
+---------------------------------------+---------------------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)                 | Load  |
+---------------------------------------+---------------------------------------+-------+
+CLK_100MHZ                             | BUFGP                                 | 74    |
+vgaPCC/vgap/vsync_unit/mod2_reg        | NONE(vgaPCC/vgap/text_unit/text_rgb_2)| 17    |
+vgaPCC/vgap/clk_50MHz                  | BUFG                                  | 25    |
+incrementSeg(tsm/Mmux_incrementSeg11:O)| NONE(*)(mc/seconds/out2_5)            | 6     |
+N0                                     | NONE(mc/seconds/out_0)                | 12    |
+incrementMin(tsm/Mmux_incrementMin1:O) | NONE(*)(mc/minutes/out2_0)            | 6     |
+vgaPCC/vgap/fd/clk_1Hz                 | NONE(mc/minutes/out3_5)               | 13    |
+---------------------------------------+---------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -764,7 +783,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.471ns (Maximum Frequency: 182.787MHz)
+   Minimum period: 5.262ns (Maximum Frequency: 190.056MHz)
    Minimum input arrival time before clock: 2.522ns
    Maximum output required time after clock: 7.569ns
    Maximum combinational path delay: No path found
@@ -775,10 +794,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_100MHZ'
-  Clock period: 4.417ns (frequency: 226.381MHz)
+  Clock period: 4.390ns (frequency: 227.784MHz)
   Total number of paths / destination ports: 2103 / 78
 -------------------------------------------------------------------------
-Delay:               4.417ns (Levels of Logic = 3)
+Delay:               4.390ns (Levels of Logic = 3)
   Source:            tsm/state_FSM_FFd3 (FF)
   Destination:       mc/decoSeconds/decimals_0 (FF)
   Source Clock:      CLK_100MHZ rising
@@ -789,37 +808,62 @@ Delay:               4.417ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              56   0.447   1.816  tsm/state_FSM_FFd3 (tsm/state_FSM_FFd3)
-     LUT5:I2->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<0>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<0>)
-     LDC:D->Q              9   0.471   1.174  mc/seconds/out_0 (mc/seconds/out_0)
+     LUT5:I2->O            1   0.205   0.000  mc/seconds/Mmux_out[5]_out2[5]_mux_17_OUT<2>11 (mc/seconds/out[5]_out2[5]_mux_17_OUT<2>)
+     LDC:D->Q              8   0.471   1.147  mc/seconds/out_2 (mc/seconds/out_2)
      LUT5:I0->O            1   0.203   0.000  mc/decoSeconds_Mram__n007312 (mc/decoSeconds/_n0073<0>)
      FD:D                      0.102          mc/decoSeconds/decimals_0
     ----------------------------------------
-    Total                      4.417ns (1.428ns logic, 2.989ns route)
-                                       (32.3% logic, 67.7% route)
+    Total                      4.390ns (1.428ns logic, 2.962ns route)
+                                       (32.5% logic, 67.5% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'vgap/vsync_unit/mod2_reg'
+Timing constraint: Default period analysis for Clock 'vgaPCC/vgap/vsync_unit/mod2_reg'
   Clock period: 3.058ns (frequency: 327.065MHz)
   Total number of paths / destination ports: 15 / 3
 -------------------------------------------------------------------------
 Delay:               3.058ns (Levels of Logic = 3)
-  Source:            vgap/text_unit/bit_addr_2 (LATCH)
-  Destination:       vgap/text_unit/text_rgb_1 (LATCH)
-  Source Clock:      vgap/vsync_unit/mod2_reg falling
-  Destination Clock: vgap/vsync_unit/mod2_reg falling
+  Source:            vgaPCC/vgap/text_unit/bit_addr_2 (LATCH)
+  Destination:       vgaPCC/vgap/text_unit/text_rgb_1 (LATCH)
+  Source Clock:      vgaPCC/vgap/vsync_unit/mod2_reg falling
+  Destination Clock: vgaPCC/vgap/vsync_unit/mod2_reg falling
 
-  Data Path: vgap/text_unit/bit_addr_2 to vgap/text_unit/text_rgb_1
+  Data Path: vgaPCC/vgap/text_unit/bit_addr_2 to vgaPCC/vgap/text_unit/text_rgb_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q              2   0.498   0.981  vgap/text_unit/bit_addr_2 (vgap/text_unit/bit_addr_2)
-     LUT6:I0->O            1   0.203   0.000  vgap/text_unit/Mmux_font_bit_2_f7_G (N50)
-     MUXF7:I1->O           3   0.140   0.995  vgap/text_unit/Mmux_font_bit_2_f7 (vgap/text_unit/font_bit)
-     LUT5:I0->O            1   0.203   0.000  vgap/text_unit/Mmux_GND_7_o_GND_7_o_mux_75_OUT<1>12 (vgap/text_unit/GND_7_o_GND_7_o_mux_75_OUT<1>)
-     LD:D                      0.037          vgap/text_unit/text_rgb_1
+     LDE:G->Q              2   0.498   0.981  vgaPCC/vgap/text_unit/bit_addr_2 (vgaPCC/vgap/text_unit/bit_addr_2)
+     LUT6:I0->O            1   0.203   0.000  vgaPCC/vgap/text_unit/Mmux_font_bit_2_f7_G (N48)
+     MUXF7:I1->O           3   0.140   0.995  vgaPCC/vgap/text_unit/Mmux_font_bit_2_f7 (vgaPCC/vgap/text_unit/font_bit)
+     LUT5:I0->O            1   0.203   0.000  vgaPCC/vgap/text_unit/Mmux_GND_6_o_GND_6_o_mux_75_OUT<1>12 (vgaPCC/vgap/text_unit/GND_6_o_GND_6_o_mux_75_OUT<1>)
+     LD:D                      0.037          vgaPCC/vgap/text_unit/text_rgb_1
     ----------------------------------------
     Total                      3.058ns (1.081ns logic, 1.977ns route)
                                        (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vgaPCC/vgap/clk_50MHz'
+  Clock period: 4.801ns (frequency: 208.311MHz)
+  Total number of paths / destination ports: 598 / 47
+-------------------------------------------------------------------------
+Delay:               4.801ns (Levels of Logic = 4)
+  Source:            vgaPCC/vgap/vsync_unit/h_count_reg_6 (FF)
+  Destination:       vgaPCC/vgap/vsync_unit/v_count_reg_9 (FF)
+  Source Clock:      vgaPCC/vgap/clk_50MHz rising
+  Destination Clock: vgaPCC/vgap/clk_50MHz rising
+
+  Data Path: vgaPCC/vgap/vsync_unit/h_count_reg_6 to vgaPCC/vgap/vsync_unit/v_count_reg_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            38   0.447   1.377  vgaPCC/vgap/vsync_unit/h_count_reg_6 (vgaPCC/vgap/vsync_unit/h_count_reg_6)
+     LUT6:I5->O            2   0.205   0.617  vgaPCC/vgap/vsync_unit/_n00581_SW0 (N13)
+     LUT6:I5->O            1   0.205   0.580  vgaPCC/vgap/vsync_unit/_n00581_1 (vgaPCC/vgap/vsync_unit/_n005811)
+     LUT6:I5->O           10   0.205   0.857  vgaPCC/vgap/vsync_unit/_n00583 (vgaPCC/vgap/vsync_unit/_n0058)
+     LUT4:I3->O            1   0.205   0.000  vgaPCC/vgap/vsync_unit/v_count_reg_9_rstpot (vgaPCC/vgap/vsync_unit/v_count_reg_9_rstpot)
+     FD:D                      0.102          vgaPCC/vgap/vsync_unit/v_count_reg_9
+    ----------------------------------------
+    Total                      4.801ns (1.369ns logic, 3.432ns route)
+                                       (28.5% logic, 71.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'incrementSeg'
@@ -837,7 +881,7 @@ Delay:               3.782ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             5   0.447   0.943  mc/seconds/out2_4 (mc/seconds/out2_4)
-     LUT4:I1->O            1   0.205   0.808  mc/seconds/Mcount_out2_val_SW0 (N17)
+     LUT4:I1->O            1   0.205   0.808  mc/seconds/Mcount_out2_val_SW0 (N15)
      LUT5:I2->O            6   0.205   0.744  mc/seconds/Mcount_out2_val (mc/seconds/Mcount_out2_val)
      FDRE:R                    0.430          mc/seconds/out2_0
     ----------------------------------------
@@ -860,7 +904,7 @@ Delay:               3.782ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             5   0.447   0.943  mc/minutes/out2_4 (mc/minutes/out2_4)
-     LUT4:I1->O            1   0.205   0.808  mc/minutes/Mcount_out2_val_SW0 (N31)
+     LUT4:I1->O            1   0.205   0.808  mc/minutes/Mcount_out2_val_SW0 (N29)
      LUT5:I2->O            6   0.205   0.744  mc/minutes/Mcount_out2_val (mc/minutes/Mcount_out2_val)
      FDRE:R                    0.430          mc/minutes/out2_0
     ----------------------------------------
@@ -868,15 +912,15 @@ Delay:               3.782ns (Levels of Logic = 2)
                                        (34.0% logic, 66.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'vgap/fd/clk_1Hz'
+Timing constraint: Default period analysis for Clock 'vgaPCC/vgap/fd/clk_1Hz'
   Clock period: 5.262ns (frequency: 190.056MHz)
   Total number of paths / destination ports: 210 / 19
 -------------------------------------------------------------------------
 Delay:               5.262ns (Levels of Logic = 4)
   Source:            mc/seconds/out3_5 (FF)
   Destination:       mc/minutes/out3_5 (FF)
-  Source Clock:      vgap/fd/clk_1Hz rising
-  Destination Clock: vgap/fd/clk_1Hz rising
+  Source Clock:      vgaPCC/vgap/fd/clk_1Hz rising
+  Destination Clock: vgaPCC/vgap/fd/clk_1Hz rising
 
   Data Path: mc/seconds/out3_5 to mc/minutes/out3_5
                                 Gate     Net
@@ -891,31 +935,6 @@ Delay:               5.262ns (Levels of Logic = 4)
     ----------------------------------------
     Total                      5.262ns (1.855ns logic, 3.407ns route)
                                        (35.3% logic, 64.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'vgap/clk_50MHz'
-  Clock period: 5.471ns (frequency: 182.787MHz)
-  Total number of paths / destination ports: 587 / 23
--------------------------------------------------------------------------
-Delay:               5.471ns (Levels of Logic = 4)
-  Source:            vgap/vsync_unit/h_count_reg_7 (FF)
-  Destination:       vgap/vsync_unit/v_count_reg_9 (FF)
-  Source Clock:      vgap/clk_50MHz rising
-  Destination Clock: vgap/clk_50MHz rising
-
-  Data Path: vgap/vsync_unit/h_count_reg_7 to vgap/vsync_unit/v_count_reg_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              33   0.447   1.306  vgap/vsync_unit/h_count_reg_7 (vgap/vsync_unit/h_count_reg_7)
-     LUT5:I4->O            1   0.205   0.580  vgap/vsync_unit/h_end<9>_SW0 (N15)
-     LUT6:I5->O           21   0.205   1.114  vgap/vsync_unit/h_end<9> (vgap/vsync_unit/h_end)
-     LUT6:I5->O           10   0.205   1.104  vgap/vsync_unit/_n0058 (vgap/vsync_unit/_n0058)
-     LUT4:I0->O            1   0.203   0.000  vgap/vsync_unit/v_count_reg_9_rstpot (vgap/vsync_unit/v_count_reg_9_rstpot)
-     FD:D                      0.102          vgap/vsync_unit/v_count_reg_9
-    ----------------------------------------
-    Total                      5.471ns (1.367ns logic, 4.104ns route)
-                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_100MHZ'
@@ -938,42 +957,42 @@ Offset:              2.522ns (Levels of Logic = 2)
                                        (60.5% logic, 39.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'vgap/vsync_unit/mod2_reg'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgaPCC/vgap/vsync_unit/mod2_reg'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              4.678ns (Levels of Logic = 2)
-  Source:            vgap/text_unit/text_rgb_2 (LATCH)
+  Source:            vgaPCC/vgap/text_unit/text_rgb_2 (LATCH)
   Destination:       rgb<2> (PAD)
-  Source Clock:      vgap/vsync_unit/mod2_reg falling
+  Source Clock:      vgaPCC/vgap/vsync_unit/mod2_reg falling
 
-  Data Path: vgap/text_unit/text_rgb_2 to rgb<2>
+  Data Path: vgaPCC/vgap/text_unit/text_rgb_2 to rgb<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.827  vgap/text_unit/text_rgb_2 (vgap/text_unit/text_rgb_2)
-     LUT4:I0->O            1   0.203   0.579  colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
+     LD:G->Q               1   0.498   0.827  vgaPCC/vgap/text_unit/text_rgb_2 (vgaPCC/vgap/text_unit/text_rgb_2)
+     LUT4:I0->O            1   0.203   0.579  vgaPCC/colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
     Total                      4.678ns (3.272ns logic, 1.406ns route)
                                        (69.9% logic, 30.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'vgap/clk_50MHz'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgaPCC/vgap/clk_50MHz'
   Total number of paths / destination ports: 77 / 5
 -------------------------------------------------------------------------
 Offset:              7.410ns (Levels of Logic = 4)
-  Source:            vgap/vsync_unit/h_count_reg_5 (FF)
+  Source:            vgaPCC/vgap/vsync_unit/h_count_reg_5 (FF)
   Destination:       rgb<2> (PAD)
-  Source Clock:      vgap/clk_50MHz rising
+  Source Clock:      vgaPCC/vgap/clk_50MHz rising
 
-  Data Path: vgap/vsync_unit/h_count_reg_5 to rgb<2>
+  Data Path: vgaPCC/vgap/vsync_unit/h_count_reg_5 to rgb<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              35   0.447   1.679  vgap/vsync_unit/h_count_reg_5 (vgap/vsync_unit/h_count_reg_5)
-     LUT5:I0->O            2   0.203   0.617  vgap/text_unit/Mmux_state_on1_SW0 (N7)
-     LUT6:I5->O            8   0.205   0.907  vgap/text_unit/Mmux_state_on1 (txt_on<0>)
-     LUT4:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
+     FDRE:C->Q            35   0.447   1.679  vgaPCC/vgap/vsync_unit/h_count_reg_5 (vgaPCC/vgap/vsync_unit/h_count_reg_5)
+     LUT5:I0->O            2   0.203   0.617  vgaPCC/vgap/text_unit/Mmux_state_on1_SW0 (N7)
+     LUT6:I5->O            8   0.205   0.907  vgaPCC/vgap/text_unit/Mmux_state_on1 (vgaPCC/n0007<0>)
+     LUT4:I2->O            1   0.203   0.579  vgaPCC/colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
     Total                      7.410ns (3.629ns logic, 3.781ns route)
@@ -993,22 +1012,22 @@ Offset:              7.569ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              59   0.447   1.835  tsm/state_FSM_FFd2 (tsm/state_FSM_FFd2)
-     LUT5:I2->O            2   0.205   0.617  vgap/text_unit/Mmux_state_on1_SW0 (N7)
-     LUT6:I5->O            8   0.205   0.907  vgap/text_unit/Mmux_state_on1 (txt_on<0>)
-     LUT4:I2->O            1   0.203   0.579  colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
+     LUT5:I2->O            2   0.205   0.617  vgaPCC/vgap/text_unit/Mmux_state_on1_SW0 (N7)
+     LUT6:I5->O            8   0.205   0.907  vgaPCC/vgap/text_unit/Mmux_state_on1 (vgaPCC/n0007<0>)
+     LUT4:I2->O            1   0.203   0.579  vgaPCC/colorConfg/Mmux_rgbAux31 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
     Total                      7.569ns (3.631ns logic, 3.938ns route)
                                        (48.0% logic, 52.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'vgap/fd/clk_1Hz'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgaPCC/vgap/fd/clk_1Hz'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.701ns (Levels of Logic = 1)
   Source:            mc/minutes/finish (FF)
   Destination:       finish (PAD)
-  Source Clock:      vgap/fd/clk_1Hz rising
+  Source Clock:      vgaPCC/vgap/fd/clk_1Hz rising
 
   Data Path: mc/minutes/finish to finish
                                 Gate     Net
@@ -1026,27 +1045,27 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock CLK_100MHZ
-------------------------+---------+---------+---------+---------+
-                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------+---------+---------+---------+---------+
-CLK_100MHZ              |    4.417|         |         |         |
-incrementMin            |    3.600|         |         |         |
-incrementSeg            |    3.774|         |         |         |
-vgap/fd/clk_1Hz         |    3.552|         |         |         |
-vgap/vsync_unit/mod2_reg|         |    1.427|         |         |
-------------------------+---------+---------+---------+---------+
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+CLK_100MHZ                     |    4.390|         |         |         |
+incrementMin                   |    3.600|         |         |         |
+incrementSeg                   |    3.690|         |         |         |
+vgaPCC/vgap/fd/clk_1Hz         |    3.552|         |         |         |
+vgaPCC/vgap/vsync_unit/mod2_reg|         |    1.427|         |         |
+-------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock N0
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK_100MHZ     |         |         |    2.504|         |
-incrementMin   |         |         |    1.797|         |
-incrementSeg   |         |         |    1.824|         |
-vgap/fd/clk_1Hz|         |         |    1.797|         |
----------------+---------+---------+---------+---------+
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+CLK_100MHZ            |         |         |    2.504|         |
+incrementMin          |         |         |    1.797|         |
+incrementSeg          |         |         |    1.824|         |
+vgaPCC/vgap/fd/clk_1Hz|         |         |    1.797|         |
+----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock incrementMin
 ---------------+---------+---------+---------+---------+
@@ -1066,46 +1085,46 @@ CLK_100MHZ     |    5.077|         |         |         |
 incrementSeg   |    3.782|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock vgap/clk_50MHz
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-vgap/clk_50MHz |    5.471|         |         |         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock vgaPCC/vgap/clk_50MHz
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+vgaPCC/vgap/clk_50MHz|    4.801|         |         |         |
+---------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock vgap/fd/clk_1Hz
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK_100MHZ     |    6.275|         |         |         |
-incrementMin   |    1.946|         |         |         |
-incrementSeg   |    5.603|         |         |         |
-vgap/fd/clk_1Hz|    5.262|         |         |         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock vgaPCC/vgap/fd/clk_1Hz
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+CLK_100MHZ            |    6.275|         |         |         |
+incrementMin          |    1.946|         |         |         |
+incrementSeg          |    5.603|         |         |         |
+vgaPCC/vgap/fd/clk_1Hz|    5.262|         |         |         |
+----------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock vgap/vsync_unit/mod2_reg
-------------------------+---------+---------+---------+---------+
-                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------+---------+---------+---------+---------+
-CLK_100MHZ              |         |         |    5.924|         |
-vgap/clk_50MHz          |         |         |    6.066|         |
-vgap/vsync_unit/mod2_reg|         |         |    3.058|         |
-------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock vgaPCC/vgap/vsync_unit/mod2_reg
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+CLK_100MHZ                     |         |         |    5.924|         |
+vgaPCC/vgap/clk_50MHz          |         |         |    6.007|         |
+vgaPCC/vgap/vsync_unit/mod2_reg|         |         |    3.058|         |
+-------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.44 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.52 secs
  
 --> 
 
 Total memory usage is 294072 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   49 (   0 filtered)
+Number of warnings :   56 (   0 filtered)
 Number of infos    :   35 (   0 filtered)
 
