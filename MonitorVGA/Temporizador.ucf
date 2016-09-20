@@ -1,5 +1,5 @@
-NET "CLK_50MHZ" LOC = V10;
-NET "CLK_50MHZ" PERIOD = 20.0ns HIGH 40%;
+NET "CLK_100MHZ" LOC = V10;
+NET "CLK_100MHZ" PERIOD = 20.0ns HIGH 40%;
 
 NET "incrementSeconds" CLOCK_DEDICATED_ROUTE = FALSE; 
 NET "incrementMinutes" CLOCK_DEDICATED_ROUTE = FALSE; 
@@ -24,10 +24,6 @@ NET "rgb[0]" LOC = T7;
 
 NET "hsync" LOC = N6;     
 NET "vsync" LOC = P7;
-
-NET "sw[0]" LOC = T5;
-NET "sw[1]" LOC = V8;
-NET "sw[2]" LOC = U8;
 
 NET "finish" LOC = T11;
 

@@ -22,10 +22,8 @@ module Temporizador(
 	input wire CLK_100MHZ,
 	input wire incrementSeconds,
 	input wire incrementMinutes,
-	input wire reset,
 	input wire start,
 	input wire stop,
-	input wire [2:0] sw,
 	input wire delete,
    output wire hsync, vsync,
    output wire [2:0] rgb,
@@ -39,7 +37,7 @@ module Temporizador(
    wire resetTimer;	
 	wire forward;
 	wire video_on;
-	wire [1:0] txt_on;
+	wire [3:0] txt_on;
 	wire [2:0] nextRGB;	
 	wire [2:0] actualState;
 	wire [3:0] mDecimal ;

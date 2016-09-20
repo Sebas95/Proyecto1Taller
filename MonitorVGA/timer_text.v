@@ -65,8 +65,9 @@ module textPainter
    always @*
 	begin
 		state_on = (pix_y[9:5]==1) && (pix_x[9:4]<16);
+		char_addr_st = 7'h00;
 		if(actualState == 3'b000)
-			begin
+			begin				
 				case (pix_x[7:4])
 					4'h0: char_addr_st = 7'h45; // E
 					4'h1: char_addr_st = 7'h53; // s
@@ -90,6 +91,7 @@ module textPainter
 			
 		else if(actualState == 3'b001)		
 			begin
+			 char_addr_st = 7'h00;			
 			 state_on = (pix_y[9:5]==1) && (pix_x[9:4]<22);
 				case (pix_x[8:4])
 					5'h0: char_addr_st = 7'h45; // E
@@ -118,6 +120,7 @@ module textPainter
 			
 		else if(actualState == 3'b010)
 			begin
+				char_addr_st = 7'h00;			
 				case (pix_x[7:4])
 					4'h0: char_addr_st = 7'h45; // E
 					4'h1: char_addr_st = 7'h53; // s
@@ -141,6 +144,7 @@ module textPainter
 
 		else if(actualState == 3'b011)
 			begin
+				char_addr_st = 7'h00;			
 				case (pix_x[7:4])
 					4'h0: char_addr_st = 7'h45; // E
 					4'h1: char_addr_st = 7'h53; // s
@@ -164,6 +168,7 @@ module textPainter
 	
 		else if(actualState == 3'b101)		
 			begin
+				char_addr_st = 7'h00;			
 			 state_on = (pix_y[9:5]==1) && (pix_x[9:4]<22);
 				case (pix_x[8:4])
 				   4'h0: char_addr_st = 7'h45; // E
@@ -192,6 +197,8 @@ module textPainter
 	localparam red = 3'b001;
    always @*
    begin
+	if(pixel_tick)
+	begin
       text_rgb = 3'b000;  // background, yellow
       if (score_on)
          begin
@@ -207,7 +214,7 @@ module textPainter
 						else if(actualState == 3'b011)
 							text_rgb = 3'b100;
 						else if(actualState == 3'b101)
-							if(count) text_rgb = 3'b010;	
+							if(clk1Hz) text_rgb = 3'b010;	
 							else text_rgb = 3'b100;	
 						else
 							text_rgb = 3'b111;
@@ -238,15 +245,9 @@ module textPainter
          end		
 
    end
+	end
 	
-	reg [2:0] text_rgb_Aux0 = 3'b000;
-	reg [2:0] text_rgb_Aux1 = 3'b101;
-	reg count = 0;
-	always@(posedge clk1Hz)
-		begin
-			if (finish)
-				count = ~count;
-		end
+
 
    assign text_on = {score_on,state_on};
    //-------------------------------------------

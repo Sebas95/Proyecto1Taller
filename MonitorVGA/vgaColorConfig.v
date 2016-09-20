@@ -21,7 +21,7 @@
 module vgaColorConfig(
     input wire [2:0] nextRGB,
     input wire video_on,
-	 input wire [1:0] txt_on,
+	 input wire [3:0] txt_on,
     output wire [2:0] rgb
     );
 	reg [2:0] rgbAux = 0;

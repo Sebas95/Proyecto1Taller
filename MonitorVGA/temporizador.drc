@@ -1,27 +1,15 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Sep 13 14:18:21 2016
+Mon Sep 19 17:49:18 2016
 
 drc -z Temporizador.ncd Temporizador.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net incrementMin is sourced by
-   a combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   vgap/text_unit/score_on_state_on_OR_97_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net incrementSeg is sourced by
    a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   vgap/text_unit/actualState[2]_actualState[2]_OR_76_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
+WARNING:PhysDesignRules:372 - Gated clock. Clock net incrementMin is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tsm/state[2]_GND_47_o_Mux_20_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-DRC detected 0 errors and 5 warnings.  Please see the previously displayed
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

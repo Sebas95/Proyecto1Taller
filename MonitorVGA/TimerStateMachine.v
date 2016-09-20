@@ -45,7 +45,7 @@ module TimerStateMachine(
 	 localparam [2:0] finalState   = 3'b101;
 		 
 	always @(state, start, stop, delete, initialState,countState,stopState, deleteState,
-				segDemand,minDemand)
+				segDemand,minDemand,finish)
 		begin
 		 nextState = initialState;
 			case(state)

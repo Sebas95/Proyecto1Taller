@@ -49,7 +49,7 @@ module VgaPainter(
    output wire hsync, vsync,
    output wire [2:0] rgb,
 	output wire video_on,
-	output wire [1:0] text_on
+	output wire [3:0] text_on
     );
 
    wire [9:0] pixel_x, pixel_y;
@@ -75,7 +75,7 @@ module VgaPainter(
    // instantiate video synchronization unit
    vga_sync vsync_unit
       (.clk(clk_50MHz), 
-		.reset(reset), 
+		.reset(0), 
 		.hsync(hsync), 
 		.vsync(vsync),
       .video_on(video_on), 
